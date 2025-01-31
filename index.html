@@ -30,19 +30,47 @@
             padding: 0;
         }
         .donation-methods li {
+            display: flex;
+            align-items: center;
             background-color: #ecf0f1;
             margin: 10px 0;
             padding: 15px;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
         }
         .donation-methods li:hover {
             background-color: #3498db;
             color: white;
+            transform: scale(1.05);
+        }
+        .donation-methods li img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
         }
         .contact {
             margin-top: 20px;
             font-style: italic;
+        }
+        form {
+            margin-top: 20px;
+        }
+        form input, form textarea, form button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #2980b9;
         }
     </style>
 </head>
@@ -51,11 +79,28 @@
         <h1>Donate to Our Cause</h1>
         <p>Your support makes a difference. We accept donations through the following methods:</p>
         <ul class="donation-methods">
-            <li>PayPal</li>
-            <li>Credit Card</li>
-            <li>Cryptocurrency</li>
+            <li>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal Logo">
+                <a href="https://www.paypal.com/donate" target="_blank">PayPal</a>
+            </li>
+            <li>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Credit_card_logo.png" alt="Credit Card Icon">
+                <a href="https://example.com/credit-card" target="_blank">Credit Card</a>
+            </li>
+            <li>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Bitcoin.svg" alt="Cryptocurrency Icon">
+                <a href="https://example.com/crypto" target="_blank">Cryptocurrency</a>
+            </li>
         </ul>
-        <p class="contact">To make a donation, please contact us at: donatetoalan@example.com</p>
+        <p class="contact">To make a donation, please fill out the form below or contact us at: <a href="mailto:donatetoalan@example.com">donatetoalan@example.com</a></p>
+
+        <!-- Contact Form -->
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+            <button type="submit">Submit</button>
+        </form>
     </div>
 </body>
 </html>
