@@ -113,11 +113,11 @@
     <div class="container">
         <!-- Header Section -->
         <header>
-            <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-image">
+            <!-- Updated Image Code -->
+            <img src="images/IMG_2748 (1).png" alt="Profile Picture" class="profile-image">
             <h1>Welcome to My Portfolio</h1>
             <p>Hello! I'm Alan Holding, an AI enthusiast, aspiring web developer, and freelance creator currently studying Computing. I specialize in turning creative ideas into reality by leveraging AI and modern web development tools. Whether you're looking for a custom website, AI-powered solutions, or innovative projects, I’m here to help bring your vision to life. I’m open to freelance opportunities, collaborations, and meaningful connections.</p>
         </header>
-
         <!-- Tab Navigation -->
         <div class="tabs">
             <div class="tab active" onclick="showTab('about')">About Me</div>
@@ -125,14 +125,12 @@
             <div class="tab" onclick="showTab('contact')">Contact</div>
             <div class="tab" onclick="showTab('donate')">Donate</div>
         </div>
-
         <!-- About Me Section -->
         <section id="about" class="tab-content active">
             <h2>About Me</h2>
             <p>I am currently learning how to build websites using AI tools and exploring the vast potential of artificial intelligence. My goal is to combine my enthusiasm for AI with web development to create innovative solutions. I’m always eager to learn new things and collaborate with like-minded individuals or businesses.</p>
             <p>If you're interested in discussing potential projects, partnerships, or just want to connect, feel free to reach out!</p>
         </section>
-
         <!-- Projects Section -->
         <section id="projects" class="tab-content">
             <h2>My Projects</h2>
@@ -142,13 +140,11 @@
                 <li><strong>Learning AI Tools:</strong> Exploring various AI platforms to enhance productivity and creativity.</li>
             </ul>
         </section>
-
         <!-- Contact Section -->
         <section id="contact" class="tab-content">
             <h2>Contact Me</h2>
             <p>You can reach me via email at <a href="mailto:alan.s.holding@gmail.com">alan.s.holding@gmail.com</a>. Whether it's for business opportunities, collaborations, or just to say hello, I'd love to hear from you!</p>
         </section>
-
         <!-- Donate Section -->
         <section id="donate" class="tab-content">
             <h2>Support My Journey</h2>
@@ -156,39 +152,4 @@
             <ul class="donation-methods">
                 <li>
                     <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal Logo">
-                    <a href="https://paypal.me/AlanStuart11?country.x=GB&locale.x=en_GB" target="_blank">PayPal</a>
-                </li>
-                <li>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Credit_card_logo.png" alt="Credit Card Icon">
-                    <a href="https://example.com/credit-card" target="_blank">Credit Card</a>
-                </li>
-                <li>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Bitcoin.svg" alt="Cryptocurrency Icon">
-                    <a href="https://example.com/crypto" target="_blank">Cryptocurrency</a>
-                </li>
-            </ul>
-            <p>To make a donation, simply click on one of the donation links above. Alternatively, you can fill out the form below or contact us at: <a href="mailto:alan.s.holding@gmail.com">alan.s.holding@gmail.com</a> if you have any questions or want to send a message.</p>
-            <!-- Contact Form -->
-            <form action="https://formspree.io/f/your-form-id" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows="4" placeholder="Your Message"></textarea>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-    </div>
-
-    <!-- JavaScript for Tab Functionality -->
-    <script>
-        function showTab(tabId) {
-            // Remove 'active' class from all tabs and sections
-            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
-            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
-
-            // Add 'active' class to the clicked tab and corresponding section
-            document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add('active');
-            document.getElementById(tabId).classList.add('active');
-        }
-    </script>
-</body>
-</html>
+                    <a href="https://paypal.me/AlanStuart11?country.x=GB&locale.x=en_GB" target="_blank
