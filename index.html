@@ -87,6 +87,19 @@
             height: 24px;
             margin-right: 10px;
         }
+        /* Added styles for crypto details */
+        .crypto-details {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: rgba(52, 152, 219, 0.1);
+            border-radius: 5px;
+        }
+        .crypto-link {
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+        }
         form {
             margin-top: 20px;
         }
@@ -187,8 +200,16 @@
                     <a href="https://paypal.me/AlanStuart11?country.x=GB&locale.x=en_GB" target="_blank">Commission via PayPal</a>
                 </li>
                 <li>
-                    <img src="https://cryptologos.cc/logos/xrp-xrp-logo.svg" alt="XRP Logo">
-                    <span>XRP Address: rNxp4h8apvRis6mJf9Sh8C6iRxfrDWN7AV<br>Memo: 310176204</span>
+                    <div class="crypto-container">
+                        <div class="crypto-link" onclick="toggleCryptoDetails()">
+                            <img src="https://cryptologos.cc/logos/xrp-xrp-logo.svg" alt="XRP Logo">
+                            <span>Commission via Cryptocurrency</span>
+                        </div>
+                        <div id="crypto-details" class="crypto-details">
+                            <p><strong>XRP Address:</strong> rNxp4h8apvRis6mJf9Sh8C6iRxfrDWN7AV</p>
+                            <p><strong>Memo:</strong> 310176204</p>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </section>
@@ -213,6 +234,15 @@
             
             // Add active class to clicked tab
             event.currentTarget.classList.add('active');
+        }
+        
+        function toggleCryptoDetails() {
+            const cryptoDetails = document.getElementById('crypto-details');
+            if (cryptoDetails.style.display === 'block') {
+                cryptoDetails.style.display = 'none';
+            } else {
+                cryptoDetails.style.display = 'block';
+            }
         }
     </script>
 </body>
