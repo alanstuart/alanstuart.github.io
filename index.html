@@ -107,6 +107,14 @@
         form button:hover {
             background-color: #2980b9;
         }
+        /* Added style for work model highlight */
+        .work-model {
+            background-color: #e8f4fc;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
     </style>
 </head>
 <body>
@@ -116,7 +124,7 @@
             <!-- Updated Image Code -->
             <img src="images/IMG_2748 (1).png" alt="Profile Picture" class="profile-image">
             <h1>Welcome to My Portfolio</h1>
-            <p>Hello! I'm Alan Holding, an AI enthusiast, aspiring web developer, and freelance creator currently studying Computing. I specialize in turning creative ideas into reality by leveraging AI and modern web development tools. Whether you're looking for a custom website, AI-powered solutions, or innovative projects, I’m here to help bring your vision to life. I’m open to freelance opportunities, collaborations, and meaningful connections.</p>
+            <p>Hello! I'm Alan Holding, a Digital Marketing Consultant, Copywriter, and AI enthusiast specializing in web development solutions. I transform creative ideas into reality by leveraging AI tools and modern digital marketing strategies. Whether you need a custom website, compelling copy, AI-powered solutions, or innovative digital marketing campaigns, I'm here to help bring your vision to life. I'm open to freelance opportunities, collaborations, and meaningful connections.</p>
         </header>
         <!-- Tab Navigation -->
         <div class="tabs">
@@ -128,8 +136,20 @@
         <!-- About Me Section -->
         <section id="about" class="tab-content active">
             <h2>About Me</h2>
-            <p>I am currently learning how to build websites using AI tools and exploring the vast potential of artificial intelligence. My goal is to combine my enthusiasm for AI with web development to create innovative solutions. I’m always eager to learn new things and collaborate with like-minded individuals or businesses.</p>
-            <p>If you're interested in discussing potential projects, partnerships, or just want to connect, feel free to reach out!</p>
+            <p>As a Digital Marketing Consultant and Copywriter, I help businesses build their online presence through effective content strategies and web solutions. I specialize in creating websites using AI tools while exploring the vast potential of artificial intelligence to enhance digital marketing efforts. My copywriting focuses on creating compelling content that converts visitors into customers and engages audiences across various platforms.</p>
+            
+            <div class="work-model">
+                <h3>My Working Model</h3>
+                <p>As a professional looking to build strong client relationships and demonstrate my capabilities, I offer a results-based working model:</p>
+                <ul>
+                    <li>I'm willing to work on initial projects for free to demonstrate my capabilities</li>
+                    <li>For successful projects that generate revenue or significant value, I only ask for a reasonable commission based on results</li>
+                    <li>This model ensures you get quality work with minimal risk, while allowing me to build my portfolio with real-world projects</li>
+                </ul>
+                <p>This approach creates a win-win partnership where both parties are invested in the project's success!</p>
+            </div>
+            
+            <p>I'm always eager to learn new things and collaborate with like-minded individuals or businesses. If you're interested in discussing potential projects, partnerships, or just want to connect, feel free to reach out!</p>
         </section>
         <!-- Projects Section -->
         <section id="projects" class="tab-content">
@@ -137,8 +157,20 @@
             <ul>
                 <li><strong>AI-Powered Website:</strong> A project where I used AI to generate content and design elements for a website.</li>
                 <li><strong>Personal Portfolio:</strong> This very website! Built to showcase my skills and interests.</li>
-                <li><strong>Learning AI Tools:</strong> Exploring various AI platforms to enhance productivity and creativity.</li>
+                <li><strong>Digital Marketing Campaigns:</strong> Creating and implementing comprehensive marketing strategies for small businesses.</li>
+                <li><strong>Copywriting Projects:</strong> Creating engaging and persuasive copy for various applications including websites, email campaigns, and social media.</li>
             </ul>
+            
+            <div class="work-model">
+                <h3>Project Collaboration</h3>
+                <p>Interested in working together? Here's how my collaboration model works:</p>
+                <ul>
+                    <li>I'll work on your initial project at no upfront cost</li>
+                    <li>If the project succeeds (generates traffic, leads, sales, etc.), we can discuss a fair commission structure</li>
+                    <li>This ensures I'm motivated to deliver high-quality work that actually drives results</li>
+                </ul>
+                <p>Contact me to discuss how we can collaborate on your next project!</p>
+            </div>
         </section>
         <!-- Contact Section -->
         <section id="contact" class="tab-content">
@@ -152,4 +184,32 @@
             <ul class="donation-methods">
                 <li>
                     <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal Logo">
-                    <a href="https://paypal.me/AlanStuart11?country.x=GB&locale.x=en_GB" target="_blank
+                    <a href="https://paypal.me/AlanStuart11?country.x=GB&locale.x=en_GB" target="_blank">Donate via PayPal</a>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            // Hide all tab content
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Remove active class from all tabs
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show the selected tab content
+            document.getElementById(tabId).classList.add('active');
+            
+            // Add active class to clicked tab
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
