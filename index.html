@@ -1,152 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alan Holding | Copywriting y Automatización</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f0f0f0;
-        }
-        .container {
-            background-color: white;
-            border-radius: 8px;
-            padding: 30px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-        }
-        .section {
-            margin-bottom: 30px;
-        }
-        .profile-image {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            object-fit: cover;
-        }
-        .tabs {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-        .tab {
-            padding: 10px 15px;
-            background-color: #ecf0f1;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .tab:hover {
-            background-color: #3498db;
-            color: white;
-        }
-        .tab.active {
-            background-color: #3498db;
-            color: white;
-        }
-        .tab-content {
-            display: none;
-        }
-        .tab-content.active {
-            display: block;
-        }
-        .cta-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #3498db;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .cta-button:hover {
-            background-color: #2980b9;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alan Holding | Copywriting y Automatización</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <!-- Particles.js -->
+  <script src="particles.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      height: 100%;
+      overflow-x: hidden;
+    }
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    header {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .profile-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+    h1, h2, h3 {
+      color: #ffffff;
+    }
+    p, li {
+      color: #ecf0f1;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .tab {
+      background: rgba(255,255,255,0.2);
+      padding: 10px 20px;
+      margin: 0 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .tab:hover, .tab.active {
+      background: #ffffff;
+      color: #0072ff;
+    }
+    .tab-content {
+      display: none;
+      margin-top: 30px;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .cta-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #ffffff;
+      color: #0072ff;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .cta-button:hover {
+      background-color: #ecf0f1;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <img src="images/IMG_2748 (1).png" alt="Profile Picture" class="profile-image">
-            <h1>Crafting Words That Command Attention and Drive Action.</h1>
-            <p>I'm Alan Holding — The guy brands call when they’re serious about standing out.<br>
-            Digital Marketing Consultant. Copywriter. AI Architect.<br>
-            I don’t just 'build websites' or 'write copy.' I craft digital machines that attract, persuade, and sell — while you sleep.<br>
-            Armed with bleeding-edge AI tools and real-world marketing firepower, I help brands (and people) turn bold ideas into living, breathing online empires.<br>
-            Need a website that actually converts? Words that make people stop scrolling and start buying? AI-powered systems that make business effortless?<br>
-            Good. Because that’s exactly what I do.<br>
-            Let's build something that matters.<br>
-            I’m open to freelance gigs, strategic collabs, and big ideas that scare the small thinkers.</p>
-            <a href="#contact" class="cta-button">Let’s Talk Copy</a>
-        </header>
+<div id="particles-js"></div>
+<div class="container">
+<header>
+  <img src="images/IMG_2748 (1).png" alt="Profile Picture" class="profile-image">
+  <h1>Crafting Words That Command Attention and Drive Action.</h1>
+  <p>I'm Alan Holding — The guy brands call when they’re serious about standing out.<br>
+     Digital Marketing Consultant. Copywriter. AI Architect.<br>
+     I don’t just 'build websites' or 'write copy.' I craft digital machines that attract, persuade, and sell — while you sleep.<br>
+     Armed with bleeding-edge AI tools and real-world marketing firepower, I help brands (and people) turn bold ideas into living, breathing online empires.<br>
+     Need a website that actually converts? Words that make people stop scrolling and start buying? AI-powered systems that make business effortless?<br>
+     Good. Because that’s exactly what I do.<br>
+     Let's build something that matters.<br>
+     I’m open to freelance gigs, strategic collabs, and big ideas that scare the small thinkers.</p>
 
-        <div class="tabs">
-            <div class="tab active" onclick="showTab(event, 'about')">About Me</div>
-            <div class="tab" onclick="showTab(event, 'projects')">Projects</div>
-            <div class="tab" onclick="showTab(event, 'contact')">Contact</div>
-        </div>
+  <a href="#contact" class="cta-button">Let’s Talk Copy</a>
+</header>
 
-        <section id="about" class="tab-content active">
-            <h2>About Me</h2>
-            <p>As a Digital Marketing Consultant and Copywriter, I help businesses grow their online presence through smart content strategies and innovative web solutions.<br>
-            I'm a student of digital marketing, AI, and copywriting — constantly sharpening my skills under the guidance of some of the best mentors and tools in the industry.<br>
-            Every project I take on is an opportunity to prove that action beats theory, and results matter more than titles.<br>
-            Using advanced AI tools, I specialize in building websites and crafting compelling copy that doesn't just attract attention — it turns visitors into customers and builds real engagement across platforms.</p>
+<div class="tabs">
+  <div class="tab active" onclick="showTab(event, 'about')">About Me</div>
+  <div class="tab" onclick="showTab(event, 'projects')">Projects</div>
+  <div class="tab" onclick="showTab(event, 'contact')">Contact</div>
+</div>
+<div id="about" class="tab-content active">
+  <h2>About Me</h2>
+  <p>As a Digital Marketing Consultant and Copywriter, I help businesses grow their online presence through smart content strategies and innovative web solutions.<br>
+  I'm a student of digital marketing, AI, and copywriting — constantly sharpening my skills under the guidance of some of the best mentors and tools in the industry.<br>
+  Every project I take on is an opportunity to prove that action beats theory, and results matter more than titles.<br>
+  Using advanced AI tools, I specialize in building websites and crafting compelling copy that doesn't just attract attention — it turns visitors into customers and builds real engagement across platforms.</p>
 
-            <h3>My Working Model</h3>
-            <p>Because I’m still early in my professional journey, I operate with a results-based model that favors smart risk-taking and real partnership:</p>
-            <ul>
-                <li>I’m willing to take on initial projects for free to prove my skills where it matters most — in real-world execution.</li>
-                <li>If the project succeeds and generates revenue or measurable value, I ask only for a reasonable commission based on results.</li>
-            </ul>
-            <p>You get quality work with minimal risk.<br>
-            I get to build a portfolio backed by real wins.<br>
-            This creates a true win-win: Both sides are invested. Both sides grow. Both sides win.</p>
+  <h3>My Working Model</h3>
+  <p>Because I’m still early in my professional journey, I operate with a results-based model that favors smart risk-taking and real partnership:</p>
+  <ul>
+    <li>✅ I’m willing to take on initial projects for free to prove my skills where it matters most — in real-world execution.</li>
+    <li>✅ If the project succeeds and generates revenue or measurable value, I ask only for a reasonable commission based on results.</li>
+  </ul>
+  <p>You get quality work with minimal risk.<br>
+  I get to build a portfolio backed by real wins.<br>
+  This creates a true win-win: Both sides are invested. Both sides grow. Both sides win.</p>
 
-            <p>Let’s Connect: I’m always hungry to learn, build, and collaborate with people who believe in taking action.<br>
-            If you’re interested in launching a project, partnering up, or even just brainstorming big ideas, let’s talk.<br>
-            Reach out — let’s build something worth talking about.</p>
-        </section>
+  <p>Let’s Connect: I’m always hungry to learn, build, and collaborate with people who believe in taking action.<br>
+  If you’re interested in launching a project, partnering up, or even just brainstorming big ideas, let’s talk.<br>
+  Reach out — let’s build something worth talking about.</p>
+</div>
 
-        <section id="projects" class="tab-content">
-            <h2>Projects</h2>
-            <p>Coming soon: A showcase of my latest projects and collaborations!</p>
-        </section>
+<div id="projects" class="tab-content">
+  <h2>Example Project: AlanHolding.co.uk</h2>
+  <h3>Full Website Build — Concept to Completion</h3>
+  <p>This very website was designed, written, and developed entirely by me — from the ground up. I created everything you see here:</p>
+  <ul>
+    <li>✅ Website structure</li>
+    <li>✅ Copywriting</li>
+    <li>✅ Branding tone</li>
+    <li>✅ Visual design</li>
+    <li>✅ User experience</li>
+    <li>✅ SEO optimization</li>
+  </ul>
+  <p><strong>AlanHolding.co.uk is proof of what I deliver: clarity, persuasion, and functionality — all built to move people and grow brands.</strong></p>
+</div>
 
-        <section id="contact" class="tab-content">
-            <h2>Are you ready to turn attention into action?</h2>
-            <p>I'm Alan Holding, a Copywriter specialized in crafting persuasive messages that move people — and grow businesses.<br>
-            Whether you need website copy, sales pages, ads, or emails, I write words that aren’t just pretty... they’re profitable.<br>
-            Let's build communication that captures attention and drives real results.</p>
-            <p>👉 <strong>Contact me today and let's make your brand unforgettable.</strong></p>
-            <a href="mailto:alan.s.holding@gmail.com" class="cta-button">Let’s Talk Copy</a>
-        </section>
-    </div>
+<div id="contact" class="tab-content">
+  <h2>Are you ready to turn attention into action?</h2>
+  <p>I'm Alan Holding, a Copywriter specialized in crafting persuasive messages that move people — and grow businesses.<br>
+  Whether you need website copy, sales pages, ads, or emails, I write words that aren’t just pretty... they’re profitable.<br>
+  Let's build communication that captures attention and drives real results.</p>
+  <p>👉 <strong>Contact me today and let's make your brand unforgettable.</strong></p>
+  <a href="mailto:alan.s.holding@gmail.com" class="cta-button">Let’s Talk Copy</a>
+</div>
 
-    <script>
-        function showTab(event, tabId) {
-            const tabContents = document.querySelectorAll('.tab-content');
-            tabContents.forEach(content => content.classList.remove('active'));
+<script>
+function showTab(event, tabId) {
+  const tabContents = document.querySelectorAll('.tab-content');
+  tabContents.forEach(content => content.classList.remove('active'));
 
-            const tabs = document.querySelectorAll('.tab');
-            tabs.forEach(tab => tab.classList.remove('active'));
+  const tabs = document.querySelectorAll('.tab');
+  tabs.forEach(tab => tab.classList.remove('active'));
 
-            document.getElementById(tabId).classList.add('active');
-            event.currentTarget.classList.add('active');
-        }
-    </script>
+  document.getElementById(tabId).classList.add('active');
+  event.currentTarget.classList.add('active');
+}
+
+// Initialize Particles.js
+particlesJS.load('particles-js', 'particles-config.json', function() {
+  console.log('particles.js config loaded');
+});
+</script>
+</div> <!-- End Container -->
 </body>
 </html>
