@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Portfolio</title>
+    <title>Alan Holding | Copywriting y Automatización</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -29,13 +29,12 @@
             margin-bottom: 30px;
         }
         .profile-image {
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             margin-bottom: 20px;
             object-fit: cover;
         }
-        /* Tab Navigation Styles */
         .tabs {
             display: flex;
             gap: 10px;
@@ -56,193 +55,97 @@
             background-color: #3498db;
             color: white;
         }
-        /* Hidden Sections */
         .tab-content {
             display: none;
         }
         .tab-content.active {
             display: block;
         }
-        /* Donation Section Styles */
-        .donation-methods {
-            list-style-type: none;
-            padding: 0;
-        }
-        .donation-methods li {
-            display: flex;
-            align-items: center;
-            background-color: #ecf0f1;
-            margin: 10px 0;
-            padding: 15px;
-            border-radius: 5px;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-        .donation-methods li:hover {
-            background-color: #3498db;
-            color: white;
-            transform: scale(1.05);
-        }
-        .donation-methods li img {
-            width: 24px;
-            height: 24px;
-            margin-right: 10px;
-        }
-        /* Added styles for crypto details */
-        .crypto-details {
-            display: none;
-            margin-top: 10px;
-            padding: 10px;
-            background-color: rgba(52, 152, 219, 0.1);
-            border-radius: 5px;
-        }
-        .crypto-link {
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-        }
-        form {
+        .cta-button {
+            display: inline-block;
             margin-top: 20px;
-        }
-        form input, form textarea, form button {
-            display: block;
-            width: 100%;
-            margin: 10px 0;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        form button {
+            padding: 10px 20px;
             background-color: #3498db;
             color: white;
             border: none;
-            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
         }
-        form button:hover {
+        .cta-button:hover {
             background-color: #2980b9;
-        }
-        /* Added style for work model highlight */
-        .work-model {
-            background-color: #e8f4fc;
-            border-left: 4px solid #3498db;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 0 5px 5px 0;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Header Section -->
         <header>
-            <!-- Updated Image Code -->
             <img src="images/IMG_2748 (1).png" alt="Profile Picture" class="profile-image">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Hello! I'm Alan Holding, a Digital Marketing Consultant, Copywriter, and AI enthusiast specializing in web development solutions. I transform creative ideas into reality by leveraging AI tools and modern digital marketing strategies. Whether you need a custom website, compelling copy, AI-powered solutions, or innovative digital marketing campaigns, I'm here to help bring your vision to life. I'm open to freelance opportunities, collaborations, and meaningful connections.</p>
+            <h1>Crafting Words That Command Attention and Drive Action.</h1>
+            <p>I'm Alan Holding — The guy brands call when they’re serious about standing out.<br>
+            Digital Marketing Consultant. Copywriter. AI Architect.<br>
+            I don’t just 'build websites' or 'write copy.' I craft digital machines that attract, persuade, and sell — while you sleep.<br>
+            Armed with bleeding-edge AI tools and real-world marketing firepower, I help brands (and people) turn bold ideas into living, breathing online empires.<br>
+            Need a website that actually converts? Words that make people stop scrolling and start buying? AI-powered systems that make business effortless?<br>
+            Good. Because that’s exactly what I do.<br>
+            Let's build something that matters.<br>
+            I’m open to freelance gigs, strategic collabs, and big ideas that scare the small thinkers.</p>
+            <a href="#contact" class="cta-button">Let’s Talk Copy</a>
         </header>
-        <!-- Tab Navigation -->
+
         <div class="tabs">
-            <div class="tab active" onclick="showTab('about')">About Me</div>
-            <div class="tab" onclick="showTab('projects')">Projects</div>
-            <div class="tab" onclick="showTab('contact')">Contact</div>
-            <div class="tab" onclick="showTab('donate')">Commissions</div>
+            <div class="tab active" onclick="showTab(event, 'about')">About Me</div>
+            <div class="tab" onclick="showTab(event, 'projects')">Projects</div>
+            <div class="tab" onclick="showTab(event, 'contact')">Contact</div>
         </div>
-        <!-- About Me Section -->
+
         <section id="about" class="tab-content active">
             <h2>About Me</h2>
-            <p>As a Digital Marketing Consultant and Copywriter, I help businesses build their online presence through effective content strategies and web solutions. I specialize in creating websites using AI tools while exploring the vast potential of artificial intelligence to enhance digital marketing efforts. My copywriting focuses on creating compelling content that converts visitors into customers and engages audiences across various platforms.</p>
-            
-            <div class="work-model">
-                <h3>My Working Model</h3>
-                <p>As a professional looking to build strong client relationships and demonstrate my capabilities, I offer a results-based working model:</p>
-                <ul>
-                    <li>I'm willing to work on initial projects for free to demonstrate my capabilities</li>
-                    <li>For successful projects that generate revenue or significant value, I only ask for a reasonable commission based on results</li>
-                    <li>This model ensures you get quality work with minimal risk, while allowing me to build my portfolio with real-world projects</li>
-                </ul>
-                <p>This approach creates a win-win partnership where both parties are invested in the project's success!</p>
-            </div>
-            
-            <p>I'm always eager to learn new things and collaborate with like-minded individuals or businesses. If you're interested in discussing potential projects, partnerships, or just want to connect, feel free to reach out!</p>
-        </section>
-        <!-- Projects Section -->
-        <section id="projects" class="tab-content">
-            <h2>My Projects</h2>
+            <p>As a Digital Marketing Consultant and Copywriter, I help businesses grow their online presence through smart content strategies and innovative web solutions.<br>
+            I'm a student of digital marketing, AI, and copywriting — constantly sharpening my skills under the guidance of some of the best mentors and tools in the industry.<br>
+            Every project I take on is an opportunity to prove that action beats theory, and results matter more than titles.<br>
+            Using advanced AI tools, I specialize in building websites and crafting compelling copy that doesn't just attract attention — it turns visitors into customers and builds real engagement across platforms.</p>
+
+            <h3>My Working Model</h3>
+            <p>Because I’m still early in my professional journey, I operate with a results-based model that favors smart risk-taking and real partnership:</p>
             <ul>
-                <li><strong>AI-Powered Website:</strong> A project where I used AI to generate content and design elements for a website.</li>
-                <li><strong>Personal Portfolio:</strong> This very website! Built to showcase my skills and interests.</li>
-                <li><strong>Digital Marketing Campaigns:</strong> Creating and implementing comprehensive marketing strategies for small businesses.</li>
-                <li><strong>Copywriting Projects:</strong> Creating engaging and persuasive copy for various applications including websites, email campaigns, and social media.</li>
+                <li>I’m willing to take on initial projects for free to prove my skills where it matters most — in real-world execution.</li>
+                <li>If the project succeeds and generates revenue or measurable value, I ask only for a reasonable commission based on results.</li>
             </ul>
-            
-            <div class="work-model">
-                <h3>Project Collaboration</h3>
-                <p>Interested in working together? Here's how my collaboration model works:</p>
-                <ul>
-                    <li>I'll work on your initial project at no upfront cost</li>
-                    <li>If the project succeeds (generates traffic, leads, sales, etc.), we can discuss a fair commission structure</li>
-                    <li>This ensures I'm motivated to deliver high-quality work that actually drives results</li>
-                </ul>
-                <p>Contact me to discuss how we can collaborate on your next project!</p>
-            </div>
+            <p>You get quality work with minimal risk.<br>
+            I get to build a portfolio backed by real wins.<br>
+            This creates a true win-win: Both sides are invested. Both sides grow. Both sides win.</p>
+
+            <p>Let’s Connect: I’m always hungry to learn, build, and collaborate with people who believe in taking action.<br>
+            If you’re interested in launching a project, partnering up, or even just brainstorming big ideas, let’s talk.<br>
+            Reach out — let’s build something worth talking about.</p>
         </section>
-        <!-- Contact Section -->
+
+        <section id="projects" class="tab-content">
+            <h2>Projects</h2>
+            <p>Coming soon: A showcase of my latest projects and collaborations!</p>
+        </section>
+
         <section id="contact" class="tab-content">
-            <h2>Contact Me</h2>
-            <p>You can reach me via email at <a href="mailto:alan.s.holding@gmail.com">alan.s.holding@gmail.com</a>. Whether it's for business opportunities, collaborations, or just to say hello, I'd love to hear from you!</p>
-        </section>
-        <!-- Donate Section (renamed to Commissions) -->
-        <section id="donate" class="tab-content">
-            <h2>Support My Journey</h2>
-            <p>If you find my work inspiring or valuable, consider supporting me through a commission. Your support helps me continue learning and creating content.</p>
-            <ul class="donation-methods">
-                <li>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal Logo">
-                    <a href="https://paypal.me/AlanStuart11?country.x=GB&locale.x=en_GB" target="_blank">Commission via PayPal</a>
-                </li>
-                <li>
-                    <div class="crypto-container">
-                        <div class="crypto-link" onclick="toggleCryptoDetails()">
-                            <img src="https://cryptologos.cc/logos/xrp-xrp-logo.svg" alt="XRP Logo">
-                            <span>Commission via Cryptocurrency</span>
-                        </div>
-                        <div id="crypto-details" class="crypto-details">
-                            <p><strong>XRP Address:</strong> rNxp4h8apvRis6mJf9Sh8C6iRxfrDWN7AV</p>
-                            <p><strong>Memo:</strong> 310176204</p>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+            <h2>Are you ready to turn attention into action?</h2>
+            <p>I'm Alan Holding, a Copywriter specialized in crafting persuasive messages that move people — and grow businesses.<br>
+            Whether you need website copy, sales pages, ads, or emails, I write words that aren’t just pretty... they’re profitable.<br>
+            Let's build communication that captures attention and drives real results.</p>
+            <p>👉 <strong>Contact me today and let's make your brand unforgettable.</strong></p>
+            <a href="mailto:alan.s.holding@gmail.com" class="cta-button">Let’s Talk Copy</a>
         </section>
     </div>
 
     <script>
-        function showTab(tabId) {
-            // Hide all tab content
+        function showTab(event, tabId) {
             const tabContents = document.querySelectorAll('.tab-content');
-            tabContents.forEach(content => {
-                content.classList.remove('active');
-            });
-            
-            // Remove active class from all tabs
+            tabContents.forEach(content => content.classList.remove('active'));
+
             const tabs = document.querySelectorAll('.tab');
-            tabs.forEach(tab => {
-                tab.classList.remove('active');
-            });
-            
-            // Show the selected tab content
+            tabs.forEach(tab => tab.classList.remove('active'));
+
             document.getElementById(tabId).classList.add('active');
-            
-            // Add active class to clicked tab
             event.currentTarget.classList.add('active');
-        }
-        
-        function toggleCryptoDetails() {
-            const cryptoDetails = document.getElementById('crypto-details');
-            if (cryptoDetails.style.display === 'block') {
-                cryptoDetails.style.display = 'none';
-            } else {
-                cryptoDetails.style.display = 'block';
-            }
         }
     </script>
 </body>
