@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alan Holding, Copywriting y Automatización</title>
+  <title>Alan Holding | Copywriting and Automation</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -76,7 +76,7 @@
       <h1><span id="typed"></span></h1>
       <p>I’m Alan Holding, the guy brands call when they’re serious about standing out, an AI enthusiast and copywriter.<br>
          I create online systems that attract attention, build trust, and help you make sales around the clock, without needing to chase people down.</p>
-      <a href="#contact" class="cta-button" data-aos="zoom-in" onclick="showTab(event,'contact')">Let’s Talk Copy</a>
+      <a href="#contact" class="cta-button" data-aos="zoom-in">Let’s Talk Copy</a>
     </header>
     <div class="tabs" data-aos="fade-up">
       <div class="tab active" onclick="showTab(event,'about')">About Me</div>
@@ -93,7 +93,7 @@
     </div>
     <div id="projects" class="tab-content" data-aos="fade-left">
       <h2>Example Project: AlanHolding.co.uk</h2>
-      <h3>Full Website Build, Concept to Completion <span id="projectsCount"></span></h3>
+      <h3">Full Website Build, Concept to Completion <span id="projectsCount"></span></h3>
       <p>This website was designed and developed entirely by me:</p>
       <ul>
         <li>✅ Website structure</li>
@@ -128,6 +128,7 @@
       document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
       document.getElementById(tabId).classList.add('active');
       event.currentTarget.classList.add('active');
+      document.getElementById(tabId).scrollIntoView({behavior:'smooth'});
     }
     particlesJS.load('particles-js','particles-config.json');
     document.addEventListener('DOMContentLoaded',()=>{
