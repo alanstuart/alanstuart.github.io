@@ -17,10 +17,13 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <!-- CountUp.js -->
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.umd.js"></script>
+  <!-- Rellax.js for Parallax -->
+  <script src="https://cdn.jsdelivr.net/npm/rellax@1.12.1/rellax.min.js"></script>
 
   <style>
-    body { margin:0; font-family:Arial,sans-serif; color:#fff; background:linear-gradient(to right,#00c6ff,#0072ff); height:100%; overflow-x:hidden;}    
-    #particles-js {position:fixed;width:100%;height:100%;top:0;left:0;z-index:-1;}
+    body { margin:0; font-family:Arial,sans-serif; color:#fff; background:linear-gradient(to right,#00c6ff,#0072ff); height:100%; overflow-x:hidden; overflow-y:auto;}    
+    #particles-js {position:fixed;width:100%;height:100%;top:0;left:0;z-index:-2;}
+    .parallax-bg {position:fixed;top:0;left:0;width:100%;height:100%;background:url('futuristic-texture.jpg') center/cover no-repeat;opacity:0.25;z-index:-3;}
     .container {max-width:800px;margin:0 auto;padding:20px;position:relative;z-index:1;}
     header {text-align:center;margin-top:50px;}
     .profile-image {width:220px;height:220px;border-radius:50%;object-fit:cover;object-position:center;display:block;margin:30px auto 20px;box-shadow:0 4px 15px rgba(0,0,0,0.25);}
@@ -28,6 +31,7 @@
   </style>
 </head>
 <body>
+  <div class="parallax-bg" data-rellax-speed="-2"></div>
   <div id="particles-js"></div>
   <div class="container">
     <header data-aos="fade-down">
@@ -57,12 +61,12 @@
         <li>✅ Free trials on initial projects to prove my skills.</li>
         <li>✅ Commission only on successful revenue-generating results.</li>
       </ul>
-      <p>Win-win: minimal risk for you, real portfolio wins for me.</p>
+      <p>Win-win, minimal risk for you, real portfolio wins for me.</p>
     </div>
 
     <div id="projects" class="tab-content" data-aos="fade-left">
       <h2>Example Project: AlanHolding.co.uk</h2>
-      <h3>Full Website Build, Concept to Completion<span id="projectsCount"></span></h3>
+      <h3>Full Website Build, Concept to Completion <span id="projectsCount"></span></h3>
       <p>This website was designed and developed entirely by me:</p>
       <ul>
         <li>✅ Website structure</li>
@@ -92,6 +96,7 @@
       document.querySelectorAll('.tab,.cta-button').forEach(el=>el.addEventListener('click',function(e){const d=Math.max(el.clientWidth,el.clientHeight),r=d/2,rect=el.getBoundingClientRect(),circle=document.createElement('span');circle.style.width=circle.style.height=`${d}px`;circle.style.left=`${e.clientX-rect.left-r}px`;circle.style.top=`${e.clientY-rect.top-r}px`;circle.classList.add('ripple');const rp=el.getElementsByClassName('ripple')[0];if(rp)rp.remove();el.appendChild(circle);}));
       AOS.init({duration:800});
       const countUp=new countUp.CountUp('projectsCount',6,{suffix:' Features'});if(!countUp.error){countUp.start();}
+      new Rellax('.parallax-bg');
     });
   </script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
