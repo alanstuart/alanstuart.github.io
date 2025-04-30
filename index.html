@@ -46,10 +46,11 @@
     header {text-align:center;margin-top:50px;position:relative;}
     .mode-toggle {position:absolute;top:20px;right:20px;background:#fff;color:#0072ff;border:none;border-radius:50%;width:40px;height:40px;cursor:pointer;box-shadow:0 2px 5px rgba(0,0,0,0.2);}
     .profile-image {width:220px;height:220px;border-radius:50%;object-fit:cover;object-position:center;display:block;margin:30px auto;box-shadow:0 4px 15px rgba(0,0,0,0.25);}
-    h1,h2,h3 {color:inherit;} p,li {color:inherit;}
+    h1,h2,h3 {color:inherit;} p, li {color:inherit;}
+    ul {list-style: none; padding-left: 0;} /* Quitar bullets default */
     .tabs {display:flex;justify-content:center;margin-top:30px;}
     .tab {position:relative;overflow:hidden;background:rgba(255,255,255,0.2);padding:10px 20px;margin:0 5px;border-radius:5px;cursor:pointer;transition:transform .2s,background .3s;color:inherit;}
-    .tab:hover,.tab.active {background:#fff;color:#0072ff;transform:scale(1.05);}
+    .tab:hover, .tab.active {background:#fff;color:#0072ff;transform:scale(1.05);}
     .tab-content {display:none;margin-top:30px;}
     .tab-content.active {display:block;}
     .cta-button {position:relative;overflow:hidden;display:inline-block;margin-top:20px;padding:10px 20px;background:#fff;color:#0072ff;border:none;border-radius:5px;text-decoration:none;font-weight:bold;transition:transform .2s,background .3s;}
@@ -69,7 +70,7 @@
   <button id="backToTop" title="Back to top">↑</button>
   <div class="container">
     <header data-aos="fade-down">
-      <button class="mode-toggle" id="modeToggle" title="Toggle light/dark mode">🌙</button>
+      <button class="mode-toggle" id="modeToggle" title="Toggle light/dark mode">☀️</button>
       <img src="avatar.png" alt="Profile Avatar" class="profile-image" data-tilt data-tilt-max="15" data-tilt-speed="400">
       <h1><span id="typed"></span></h1>
       <p>I'm Alan Holding, the guy brands call when they’re serious about standing out, digital marketing consultant, copywriter, AI architect.<br>
