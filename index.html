@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alan Holding | Copywriting y Automatización</title>
+  <title>Alan Holding, Copywriting y Automatización</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -12,160 +12,58 @@
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <!-- Typed.js CDN -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <!-- AOS CSS & JS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <!-- CountUp.js -->
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.umd.js"></script>
 
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #fff;
-      background: linear-gradient(to right, #00c6ff, #0072ff);
-      height: 100%;
-      overflow-x: hidden;
-    }
-    #particles-js {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: -1;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      position: relative;
-      z-index: 1;
-    }
-    header {
-      text-align: center;
-      margin-top: 50px;
-    }
-    .profile-image {
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: center;
-      display: block;
-      margin: 30px auto 20px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
-    }
-    h1, h2, h3 {
-      color: #ffffff;
-    }
-    p, li {
-      color: #ecf0f1;
-    }
-    .tabs {
-      display: flex;
-      justify-content: center;
-      margin-top: 30px;
-    }
-    .tab {
-      position: relative;
-      overflow: hidden;
-      background: rgba(255,255,255,0.2);
-      padding: 10px 20px;
-      margin: 0 5px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: transform 0.2s ease, background 0.3s;
-    }
-    .tab:hover, .tab.active {
-      background: #ffffff;
-      color: #0072ff;
-      transform: scale(1.05);
-    }
-    .tab-content {
-      display: none;
-      margin-top: 30px;
-    }
-    .tab-content.active {
-      display: block;
-    }
-    .cta-button {
-      position: relative;
-      overflow: hidden;
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #ffffff;
-      color: #0072ff;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: transform 0.2s ease, background 0.3s;
-    }
-    .cta-button:hover {
-      background-color: #ecf0f1;
-      transform: scale(1.05);
-    }
-    .ripple {
-      position: absolute;
-      border-radius: 50%;
-      transform: scale(0);
-      background: rgba(0,0,0,0.1);
-      animation: ripple 600ms linear;
-    }
-    @keyframes ripple {
-      to {
-        transform: scale(4);
-        opacity: 0;
-      }
-    }
+    body { margin:0; font-family:Arial,sans-serif; color:#fff; background:linear-gradient(to right,#00c6ff,#0072ff); height:100%; overflow-x:hidden;}    
+    #particles-js {position:fixed;width:100%;height:100%;top:0;left:0;z-index:-1;}
+    .container {max-width:800px;margin:0 auto;padding:20px;position:relative;z-index:1;}
+    header {text-align:center;margin-top:50px;}
+    .profile-image {width:220px;height:220px;border-radius:50%;object-fit:cover;object-position:center;display:block;margin:30px auto 20px;box-shadow:0 4px 15px rgba(0,0,0,0.25);}
+    h1,h2,h3 {color:#fff;} p,li {color:#ecf0f1;} .tabs {display:flex;justify-content:center;margin-top:30px;} .tab {position:relative;overflow:hidden;background:rgba(255,255,255,0.2);padding:10px 20px;margin:0 5px;border-radius:5px;cursor:pointer;transition:transform .2s ease,background .3s;} .tab:hover,.tab.active {background:#fff;color:#0072ff;transform:scale(1.05);} .tab-content {display:none;margin-top:30px;} .tab-content.active {display:block;} .cta-button {position:relative;overflow:hidden;display:inline-block;margin-top:20px;padding:10px 20px;background:#fff;color:#0072ff;border:none;border-radius:5px;text-decoration:none;font-weight:bold;transition:transform .2s ease,background .3s;} .cta-button:hover {background:#ecf0f1;transform:scale(1.05);} .ripple {position:absolute;border-radius:50%;transform:scale(0);background:rgba(0,0,0,0.1);animation:ripple .6s linear;} @keyframes ripple {to{transform:scale(4);opacity:0;}}
   </style>
 </head>
 <body>
   <div id="particles-js"></div>
   <div class="container">
-    <header>
+    <header data-aos="fade-down">
       <img src="avatar.png" alt="Profile Avatar" class="profile-image">
       <h1><span id="typed"></span></h1>
       <p>I'm Alan Holding, the guy brands call when they’re serious about standing out.<br>
          Digital Marketing Consultant, Copywriter, AI Architect.<br>
-         I don’t just 'build websites' or 'write copy.' I craft digital machines that attract, persuade, and sell while you sleep.<br>
-         Armed with bleeding-edge AI tools and real-world marketing firepower, I help brands (and people) turn bold ideas into living, breathing online empires.<br>
-         Need a website that actually converts? Words that make people stop scrolling and start buying? AI-powered systems that make business effortless?<br>
-         Good, because that’s exactly what I do.<br>
-         Let's build something that matters.<br>
-         I’m open to freelance gigs, strategic collabs, and big ideas that scare the small thinkers.</p>
-      <a href="#contact" class="cta-button">Let’s Talk Copy</a>
+         I don’t just write copy; I craft digital machines that attract, persuade, and sell while you sleep.<br>
+         Armed with bleeding-edge AI tools and marketing firepower, I help brands turn bold ideas into online empires.<br>
+         Need conversions, killer copy, or effortless AI systems? Good, because that’s what I do.</p>
+      <a href="#contact" class="cta-button" data-aos="zoom-in">Let’s Talk Copy</a>
     </header>
 
-    <div class="tabs">
-      <div class="tab active" onclick="showTab(event, 'about')">About Me</div>
-      <div class="tab" onclick="showTab(event, 'projects')">Projects</div>
-      <div class="tab" onclick="showTab(event, 'contact')">Contact</div>
+    <div class="tabs" data-aos="fade-up">
+      <div class="tab active" onclick="showTab(event,'about')">About Me</div>
+      <div class="tab" onclick="showTab(event,'projects')">Projects</div>
+      <div class="tab" onclick="showTab(event,'contact')">Contact</div>
     </div>
 
-    <div id="about" class="tab-content active">
+    <div id="about" class="tab-content active" data-aos="fade-right">
       <h2>About Me</h2>
-      <p>As a Digital Marketing Consultant and Copywriter, I help businesses grow their online presence through smart content strategies and innovative web solutions.<br>
-      I'm a student of digital marketing, AI, and copywriting, constantly sharpening my skills under the guidance of some of the best mentors and tools in the industry.<br>
-      Every project I take on is an opportunity to prove that action beats theory, and results matter more than titles.<br>
-      Using advanced AI tools, I specialize in building websites and crafting compelling copy that doesn't just attract attention, it turns visitors into customers and builds real engagement across platforms.</p>
-
+      <p>As a Digital Marketing Consultant and Copywriter, I help businesses grow online through smart content and web solutions.<br>
+      Constantly learning AI and copywriting under top mentors, I prove action beats theory and results trump titles.</p>
       <h3>My Working Model</h3>
-      <p>Because I’m still early in my professional journey, I operate with a results-based model that favors smart risk-taking and real partnership.</p>
+      <p>I operate with a results-based model:</p>
       <ul>
-        <li>✅ I’m willing to take on initial projects for free to prove my skills where it matters most, in real-world execution.</li>
-        <li>✅ If the project succeeds and generates revenue or measurable value, I ask only for a reasonable commission based on results.</li>
+        <li>✅ Free trials on initial projects to prove my skills.</li>
+        <li>✅ Commission only on successful revenue-generating results.</li>
       </ul>
-      <p>You get quality work with minimal risk.<br>
-      I get to build a portfolio backed by real wins.<br>
-      This creates a true win-win: Both sides are invested, both sides grow, both sides win.</p>
-
-      <p>Let’s Connect. I’m always hungry to learn, build, and collaborate with people who believe in taking action.<br>
-      If you’re interested in launching a project, partnering up, or even just brainstorming big ideas, let’s talk.<br>
-      Reach out, let’s build something worth talking about.</p>
+      <p>Win-win: minimal risk for you, real portfolio wins for me.</p>
     </div>
 
-    <div id="projects" class="tab-content">
+    <div id="projects" class="tab-content" data-aos="fade-left">
       <h2>Example Project: AlanHolding.co.uk</h2>
-      <h3>Full Website Build, Concept to Completion</h3>
-      <p>This very website was designed, written, and developed entirely by me, from the ground up. I created everything you see here:</p>
+      <h3>Full Website Build, Concept to Completion<span id="projectsCount"></span></h3>
+      <p>This website was designed and developed entirely by me:</p>
       <ul>
         <li>✅ Website structure</li>
         <li>✅ Copywriting</li>
@@ -174,63 +72,28 @@
         <li>✅ User experience</li>
         <li>✅ SEO optimization</li>
       </ul>
-      <p><strong>AlanHolding.co.uk is proof of what I deliver: clarity, persuasion, and functionality, all built to move people and grow brands.</strong></p>
+      <p><strong>AlanHolding.co.uk is proof of what I deliver: clarity, persuasion, functionality.</strong></p>
     </div>
 
-    <div id="contact" class="tab-content">
+    <div id="contact" class="tab-content" data-aos="fade-up">
       <h2>Are you ready to turn attention into action?</h2>
-      <p>I'm Alan Holding, a Copywriter specialized in crafting persuasive messages that move people and grow businesses.<br>
-      Whether you need website copy, sales pages, ads, or emails, I write words that aren’t just pretty, they’re profitable.<br>
-      Let's build communication that captures attention and drives real results.</p>
-      <p>👉 <strong>Contact me today and let's make your brand unforgettable.</strong></p>
+      <p>I'm Alan Holding, a Copywriter crafting messages that move people and grow businesses.<br>
+      Need profitable copy, sales pages, or AI-driven marketing? Let’s talk.</p>
       <a href="mailto:alan.s.holding@gmail.com" class="cta-button">Let’s Talk Copy</a>
     </div>
 
-    <script>
-      function showTab(event, tabId) {
-        const tabContents = document.querySelectorAll('.tab-content');
-        tabContents.forEach(content => content.classList.remove('active'));
+  </div>
 
-        const tabs = document.querySelectorAll('.tab');
-        tabs.forEach(tab => tab.classList.remove('active'));
-
-        document.getElementById(tabId).classList.add('active');
-        event.currentTarget.classList.add('active');
-      }
-
-      // Initialize Particles.js
-      particlesJS.load('particles-js', 'particles-config.json', function() {
-        console.log('particles.js config loaded');
-      });
-
-      // Initialize Typed.js
-      document.addEventListener('DOMContentLoaded', () => {
-        new Typed('#typed', {
-          strings: ['Crafting Words That Command Attention and Drive Action.'],
-          typeSpeed: 60,
-          backSpeed: 30,
-          showCursor: true,
-          cursorChar: '|'
-        });
-
-        // Ripple effect
-        document.querySelectorAll('.tab, .cta-button').forEach(el => {
-          el.addEventListener('click', function(e) {
-            const circle = document.createElement('span');
-            const diameter = Math.max(el.clientWidth, el.clientHeight);
-            const radius = diameter / 2;
-            const rect = el.getBoundingClientRect();
-            circle.style.width = circle.style.height = `${diameter}px`;
-            circle.style.left = `${e.clientX - rect.left - radius}px`;
-            circle.style.top = `${e.clientY - rect.top - radius}px`;
-            circle.classList.add('ripple');
-            const ripple = el.getElementsByClassName('ripple')[0];
-            if (ripple) ripple.remove();
-            el.appendChild(circle);
-          });
-        });
-      });
-    </script>
-  </div> <!-- End Container -->
+  <script>
+    function showTab(event,tabId){document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));document.getElementById(tabId).classList.add('active');event.currentTarget.classList.add('active');}
+    particlesJS.load('particles-js','particles-config.json');
+    document.addEventListener('DOMContentLoaded',()=>{
+      new Typed('#typed',{strings:['Crafting Words That Command Attention and Drive Action.'],typeSpeed:60,backSpeed:30,showCursor:true,cursorChar:'|'});
+      document.querySelectorAll('.tab,.cta-button').forEach(el=>el.addEventListener('click',function(e){const d=Math.max(el.clientWidth,el.clientHeight),r=d/2,rect=el.getBoundingClientRect(),circle=document.createElement('span');circle.style.width=circle.style.height=`${d}px`;circle.style.left=`${e.clientX-rect.left-r}px`;circle.style.top=`${e.clientY-rect.top-r}px`;circle.classList.add('ripple');const rp=el.getElementsByClassName('ripple')[0];if(rp)rp.remove();el.appendChild(circle);}));
+      AOS.init({duration:800});
+      const countUp=new countUp.CountUp('projectsCount',6,{suffix:' Features'});if(!countUp.error){countUp.start();}
+    });
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 </body>
 </html>
