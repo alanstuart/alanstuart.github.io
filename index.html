@@ -147,9 +147,22 @@
       window.addEventListener('scroll',()=>{backToTop.style.display=window.scrollY>300?'block':'none';});
       backToTop.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'});});
       const modeToggle=document.getElementById('modeToggle');
-      modeToggle.addEventListener('click',()=>{
-        document.body.classList.toggle('light-mode');
-        modeToggle.textContent=document.body.classList.contains('light-mode')?'🌙':'☀️';
+      modeToggle.addEventListener('click', ()=> {
+        const rootStyles = getComputedStyle(document.documentElement);
+        const lightBg = rootStyles.getPropertyValue('--bg-light').trim();
+        const darkBg = rootStyles.getPropertyValue('--bg-dark').trim();
+        const lightText = rootStyles.getPropertyValue('--text-light').trim();
+        const darkText = rootStyles.getPropertyValue('--text-dark').trim();
+        const isLight = document.body.classList.toggle('light-mode');
+        if (isLight) {
+          document.body.style.background = lightBg;
+          document.body.style.color = lightText;
+          modeToggle.textContent = '🌙';
+        } else {
+          document.body.style.background = darkBg;
+          document.body.style.color = darkText;
+          modeToggle.textContent = '☀️';
+        }
       });
     });
   </script>
