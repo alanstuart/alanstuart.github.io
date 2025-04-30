@@ -10,6 +10,8 @@
 
   <!-- Particles.js CDN -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <!-- Typed.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
   <style>
     body {
@@ -61,16 +63,19 @@
       margin-top: 30px;
     }
     .tab {
+      position: relative;
+      overflow: hidden;
       background: rgba(255,255,255,0.2);
       padding: 10px 20px;
       margin: 0 5px;
       border-radius: 5px;
       cursor: pointer;
-      transition: 0.3s;
+      transition: transform 0.2s ease, background 0.3s;
     }
     .tab:hover, .tab.active {
       background: #ffffff;
       color: #0072ff;
+      transform: scale(1.05);
     }
     .tab-content {
       display: none;
@@ -80,6 +85,8 @@
       display: block;
     }
     .cta-button {
+      position: relative;
+      overflow: hidden;
       display: inline-block;
       margin-top: 20px;
       padding: 10px 20px;
@@ -89,100 +96,141 @@
       border-radius: 5px;
       text-decoration: none;
       font-weight: bold;
-      transition: 0.3s;
+      transition: transform 0.2s ease, background 0.3s;
     }
     .cta-button:hover {
       background-color: #ecf0f1;
+      transform: scale(1.05);
+    }
+    .ripple {
+      position: absolute;
+      border-radius: 50%;
+      transform: scale(0);
+      background: rgba(0,0,0,0.1);
+      animation: ripple 600ms linear;
+    }
+    @keyframes ripple {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
     }
   </style>
 </head>
 <body>
-<div id="particles-js"></div>
-<div class="container">
-  <header>
-    <img src="avatar.png" alt="Profile Avatar" class="profile-image">
-    <h1>Crafting Words That Command Attention and Drive Action.</h1>
-    <p>I'm Alan Holding, the guy brands call when they’re serious about standing out.<br>
-       Digital Marketing Consultant, Copywriter, AI Architect.<br>
-       I don’t just 'build websites' or 'write copy.' I craft digital machines that attract, persuade, and sell while you sleep.<br>
-       Armed with bleeding-edge AI tools and real-world marketing firepower, I help brands (and people) turn bold ideas into living, breathing online empires.<br>
-       Need a website that actually converts? Words that make people stop scrolling and start buying? AI-powered systems that make business effortless?<br>
-       Good, because that’s exactly what I do.<br>
-       Let's build something that matters.<br>
-       I’m open to freelance gigs, strategic collabs, and big ideas that scare the small thinkers.</p>
+  <div id="particles-js"></div>
+  <div class="container">
+    <header>
+      <img src="avatar.png" alt="Profile Avatar" class="profile-image">
+      <h1><span id="typed"></span></h1>
+      <p>I'm Alan Holding, the guy brands call when they’re serious about standing out.<br>
+         Digital Marketing Consultant, Copywriter, AI Architect.<br>
+         I don’t just 'build websites' or 'write copy.' I craft digital machines that attract, persuade, and sell while you sleep.<br>
+         Armed with bleeding-edge AI tools and real-world marketing firepower, I help brands (and people) turn bold ideas into living, breathing online empires.<br>
+         Need a website that actually converts? Words that make people stop scrolling and start buying? AI-powered systems that make business effortless?<br>
+         Good, because that’s exactly what I do.<br>
+         Let's build something that matters.<br>
+         I’m open to freelance gigs, strategic collabs, and big ideas that scare the small thinkers.</p>
+      <a href="#contact" class="cta-button">Let’s Talk Copy</a>
+    </header>
 
-    <a href="#contact" class="cta-button">Let’s Talk Copy</a>
-  </header>
+    <div class="tabs">
+      <div class="tab active" onclick="showTab(event, 'about')">About Me</div>
+      <div class="tab" onclick="showTab(event, 'projects')">Projects</div>
+      <div class="tab" onclick="showTab(event, 'contact')">Contact</div>
+    </div>
 
-  <div class="tabs">
-    <div class="tab active" onclick="showTab(event, 'about')">About Me</div>
-    <div class="tab" onclick="showTab(event, 'projects')">Projects</div>
-    <div class="tab" onclick="showTab(event, 'contact')">Contact</div>
-  </div>
+    <div id="about" class="tab-content active">
+      <h2>About Me</h2>
+      <p>As a Digital Marketing Consultant and Copywriter, I help businesses grow their online presence through smart content strategies and innovative web solutions.<br>
+      I'm a student of digital marketing, AI, and copywriting, constantly sharpening my skills under the guidance of some of the best mentors and tools in the industry.<br>
+      Every project I take on is an opportunity to prove that action beats theory, and results matter more than titles.<br>
+      Using advanced AI tools, I specialize in building websites and crafting compelling copy that doesn't just attract attention, it turns visitors into customers and builds real engagement across platforms.</p>
 
-  <div id="about" class="tab-content active">
-    <h2>About Me</h2>
-    <p>As a Digital Marketing Consultant and Copywriter, I help businesses grow their online presence through smart content strategies and innovative web solutions.<br>
-    I'm a student of digital marketing, AI, and copywriting, constantly sharpening my skills under the guidance of some of the best mentors and tools in the industry.<br>
-    Every project I take on is an opportunity to prove that action beats theory, and results matter more than titles.<br>
-    Using advanced AI tools, I specialize in building websites and crafting compelling copy that doesn't just attract attention, it turns visitors into customers and builds real engagement across platforms.</p>
+      <h3>My Working Model</h3>
+      <p>Because I’m still early in my professional journey, I operate with a results-based model that favors smart risk-taking and real partnership.</p>
+      <ul>
+        <li>✅ I’m willing to take on initial projects for free to prove my skills where it matters most, in real-world execution.</li>
+        <li>✅ If the project succeeds and generates revenue or measurable value, I ask only for a reasonable commission based on results.</li>
+      </ul>
+      <p>You get quality work with minimal risk.<br>
+      I get to build a portfolio backed by real wins.<br>
+      This creates a true win-win: Both sides are invested, both sides grow, both sides win.</p>
 
-    <h3>My Working Model</h3>
-    <p>Because I’m still early in my professional journey, I operate with a results-based model that favors smart risk-taking and real partnership.</p>
-    <ul>
-      <li>✅ I’m willing to take on initial projects for free to prove my skills where it matters most, in real-world execution.</li>
-      <li>✅ If the project succeeds and generates revenue or measurable value, I ask only for a reasonable commission based on results.</li>
-    </ul>
-    <p>You get quality work with minimal risk.<br>
-    I get to build a portfolio backed by real wins.<br>
-    This creates a true win-win: Both sides are invested, both sides grow, both sides win.</p>
+      <p>Let’s Connect. I’m always hungry to learn, build, and collaborate with people who believe in taking action.<br>
+      If you’re interested in launching a project, partnering up, or even just brainstorming big ideas, let’s talk.<br>
+      Reach out, let’s build something worth talking about.</p>
+    </div>
 
-    <p>Let’s Connect. I’m always hungry to learn, build, and collaborate with people who believe in taking action.<br>
-    If you’re interested in launching a project, partnering up, or even just brainstorming big ideas, let’s talk.<br>
-    Reach out, let’s build something worth talking about.</p>
-  </div>
+    <div id="projects" class="tab-content">
+      <h2>Example Project: AlanHolding.co.uk</h2>
+      <h3>Full Website Build, Concept to Completion</h3>
+      <p>This very website was designed, written, and developed entirely by me, from the ground up. I created everything you see here:</p>
+      <ul>
+        <li>✅ Website structure</li>
+        <li>✅ Copywriting</li>
+        <li>✅ Branding tone</li>
+        <li>✅ Visual design</li>
+        <li>✅ User experience</li>
+        <li>✅ SEO optimization</li>
+      </ul>
+      <p><strong>AlanHolding.co.uk is proof of what I deliver: clarity, persuasion, and functionality, all built to move people and grow brands.</strong></p>
+    </div>
 
-  <div id="projects" class="tab-content">
-    <h2>Example Project: AlanHolding.co.uk</h2>
-    <h3>Full Website Build, Concept to Completion</h3>
-    <p>This very website was designed, written, and developed entirely by me, from the ground up. I created everything you see here:</p>
-    <ul>
-      <li>✅ Website structure</li>
-      <li>✅ Copywriting</li>
-      <li>✅ Branding tone</li>
-      <li>✅ Visual design</li>
-      <li>✅ User experience</li>
-      <li>✅ SEO optimization</li>
-    </ul>
-    <p><strong>AlanHolding.co.uk is proof of what I deliver: clarity, persuasion, and functionality, all built to move people and grow brands.</strong></p>
-  </div>
+    <div id="contact" class="tab-content">
+      <h2>Are you ready to turn attention into action?</h2>
+      <p>I'm Alan Holding, a Copywriter specialized in crafting persuasive messages that move people and grow businesses.<br>
+      Whether you need website copy, sales pages, ads, or emails, I write words that aren’t just pretty, they’re profitable.<br>
+      Let's build communication that captures attention and drives real results.</p>
+      <p>👉 <strong>Contact me today and let's make your brand unforgettable.</strong></p>
+      <a href="mailto:alan.s.holding@gmail.com" class="cta-button">Let’s Talk Copy</a>
+    </div>
 
-  <div id="contact" class="tab-content">
-    <h2>Are you ready to turn attention into action?</h2>
-    <p>I'm Alan Holding, a Copywriter specialized in crafting persuasive messages that move people and grow businesses.<br>
-    Whether you need website copy, sales pages, ads, or emails, I write words that aren’t just pretty, they’re profitable.<br>
-    Let's build communication that captures attention and drives real results.</p>
-    <p>👉 <strong>Contact me today and let's make your brand unforgettable.</strong></p>
-    <a href="mailto:alan.s.holding@gmail.com" class="cta-button">Let’s Talk Copy</a>
-  </div>
+    <script>
+      function showTab(event, tabId) {
+        const tabContents = document.querySelectorAll('.tab-content');
+        tabContents.forEach(content => content.classList.remove('active'));
 
-  <script>
-  function showTab(event, tabId) {
-    const tabContents = document.querySelectorAll('.tab-content');
-    tabContents.forEach(content => content.classList.remove('active'));
+        const tabs = document.querySelectorAll('.tab');
+        tabs.forEach(tab => tab.classList.remove('active'));
 
-    const tabs = document.querySelectorAll('.tab');
-    tabs.forEach(tab => tab.classList.remove('active'));
+        document.getElementById(tabId).classList.add('active');
+        event.currentTarget.classList.add('active');
+      }
 
-    document.getElementById(tabId).classList.add('active');
-    event.currentTarget.classList.add('active');
-  }
+      // Initialize Particles.js
+      particlesJS.load('particles-js', 'particles-config.json', function() {
+        console.log('particles.js config loaded');
+      });
 
-  // Initialize Particles.js
-  particlesJS.load('particles-js', 'particles-config.json', function() {
-    console.log('particles.js config loaded');
-  });
-  </script>
-</div> <!-- End Container -->
+      // Initialize Typed.js
+      document.addEventListener('DOMContentLoaded', () => {
+        new Typed('#typed', {
+          strings: ['Crafting Words That Command Attention and Drive Action.'],
+          typeSpeed: 60,
+          backSpeed: 30,
+          showCursor: true,
+          cursorChar: '|'
+        });
+
+        // Ripple effect
+        document.querySelectorAll('.tab, .cta-button').forEach(el => {
+          el.addEventListener('click', function(e) {
+            const circle = document.createElement('span');
+            const diameter = Math.max(el.clientWidth, el.clientHeight);
+            const radius = diameter / 2;
+            const rect = el.getBoundingClientRect();
+            circle.style.width = circle.style.height = `${diameter}px`;
+            circle.style.left = `${e.clientX - rect.left - radius}px`;
+            circle.style.top = `${e.clientY - rect.top - radius}px`;
+            circle.classList.add('ripple');
+            const ripple = el.getElementsByClassName('ripple')[0];
+            if (ripple) ripple.remove();
+            el.appendChild(circle);
+          });
+        });
+      });
+    </script>
+  </div> <!-- End Container -->
 </body>
 </html>
