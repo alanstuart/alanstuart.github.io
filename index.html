@@ -37,31 +37,32 @@
       scroll-behavior: smooth;
     }
     body.light-mode {
-      background-color: var(--bg-light);
+      background: var(--bg-light);
       color: var(--text-light);
     }
-    #particles-js {position:fixed;width:100%;height:100%;top:0;left:0;z-index:-2;}
-    .parallax-bg {position:fixed;top:0;left:0;width:100%;height:100%;background:url('futuristic-texture.jpg') center/cover no-repeat;opacity:0.25;z-index:-3;}
-    .container {max-width:800px;margin:0 auto;padding:20px;position:relative;z-index:1;}
-    header {text-align:center;margin-top:50px;position:relative;}
-    .mode-toggle {position:absolute;top:20px;right:20px;background:#fff;color:#0072ff;border:none;border-radius:50%;width:40px;height:40px;cursor:pointer;box-shadow:0 2px 5px rgba(0,0,0,0.2);}
-    .profile-image {width:220px;height:220px;border-radius:50%;object-fit:cover;object-position:center;display:block;margin:30px auto;box-shadow:0 4px 15px rgba(0,0,0,0.25);}
-    h1,h2,h3 {color:inherit;} p, li {color:inherit;}
-    ul {list-style: none; padding-left: 0;} /* Quitar bullets default */
-    .tabs {display:flex;justify-content:center;margin-top:30px;}
-    .tab {position:relative;overflow:hidden;background:rgba(255,255,255,0.2);padding:10px 20px;margin:0 5px;border-radius:5px;cursor:pointer;transition:transform .2s,background .3s;color:inherit;}
-    .tab:hover, .tab.active {background:#fff;color:#0072ff;transform:scale(1.05);}
-    .tab-content {display:none;margin-top:30px;}
-    .tab-content.active {display:block;}
-    .cta-button {position:relative;overflow:hidden;display:inline-block;margin-top:20px;padding:10px 20px;background:#fff;color:#0072ff;border:none;border-radius:5px;text-decoration:none;font-weight:bold;transition:transform .2s,background .3s;}
-    .cta-button:hover {background:#ecf0f1;transform:scale(1.05);}
-    .ripple {position:absolute;border-radius:50%;transform:scale(0);background:rgba(0,0,0,0.1);animation:ripple .6s linear;}
-    @keyframes ripple {to{transform:scale(4);opacity:0;}}
-    .swiper-container {width:100%;padding:20px 0;}
-    .swiper-slide {background:#fff;color:#333;padding:20px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.1);}
-    .swiper-slide blockquote {margin:0;font-style:italic;} 
-    .swiper-slide cite {display:block;margin-top:10px;text-align:right;font-weight:bold;color:#0072ff;}
-    #backToTop {position:fixed;bottom:30px;right:30px;background:#fff;color:#0072ff;border:none;padding:10px 15px;border-radius:5px;cursor:pointer;box-shadow:0 2px 5px rgba(0,0,0,0.2);display:none;z-index:2;}
+    #particles-js { position: fixed; width:100%; height:100%; top:0; left:0; z-index:-2; }
+    .parallax-bg { position: fixed; top:0; left:0; width:100%; height:100%; background: url('futuristic-texture.jpg') center/cover no-repeat; opacity:0.25; z-index:-3; }
+    .container { max-width:800px; margin:0 auto; padding:20px; position:relative; z-index:1; }
+    header { text-align:center; margin-top:50px; position:relative; }
+    .mode-toggle { position:absolute; top:20px; right:20px; background:#fff; color:#0072ff; border:none; border-radius:50%; width:40px; height:40px; cursor:pointer; box-shadow:0 2px 5px rgba(0,0,0,0.2); }
+    .profile-image { width:220px; height:220px; border-radius:50%; object-fit:cover; object-position:center; display:block; margin:30px auto; box-shadow:0 4px 15px rgba(0,0,0,0.25); }
+    h1, h2, h3 { color:inherit; }
+    p, li { color:inherit; }
+    ul { list-style: none; padding-left: 0; }
+    .tabs { display:flex; justify-content:center; margin-top:30px; }
+    .tab { position:relative; overflow:hidden; background:rgba(255,255,255,0.2); padding:10px 20px; margin:0 5px; border-radius:5px; cursor:pointer; transition: transform .2s, background .3s; color:inherit; }
+    .tab:hover, .tab.active { background:#fff; color:#0072ff; transform:scale(1.05); }
+    .tab-content { display:none; margin-top:30px; }
+    .tab-content.active { display:block; }
+    .cta-button { position:relative; overflow:hidden; display:inline-block; margin-top:20px; padding:10px 20px; background:#fff; color:#0072ff; border:none; border-radius:5px; text-decoration:none; font-weight:bold; transition: transform .2s, background .3s; }
+    .cta-button:hover { background:#ecf0f1; transform:scale(1.05); }
+    .ripple { position:absolute; border-radius:50%; transform:scale(0); background:rgba(0,0,0,0.1); animation:ripple .6s linear; }
+    @keyframes ripple { to { transform: scale(4); opacity:0; } }
+    .swiper-container { width:100%; padding:20px 0; }
+    .swiper-slide { background:#fff; color:#333; padding:20px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.1); }
+    .swiper-slide blockquote { margin:0; font-style:italic; }
+    .swiper-slide cite { display:block; margin-top:10px; text-align:right; font-weight:bold; color:#0072ff; }
+    #backToTop { position:fixed; bottom:30px; right:30px; background:#fff; color:#0072ff; border:none; padding:10px 15px; border-radius:5px; cursor:pointer; box-shadow:0 2px 5px rgba(0,0,0,0.2); display:none; z-index:2; }
   </style>
 </head>
 <body>
@@ -75,25 +76,21 @@
       <h1><span id="typed"></span></h1>
       <p>I’m Alan Holding, the guy brands call when they’re serious about standing out, an AI enthusiast and copywriter.<br>
          I create online systems that attract attention, build trust, and help you make sales around the clock, without needing to chase people down.</p>
-
       <a href="#contact" class="cta-button" data-aos="zoom-in">Let’s Talk Copy</a>
     </header>
-
     <div class="tabs" data-aos="fade-up">
       <div class="tab active" onclick="showTab(event,'about')">About Me</div>
       <div class="tab" onclick="showTab(event,'projects')">Projects</div>
       <div class="tab" onclick="showTab(event,'testimonials')">Testimonials</div>
       <div class="tab" onclick="showTab(event,'contact')">Contact</div>
     </div>
-
     <div id="about" class="tab-content active" data-aos="fade-right">
       <h2>About Me</h2>
-      <p>As a digital marketing consultant and copywriter, I help businesses grow online through smart content and web solutions.<br>
+      <p>As a digital marketing consultant and copywriter, I help businesses grow its online presence through smart content strategies and innovative web solutions.<br>
       Constantly learning AI and copywriting under top mentors, I prove action beats theory and results trump titles.</p>
       <h3>My Working Model</h3>
       <p>I operate with a results-based model, free trials on initial projects, commission only on successful outcomes.</p>
     </div>
-
     <div id="projects" class="tab-content" data-aos="fade-left">
       <h2>Example Project: AlanHolding.co.uk</h2>
       <h3>Full Website Build, Concept to Completion <span id="projectsCount"></span></h3>
@@ -107,7 +104,6 @@
         <li>✅ SEO optimization</li>
       </ul>
     </div>
-
     <div id="testimonials" class="tab-content" data-aos="fade-up">
       <h2>What Clients Say</h2>
       <div class="swiper-container">
@@ -119,7 +115,6 @@
         <div class="swiper-pagination"></div>
       </div>
     </div>
-
     <div id="contact" class="tab-content" data-aos="fade-up">
       <h2>Are you ready to turn attention into action?</h2>
       <p>I'm Alan Holding, a copywriter crafting messages that move people and grow businesses.<br>
@@ -127,7 +122,6 @@
       <a href="mailto:alan.s.holding@gmail.com" class="cta-button">Let’s Talk Copy</a>
     </div>
   </div>
-
   <script>
     function showTab(event,tabId){
       document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
@@ -148,15 +142,9 @@
       new Rellax('.parallax-bg');
       VanillaTilt.init(document.querySelectorAll('.profile-image'),{max:15,speed:400});
       new Swiper('.swiper-container',{loop:true,autoplay:{delay:5000},pagination:{el:'.swiper-pagination'}});
-
-      // Back to Top button logic
       const backToTop=document.getElementById('backToTop');
-      window.addEventListener('scroll',()=>{
-        backToTop.style.display=window.scrollY>300?'block':'none';
-      });
+      window.addEventListener('scroll',()=>{backToTop.style.display=window.scrollY>300?'block':'none';});
       backToTop.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'});});
-
-      // Light/Dark mode toggle
       const modeToggle=document.getElementById('modeToggle');
       modeToggle.addEventListener('click',()=>{
         document.body.classList.toggle('light-mode');
