@@ -15,7 +15,6 @@
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.umd.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/rellax@1.12.1/rellax.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
-
   <!-- Swiper for testimonials -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
@@ -53,7 +52,6 @@
     .container { max-width:800px; margin:0 auto; padding:20px; position:relative; z-index:1; }
     header { text-align:center; margin-top:50px; position:relative; }
     .mode-toggle { position:absolute; top:20px; right:20px; background:#fff; color:var(--primary-dark); border:none; border-radius:50%; width:40px; height:40px; cursor:pointer; box-shadow:0 2px 5px rgba(0,0,0,0.2); }
-    /* Typography hierarchy */
     h1 { font-size:3rem; margin-bottom:0.5em; }
     h2 { font-size:2rem; margin-bottom:0.5em; }
     h3 { font-size:1.5rem; margin-bottom:0.5em; }
@@ -64,20 +62,16 @@
     ul li::before { content:'✅'; position:absolute; left:0; top:0; }
     ul li:hover { transform: translateX(5px); }
     a { text-decoration: none; }
-    /* Tabs */
     .tabs { display:flex; justify-content:center; margin-top:30px; }
     .tab { position:relative; overflow:hidden; background:rgba(255,255,255,0.2); padding:10px 20px; margin:0 5px; border-radius:5px; cursor:pointer; }
     .tab.active, .tab:hover { background:#fff; color:var(--primary-dark); }
-    /* Call to action button */
     .cta-button { display:inline-block; margin-top:20px; padding:12px 24px; background:var(--primary-dark); color:#fff; border:none; border-radius:5px; font-size:1rem; font-weight:bold; }
-    .cta-button:hover { background:var(--primary-light); color:#fff; transform:scale(1.05); }
-    /* Back to top button */
+    .cta-button:hover { background:var(--primary-light); transform:scale(1.05); }
     #backToTop { position:fixed; bottom:30px; right:30px; background:#fff; color:var(--primary-dark); border:none; padding:10px 15px; border-radius:5px; cursor:pointer; box-shadow:0 2px 5px rgba(0,0,0,0.2); display:none; }
-    /* Swiper slides */
+    .swiper-container { width:100%; padding:20px 0; }
     .swiper-slide { background:#fff; color:#333; padding:20px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.1); }
-    .swiper-slide bloquequote { margin:0; font-style:italic; }
+    .swiper-slide blockquote { margin:0; font-style:italic; }
     .swiper-slide cite { display:block; margin-top:10px; text-align:right; font-weight:bold; color:var(--primary-dark); }
-    /* Ripple effect */
     .ripple { position:absolute; border-radius:50%; transform:scale(0); background:rgba(0,0,0,0.1); animation:ripple .6s linear; }
     @keyframes ripple { to { transform: scale(4); opacity:0; } }
   </style>
@@ -93,7 +87,7 @@
       <h1><span id="typed"></span></h1>
       <p>I’m Alan Holding, the guy brands call when they’re serious about standing out, an AI enthusiast and copywriter.<br>
          I create online systems that attract attention, build trust, and help you make sales around the clock, without needing to chase people down.</p>
-      <a href="mailto:alan.s.holding@gmail.com?subject=Free Consultation" class="cta-button" data-aos="zoom-in">If you’re serious about standing out, let’s chat. I’m ready when you are.</a>
+      <a href="mailto:alan.s.holding@gmail.com?subject=Free Consultation" class="cta-button" data-aos="zoom-in" onclick="showTab(event,'contact')">If you’re serious about standing out, let’s chat. I’m ready when you are.</a>
     </header>
     <div class="tabs" data-aos="fade-up">
       <div class="tab active" onclick="showTab(event,'about')">About Me</div>
@@ -103,7 +97,7 @@
     </div>
     <div id="about" class="tab-content active" data-aos="fade-right">
       <h2>About Me</h2>
-      <p>As a digital marketing consultant and copywriter, I help businesses grow its online presence through smart content strategies and innovative web solutions.<br>
+      <p>As a digital marketing consultant and copywriter, I help businesses grow their online presence through smart content strategies and innovative web solutions.<br>
       Constantly learning AI and copywriting under top mentors, I prove action beats theory and results trump titles.</p>
       <h3>My Working Model</h3>
       <p>I operate with a results-based model, free trials on initial projects, commission only on successful outcomes.</p>
@@ -115,9 +109,57 @@
       <ul>
         <li>Website structure</li>
         <li>Copywriting</li>
-        
+        <li>Branding tone</li>
+        <li>Visual design</li>
+        <li>User experience</li>
+        <li>SEO optimization</li>
       </ul>
     </div>
+    <div id="testimonials" class="tab-content" data-aos="fade-up">
+      <h2>What Clients Say</h2>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><blockquote>"Working with Alan was a game-changer, our conversions doubled!"<cite>– Maria G.</cite></blockquote></div>
+          <div class="swiper-slide"><blockquote>"His AI solutions saved us hours each week and boosted engagement."<cite>– Carlos M.</cite></blockquote></div>
+          <div class="swiper-slide"><blockquote>"The copy he wrote captured our brand voice perfectly."<cite>– Sofia R.</cite></blockquote></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div id="contact" class="tab-content" data-aos="fade-up">
+      <h2>Are you ready to turn attention into action?</h2>
+      <p>I'm Alan Holding, a copywriter crafting messages that move people and grow businesses.<br>
+      Need profitable copy, sales pages or AI-driven marketing? Let’s talk.</p>
+      <a href="mailto:alan.s.holding@gmail.com" class="cta-button">Contact Me</a>
+    </div>
   </div>
+  <script>
+    function showTab(event,tabId){
+      document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
+      document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      event.currentTarget.classList.add('active');
+      document.getElementById(tabId).scrollIntoView({behavior:'smooth'});
+    }
+    particlesJS.load('particles-js','particles-config.json');
+    document.addEventListener('DOMContentLoaded',()=>{
+      new Typed('#typed',{strings:['Crafting Words That Command Attention and Drive Action.'],typeSpeed:60,backSpeed:30,showCursor:true,cursorChar:'|'});
+      document.querySelectorAll('.tab,.cta-button').forEach(el=>el.addEventListener('click',function(e){
+        const d=Math.max(el.clientWidth,el.clientHeight),r=d/2,rect=el.getBoundingClientRect(),circle=document.createElement('span');
+        circle.style.width=circle.style.height=`${d}px`;circle.style.left=`${e.clientX-rect.left-r}px`;circle.style.top=`${e.clientY-rect.top-r}px`;
+        circle.classList.add('ripple');const rp=el.getElementsByClassName('ripple')[0];if(rp)rp.remove();el.appendChild(circle);
+      }));
+      AOS.init({duration:800});
+      const countUp=new countUp.CountUp('projectsCount',6,{suffix:' Features'});if(!countUp.error)countUp.start();
+      new Rellax('.parallax-bg');
+      VanillaTilt.init(document.querySelectorAll('.profile-image'),{max:15,speed:400});
+      new Swiper('.swiper-container',{loop:true,autoplay:{delay:5000},pagination:{el:'.swiper-pagination'}});
+      const backToTop=document.getElementById('backToTop');
+      window.addEventListener('scroll',()=>{backToTop.style.display=window.scrollY>300?'block':'none';});
+      backToTop.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'});});
+      const modeToggle=document.getElementById('modeToggle');
+      modeToggle.addEventListener('click',()=>{document.body.classList.toggle('light-mode');modeToggle.textContent=document.body.classList.contains('light-mode')?'🌙':'☀️';});
+    });
+  </script>
 </body>
 </html>
