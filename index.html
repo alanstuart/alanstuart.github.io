@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alan Holding | Copywriting and Automation</title>
 
+  <!-- SEO Meta -->
+  <meta name="description" content="Copywriting & AI automation for UK businesses. Free headline templates. Choose your package and stand out today." />
+  <link rel="canonical" href="https://alanholding.co.uk/" />
+
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
@@ -20,6 +24,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
   <style>
+    /* Variables and resets */
     :root {
       --primary-light: #00c6ff;
       --primary-dark: #0072ff;
@@ -29,58 +34,80 @@
       --text-dark: #fff;
       --transition-fast: 0.3s ease;
     }
-    *, *::before, *::after {
-      box-sizing: border-box;
-      transition: color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
-    }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: var(--text-dark);
-      background: var(--bg-dark);
-      height: 100%;
-      overflow-x: hidden;
-      scroll-behavior: smooth;
-      line-height: 1.6;
-    }
-    #particles-js { position: fixed; width:100%; height:100%; top:0; left:0; z-index:-2; }
-    .parallax-bg { position: fixed; top:0; left:0; width:100%; height:100%; background: url('futuristic-texture.jpg') center/cover no-repeat; opacity:0.25; z-index:-3; }
+    *, *::before, *::after { box-sizing: border-box; transition: color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast); }
+    body { margin:0; font-family:Arial,sans-serif; color:var(--text-dark); background:var(--bg-dark); overflow-x:hidden; scroll-behavior:smooth; line-height:1.6; }
+    body.light-mode { background:var(--bg-light); color:var(--text-light); }
+    img { max-width:100%; display:block; }
+    a { text-decoration:none; color:inherit; }
+
+    /* Background effects */
+    #particles-js, .parallax-bg { position:fixed; width:100%; height:100%; top:0; left:0; }
+    #particles-js { z-index:-2; }
+    .parallax-bg { background:url('futuristic-texture.jpg') center/cover no-repeat; opacity:0.25; z-index:-3; }
+
+    /* Container */
     .container { max-width:800px; margin:0 auto; padding:20px; position:relative; z-index:1; }
+
+    /* Header & Hero */
+    header { text-align:center; margin-top:50px; position:relative; }
     h1 { font-size:3rem; margin-bottom:0.5em; }
-    h2 { font-size:2rem; margin-bottom:0.5em; }
-    h3 { font-size:1.5rem; margin-bottom:0.5em; }
-    p { font-size:1rem; margin-bottom:1em; }
-    .profile-image { width:220px; height:220px; border-radius:50%; object-fit:cover; object-position:center; display:block; margin:30px auto; box-shadow:0 4px 15px rgba(0,0,0,0.25); }
-    ul { list-style: none; padding-left: 0; }
-    ul li { position: relative; padding-left:1.5em; margin-bottom:0.5em; }
-    ul li::before { content:'✅'; position:absolute; left:0; top:0; }
-    ul li:hover { transform: translateX(5px); }
-    a { text-decoration: none; }
-    .tabs { display:flex; justify-content:center; margin-top:30px; }
-    .tab { position:relative; overflow:hidden; background:rgba(255,255,255,0.2); padding:10px 20px; margin:0 5px; border-radius:5px; cursor:pointer; }
-    .tab.active, .tab:hover { background:#fff; color:var(--primary-dark); }
+    .profile-image { width:220px; height:220px; border-radius:50%; object-fit:cover; margin:30px auto; box-shadow:0 4px 15px rgba(0,0,0,0.25); }
+    p.lead { font-size:1.1rem; margin-bottom:1em; }
+    .mode-toggle { position:absolute; top:20px; right:20px; background:#fff; color:var(--primary-dark); border:none; border-radius:50%; width:40px; height:40px; cursor:pointer; box-shadow:0 2px 5px rgba(0,0,0,0.2); }
+
+    /* Buttons */
     .cta-button { display:inline-block; margin-top:20px; padding:12px 24px; background:var(--primary-dark); color:#fff; border:none; border-radius:5px; font-size:1rem; font-weight:bold; }
     .cta-button:hover { background:var(--primary-light); transform:scale(1.05); }
-    #backToTop { position:fixed; bottom:30px; right:30px; background:#fff; color:var(--primary-dark); border:none; padding:10px 15px; border-radius:5px; cursor:pointer; box-shadow:0 2px 5px rgba(0,0,0,0.2); display:none; }
+
+    /* Sections */
+    section { margin:60px 0; }
+    h2 { font-size:2rem; margin-bottom:0.5em; }
+
+    /* Lists */
+    ul { list-style:none; padding:0; }
+    ul li { position:relative; padding-left:1.5em; margin-bottom:0.5em; }
+    ul li::before { content:'✅'; position:absolute; left:0; top:0; }
+    ul li:hover { transform:translateX(5px); }
+
+    /* Tabs */
+    .tabs { display:flex; justify-content:center; margin-top:30px; }
+    .tab { background:rgba(255,255,255,0.2); padding:10px 20px; margin:0 5px; border-radius:5px; cursor:pointer; }
+    .tab.active, .tab:hover { background:#fff; color:var(--primary-dark); }
+    .tab-content { display:none; margin-top:30px; }
+    .tab-content.active { display:block; }
+
+    /* Packages grid */
+    .package-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; }
+    .package { background:#fff; padding:20px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1); color:#333; }
+    .package .price { font-size:1.25rem; font-weight:bold; margin:10px 0; }
+
+    /* Back to top */
+    #backToTop { position:fixed; bottom:30px; right:30px; background:#fff; color:var(--primary-dark); border:none; padding:10px 15px; border-radius:5px; cursor:pointer; box-shadow:0 2px 5px rgba(0,0,0,0.2); display:none; z-index:2; }
+
+    /* Swiper */
     .swiper-container { width:100%; padding:20px 0; }
     .swiper-slide { background:#fff; color:#333; padding:20px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.1); }
     .swiper-slide blockquote { margin:0; font-style:italic; }
     .swiper-slide cite { display:block; margin-top:10px; text-align:right; font-weight:bold; color:var(--primary-dark); }
+
+    /* Ripple */
     .ripple { position:absolute; border-radius:50%; transform:scale(0); background:rgba(0,0,0,0.1); animation:ripple .6s linear; }
-    @keyframes ripple { to { transform: scale(4); opacity:0; } }
+    @keyframes ripple { to { transform:scale(4); opacity:0; } }
   </style>
 </head>
 <body>
   <div class="parallax-bg" data-rellax-speed="-2"></div>
   <div id="particles-js"></div>
   <button id="backToTop" title="Back to top">↑</button>
+
   <div class="container">
     <header data-aos="fade-down">
-      <img src="avatar.png" alt="Profile Avatar" class="profile-image" data-tilt data-tilt-max="15" data-tilt-speed="400">
+      <button class="mode-toggle" id="modeToggle" title="Toggle light/dark mode">☀️</button>
+      <img src="avatar.png" alt="Alan Holding copywriter and AI enthusiast" class="profile-image" data-tilt data-tilt-max="15" data-tilt-speed="400">
       <h1><span id="typed"></span></h1>
-      <p>I’m Alan Holding, the guy brands call when they’re serious about standing out, an AI enthusiast and copywriter.<br>
+      <p class="lead">I’m Alan Holding, the guy brands call when they’re serious about standing out, an AI enthusiast and copywriter.<br>
          I create online systems that attract attention, build trust, and help you make sales around the clock, without needing to chase people down.</p>
-      <a href="mailto:alan.s.holding@gmail.com?subject=Free Consultation" class="cta-button" data-aos="zoom-in" onclick="showTab(event,'contact')">If you’re serious about standing out, let’s chat. I’m ready when you are.</a>
+      <a href="#contact" class="cta-button" data-aos="zoom-in" onclick="showTab(event,'contact')">If you’re serious about standing out, let’s chat. I’m ready when you are.</a>
     </header>
 
     <!-- Lead Magnet: Free Guide -->
@@ -96,6 +123,7 @@
 
     <div class="tabs" data-aos="fade-up">
       <div class="tab active" onclick="showTab(event,'about')">About Me</div>
+      <div class="tab" onclick="showTab(event,'packages')">Packages</div>
       <div class="tab" onclick="showTab(event,'projects')">Projects</div>
       <div class="tab" onclick="showTab(event,'testimonials')">Testimonials</div>
       <div class="tab" onclick="showTab(event,'contact')">Contact</div>
@@ -106,9 +134,127 @@
       <p>As a digital marketing consultant and copywriter, I help businesses grow their online presence through smart content strategies and innovative web solutions.<br>
       Constantly learning AI and copywriting under top mentors, I prove action beats theory and results trump titles.</p>
       <h3>My Working Model</h3>
-      <p>I operate with a results-based model, free trials on initial projects, commission only on successful outcomes.</p>
+      <p>I operate with a results-based model: free trials on initial projects, commission only on successful outcomes.</p>
     </div>
 
-    <!-- Service Packages -->
-    <section id="packages" data-aos="fade-up">
-      <h2>Choose Your Package</n
+    <section id="packages" class="tab-content" data-aos="fade-up">
+      <h2>Choose Your Package</h2>
+      <div class="package-grid">
+        <div class="package">
+          <h3>Starter</h3>
+          <ul>
+            <li>3 headlines + 1 optimized landing page</li>
+            <li>Basic optimisation</li>
+          </ul>
+          <p class="price">£200–£300</p>
+          <button class="cta-button">Select Starter</button>
+        </div>
+        <div class="package">
+          <h3>Growth</h3>
+          <ul>
+            <li>Everything in Starter</li>
+            <li>5 welcome emails</li>
+            <li>Existing copy audit</li>
+          </ul>\n          <p class="price">£500–£700</p>
+          <button class="cta-button">Select Growth</button>
+        </div>
+        <div class="package">
+          <h3>Empire</h3>
+          <ul>
+            <li>Everything in Growth</li>
+            <li>Complete funnel strategy</li>
+            <li>Monthly performance report</li>
+          </ul>
+          <p class="price">£1,200–£1,500</p>
+          <button class="cta-button">Select Empire</button>
+        </div>
+      </div>
+    </section>
+
+    <div id="projects" class="tab-content" data-aos="fade-left">
+      <h2>Example Project: AlanHolding.co.uk</h2>
+      <h3>Full Website Build, Concept to Completion <span id="projectsCount"></span></h3>
+      <p>This website was designed and developed entirely by me:</p>
+      <ul>
+        <li>Website structure</li>
+        <li>Copywriting</li>
+        <li>Branding tone</li>
+        <li>Visual design</li>
+        <li>User experience</li>
+        <li>SEO optimization</li>
+      </ul>
+    </div>
+
+    <div id="testimonials" class="tab-content" data-aos="fade-up">
+      <h2>What Clients Say</h2>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><blockquote>"Working with Alan was a game-changer, our conversions doubled!"<cite>– Maria G.</cite></blockquote></div>
+          <div class="swiper-slide"><blockquote>"His AI solutions saved us hours each week and boosted engagement."<cite>– Carlos M.</cite></blockquote></div>
+          <div class="swiper-slide"><blockquote>"The copy he wrote captured our brand voice perfectly."<cite>– Sofia R.</cite></blockquote></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <div id="contact" class="tab-content" data-aos="fade-up">
+      <h2>Are you ready to turn attention into action?</h2>
+      <p>I'm Alan Holding, a copywriter crafting messages that move people and grow businesses.<br>
+      Need profitable copy, sales pages or AI-driven marketing? Let’s talk.</p>
+      <a href="mailto:alan.s.holding@gmail.com?subject=Free Consultation" class="cta-button" onclick="showTab(event,'contact')">If you’re serious about standing out, let’s chat. I’m ready when you are.</a>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    function showTab(event, tabId) {
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      event.currentTarget.classList.add('active');
+      document.getElementById(tabId).scrollIntoView({ behavior: 'smooth' });
+    }
+    // Initialize Particles.js with inline configuration
+      particlesJS('particles-js', {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: '#ffffff' },
+          shape: { type: 'circle' },
+          opacity: { value: 0.5, random: false },
+          size: { value: 3, random: true },
+          move: { enable: true, speed: 2, direction: 'none', out_mode: 'out' }
+        },
+        interactivity: {
+          detect_on: 'canvas',
+          events: {
+            onhover: { enable: true, mode: 'repulse' },
+            onclick: { enable: true, mode: 'push' },
+            resize: true
+          },
+          modes: {
+            repulse: { distance: 100 },
+            push: { particles_nb: 4 }
+          }
+        },
+        retina_detect: true
+      });
+document.addEventListener('DOMContentLoaded', () => {
+      new Typed('#typed', { strings: ['Crafting Words That Command Attention and Drive Action.'], typeSpeed: 60, backSpeed: 30, showCursor: true, cursorChar: '|' });
+      AOS.init({ duration: 800 });
+      const countUp = new countUp.CountUp('projectsCount', 6, { suffix: ' Features' }); if (!countUp.error) countUp.start();
+      new Rellax('.parallax-bg');
+      VanillaTilt.init(document.querySelectorAll('.profile-image'), { max: 15, speed: 400 });
+      new Swiper('.swiper-container', { loop: true, autoplay: { delay: 5000 }, pagination: { el: '.swiper-pagination' } });
+      const backToTop = document.getElementById('backToTop');
+      window.addEventListener('scroll', () => { backToTop.style.display = window.scrollY > 300 ? 'block' : 'none'; });
+      backToTop.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+      // Toggle light/dark mode
+      const modeToggle = document.getElementById('modeToggle');
+      modeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('light-mode');
+        modeToggle.textContent = document.body.classList.contains('light-mode') ? '🌙' : '☀️';
+      });
+    });
+  </script>
+</body>
+</html>
