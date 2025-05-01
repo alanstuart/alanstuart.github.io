@@ -43,15 +43,9 @@
       scroll-behavior: smooth;
       line-height: 1.6;
     }
-    body.light-mode {
-      background: var(--bg-light);
-      color: var(--text-light);
-    }
     #particles-js { position: fixed; width:100%; height:100%; top:0; left:0; z-index:-2; }
     .parallax-bg { position: fixed; top:0; left:0; width:100%; height:100%; background: url('futuristic-texture.jpg') center/cover no-repeat; opacity:0.25; z-index:-3; }
     .container { max-width:800px; margin:0 auto; padding:20px; position:relative; z-index:1; }
-    header { text-align:center; margin-top:50px; position:relative; }
-    .mode-toggle { position:absolute; top:20px; right:20px; background:#fff; color:var(--primary-dark); border:none; border-radius:50%; width:40px; height:40px; cursor:pointer; box-shadow:0 2px 5px rgba(0,0,0,0.2); }
     h1 { font-size:3rem; margin-bottom:0.5em; }
     h2 { font-size:2rem; margin-bottom:0.5em; }
     h3 { font-size:1.5rem; margin-bottom:0.5em; }
@@ -82,7 +76,6 @@
   <button id="backToTop" title="Back to top">↑</button>
   <div class="container">
     <header data-aos="fade-down">
-      <button class="mode-toggle" id="modeToggle" title="Toggle light/dark mode">☀️</button>
       <img src="avatar.png" alt="Profile Avatar" class="profile-image" data-tilt data-tilt-max="15" data-tilt-speed="400">
       <h1><span id="typed"></span></h1>
       <p>I’m Alan Holding, the guy brands call when they’re serious about standing out, an AI enthusiast and copywriter.<br>
@@ -100,12 +93,14 @@
         <button type="submit" class="cta-button">Get my templates!</button>
       </form>
     </section>
+
     <div class="tabs" data-aos="fade-up">
       <div class="tab active" onclick="showTab(event,'about')">About Me</div>
       <div class="tab" onclick="showTab(event,'projects')">Projects</div>
       <div class="tab" onclick="showTab(event,'testimonials')">Testimonials</div>
       <div class="tab" onclick="showTab(event,'contact')">Contact</div>
     </div>
+
     <div id="about" class="tab-content active" data-aos="fade-right">
       <h2>About Me</h2>
       <p>As a digital marketing consultant and copywriter, I help businesses grow their online presence through smart content strategies and innovative web solutions.<br>
@@ -116,98 +111,4 @@
 
     <!-- Service Packages -->
     <section id="packages" data-aos="fade-up">
-      <h2>Choose Your Package</h2>
-      <div class="package-grid">
-        <div class="package">
-          <h3>Starter</h3>
-          <ul>
-            <li>3 headlines + 1 optimized landing page</li>
-            <li>Basic optimisation</li>
-          </ul>
-          <p class="price">£200–£300</p>
-          <button class="cta-button">Select Starter</button>
-        </div>
-        <div class="package">
-          <h3>Growth</h3>
-          <ul>
-            <li>Everything in Starter</li>
-            <li>5 welcome emails</li>
-            <li>Existing copy audit</li>
-          </ul>
-          <p class="price">£500–£700</p>
-          <button class="cta-button">Select Growth</button>
-        </div>
-        <div class="package">
-          <h3>Empire</h3>
-          <ul>
-            <li>Everything in Growth</li>
-            <li>Complete funnel strategy</li>
-            <li>Monthly performance report</li>
-          </ul>
-          <p class="price">£1,200–£1,500</p>
-          <button class="cta-button">Select Empire</button>
-        </div>
-      </div>
-    </section>
-
-    <div id="projects" class="tab-content" data-aos="fade-left">
-      <h2>Example Project: AlanHolding.co.uk</h2>
-      <h3>Full Website Build, Concept to Completion <span id="projectsCount"></span></h3>
-      <p>This website was designed and developed entirely by me:</p>
-      <ul>
-        <li>Website structure</li>
-        <li>Copywriting</li>
-        <li>Branding tone</li>
-        <li>Visual design</li>
-        <li>User experience</li>
-        <li>SEO optimization</li>
-      </ul>
-    </div>
-    <div id="testimonials" class="tab-content" data-aos="fade-up">
-      <h2>What Clients Say</h2>
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><blockquote>"Working with Alan was a game-changer, our conversions doubled!"<cite>– Maria G.</cite></blockquote></div>
-          <div class="swiper-slide"><blockquote>"His AI solutions saved us hours each week and boosted engagement."<cite>– Carlos M.</cite></blockquote></div>
-          <div class="swiper-slide"><blockquote>"The copy he wrote captured our brand voice perfectly."<cite>– Sofia R.</cite></blockquote></div>
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </div>
-    <div id="contact" class="tab-content" data-aos="fade-up">
-      <h2>Are you ready to turn attention into action?</h2>
-      <p>I'm Alan Holding, a copywriter crafting messages that move people and grow businesses.<br>
-      Need profitable copy, sales pages or AI-driven marketing? Let’s talk.</p>
-      <a href="mailto:alan.s.holding@gmail.com?subject=Free Consultation" class="cta-button">If you’re serious about standing out, let’s chat. I’m ready when you are.</a>
-    </div>
-  </div>
-  <script>
-    function showTab(event,tabId){
-      document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
-      document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-      document.getElementById(tabId).classList.add('active');
-      event.currentTarget.classList.add('active');
-      document.getElementById(tabId).scrollIntoView({behavior:'smooth'});
-    }
-    particlesJS.load('particles-js','particles-config.json');
-    document.addEventListener('DOMContentLoaded',()=>{
-      new Typed('#typed',{strings:['Crafting Words That Command Attention and Drive Action.'],typeSpeed:60,backSpeed:30,showCursor:true,cursorChar:'|'});
-      document.querySelectorAll('.tab,.cta-button').forEach(el=>el.addEventListener('click',function(e){
-        const d=Math.max(el.clientWidth,el.clientHeight),r=d/2,rect=el.getBoundingClientRect(),circle=document.createElement('span');
-        circle.style.width=circle.style.height=`${d}px`;circle.style.left=`${e.clientX-rect.left-r}px`;circle.style.top=`${e.clientY-rect.top-r}px`;
-        circle.classList.add('ripple');const rp=el.getElementsByClassName('ripple')[0];if(rp)rp.remove();el.appendChild(circle);
-      }));
-      AOS.init({duration:800});
-      const countUp=new countUp.CountUp('projectsCount',6,{suffix:' Features'});if(!countUp.error)countUp.start();
-      new Rellax('.parallax-bg');
-      VanillaTilt.init(document.querySelectorAll('.profile-image'),{max:15,speed:400});
-      new Swiper('.swiper-container',{loop:true,autoplay:{delay:5000},pagination:{el:'.swiper-pagination'}});
-      const backToTop=document.getElementById('backToTop');
-      window.addEventListener('scroll',()=>{backToTop.style.display=window.scrollY>300?'block':'none';});
-      backToTop.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'});});
-      const modeToggle=document.getElementById('modeToggle');
-      modeToggle.addEventListener('click',()=>{document.body.classList.toggle('light-mode');modeToggle.textContent=document.body.classList.contains('light-mode')?'🌙':'☀️';});
-    });
-  </script>
-</body>
-</html>
+      <h2>Choose Your Package</n
