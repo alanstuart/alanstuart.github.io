@@ -1,0 +1,147 @@
+{
+  "hero": {
+    "lead": "No solo para verse bien—construido para generar leads, ventas y resultados.<br>Trabajo con marcas pequeñas y negocios en crecimiento para crear sitios web rápidos y compatibles con dispositivos móviles con código limpio, SEO inteligente y un diseño que lleva a las personas a tomar acción.<br>Ya sea que necesites un sitio simple o una configuración digital completa, construiré algo que trabaje duro para tu negocio—día y noche.",
+    "cta": "Convirtamos tu mensaje en dinero."
+  },
+  "guide": {
+    "title": "Descarga Gratuita: 5 Plantillas de Títulos Irresistibles",
+    "description": "Obtén cinco fórmulas probadas para titulares que captarán la atención instantáneamente y generarán engagement. ¡Próximamente!",
+    "alert": "🚀 ¡Plantillas en desarrollo!",
+    "alert_text": "Sé el primero en recibirlas cuando estén listas:",
+    "email_placeholder": "Tu dirección de email",
+    "button": "Obtener Acceso Anticipado",
+    "note": "Sin spam, nunca. Cancela cuando quieras."
+  },
+  "tabs": {
+    "about": "Sobre Mí",
+    "packages": "Paquetes",
+    "projects": "Proyectos",
+    "testimonials": "Testimonios",
+    "contact": "Contacto"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "p1": "Transformo negocios en historias de éxito digital a través de sitios web potentes construidos con copywriting persuasivo y SEO estratégico que <em>realmente convierte</em>.",
+    "p2": "Aunque mi base está en crear sitios web de alto rendimiento que impulsan resultados comerciales reales, estoy ampliando mis herramientas para incluir soluciones de IA de vanguardia. <strong>Próximamente:</strong> chatbots y voicebots personalizados que interactúan con tus clientes 24/7, convirtiendo visitantes en leads mientras duermes.",
+    "value_title": "Mi Propuesta de Valor",
+    "value_p1": "Opero con un modelo basado en resultados: ve el valor antes de comprometerte. Actualmente estoy construyendo mi portafolio con clientes selectos que quieren sitios web hermosos y funcionales que realmente generen resultados comerciales.",
+    "value_p2": "Como estudiante de marketing digital en constante aprendizaje de los principales expertos de la industria, aporto perspectivas frescas y enfoques innovadores a cada proyecto, sin el precio de una agencia."
+  },
+  "packages": {
+    "title": "Elige Tu Paquete",
+    "essentials": {
+      "title": "Esencial",
+      "item1": "Sitio web profesional responsive",
+      "item2": "Hasta 5 páginas",
+      "item3": "Configuración SEO básica",
+      "item4": "Optimización móvil",
+      "item5": "Integración de formulario de contacto",
+      "price": "£300",
+      "button": "Seleccionar Esencial"
+    },
+    "performance": {
+      "title": "Rendimiento",
+      "item1": "Todo lo de Esencial",
+      "item2": "Copywriting enfocado en conversión",
+      "item3": "Optimización SEO avanzada",
+      "item4": "Estrategia de contenido",
+      "item5": "2 rondas de revisiones",
+      "price": "£550",
+      "button": "Seleccionar Rendimiento"
+    },
+    "complete": {
+      "title": "Solución Completa",
+      "item1": "Todo lo de Rendimiento",
+      "item2": "Sitio web extendido (hasta 10 páginas)",
+      "item3": "Soporte prioritario",
+      "item4": "Informe de rendimiento mensual",
+      "item5": "Integración de chatbot IA",
+      "coming_soon": "Próximamente:",
+      "chatbot": "Integración de chatbot con IA",
+      "price": "£850",
+      "button": "Seleccionar Solución Completa"
+    }
+  },
+  "services": {
+    "title": "Lo Que Hago",
+    "websites": {
+      "title": "✍️ Sitios Web de Rendimiento",
+      "description": "Sitios web limpios y de carga rápida que presentan tu negocio con claridad y propósito. Desde sitios de información simples hasta exhibiciones de productos y motores de generación de leads."
+    },
+    "seo": {
+      "title": "🔍 Bases de SEO",
+      "description": "Cada sitio construido pensando en la visibilidad en buscadores. Estructura adecuada, metadatos y optimización de contenido para ayudar a los clientes a encontrarte orgánicamente."
+    },
+    "development": {
+      "title": "💼 Desarrollo Personalizado",
+      "description": "Sitios web adaptados exactamente a tus requisitos, ya sea que necesites funcionalidad específica, integraciones o elementos de diseño únicos."
+    }
+  },
+  "services_explained": {
+    "title": "Servicios Explicados: Lo Que Todo Esto Significa Para Ti",
+    "simple_terms": "En términos simples:",
+    "web": {
+      "title": "🌐 Desarrollo Web",
+      "simple": "Construyo sitios web que se ven profesionales en todos los dispositivos (teléfonos, tablets, computadoras) y cargan rápidamente para que los visitantes no se frustren y se vayan.",
+      "analogy": "Piensa en ello como tener un escaparate o una oficina 24/7 que representa tu negocio perfectamente, incluso cuando estás durmiendo."
+    },
+    "seo": {
+      "title": "🔍 SEO (Optimización para Motores de Búsqueda)",
+      "simple": "Me aseguro de que las personas puedan encontrar tu sitio web cuando buscan en Google lo que ofreces.",
+      "analogy": "Es como asegurarte de que tu negocio esté en la calle principal donde los clientes pueden verlo, en lugar de escondido en un callejón trasero."
+    },
+    "copy": {
+      "title": "💬 Copywriting",
+      "simple": "Escribo las palabras en tu sitio web que explican lo que haces y convencen a los visitantes de contactarte, comprar tu producto o realizar cualquier acción que desees.",
+      "analogy": "Las buenas palabras en un sitio web funcionan como tu mejor vendedor, disponible 24/7."
+    },
+    "not_sure": "¿No estás seguro de lo que necesitas? ¡No hay problema!",
+    "contact_link": "Contáctame",
+    "chat": "para una charla amistosa sobre los objetivos de tu negocio, y te explicaré cómo puedo ayudarte sin la jerga técnica."
+  },
+  "why_me": {
+    "title": "¿Por Qué Trabajar Conmigo?",
+    "item1": "Modelo de resultados primero, bajo riesgo para un crecimiento real",
+    "item2": "Texto claro y de alta conversión que habla el lenguaje de tu cliente",
+    "item3": "Proceso colaborativo y amigable adaptado a tus objetivos"
+  },
+  "projects": {
+    "title": "Proyectos Actuales de Portafolio",
+    "costa_rica": {
+      "title": "Sitio Web de Supermercado en Costa Rica",
+      "description": "Actualmente desarrollando una presencia digital para un supermercado local en Costa Rica, enfocándome en mostrar su gama de productos y optimizar el proceso de pedidos para los clientes.",
+      "item1": "Diseño moderno y mobile-first",
+      "item2": "Organización de categorías de productos",
+      "item3": "Optimización SEO para búsqueda local",
+      "item4": "Contenido bilingüe (Inglés/Español)",
+      "completion": "Finalización esperada: Junio 2025"
+    },
+    "alan_holding": {
+      "title": "AlanHolding.co.uk",
+      "description": "Este sitio web fue diseñado y desarrollado completamente por mí:",
+      "item1": "Estructura del sitio web",
+      "item2": "Copywriting",
+      "item3": "Tono de marca",
+      "item4": "Diseño visual",
+      "item5": "Experiencia de usuario",
+      "item6": "Optimización SEO"
+    },
+    "note": "Como estudiante que continuamente mejora sus habilidades, estoy seleccionando proyectos para construir mi portafolio. Esto significa que obtienes trabajo de calidad profesional a tarifas accesibles para estudiantes."
+  },
+  "testimonials": {
+    "title": "Lo Que Dicen los Clientes",
+    "quote1": "\"Trabajar con Alan fue un cambio de juego, ¡nuestras conversiones se duplicaron!\"",
+    "author1": "– María G.",
+    "quote2": "\"Sus soluciones de IA nos ahorraron horas cada semana y aumentaron el engagement.\"",
+    "author2": "– Carlos M.",
+    "quote3": "\"El texto que escribió capturó perfectamente la voz de nuestra marca.\"",
+    "author3": "– Sofía R."
+  },
+  "contact": {
+    "title": "¿Necesitas texto que realmente convierta? Te tengo cubierto.",
+    "intro": "Soy Alan Holding, un redactor que ayuda a las marcas a vender sin sonar vendedor.<br>Ya sea una landing page impactante, secuencia de emails o sistema de ventas completo, creo mensajes claros y confiados que generan resultados.",
+    "point1": "Aumenta las conversiones sin perseguir leads",
+    "point2": "Suena como un profesional, incluso si recién estás comenzando",
+    "point3": "Usa texto simple que impulse a la acción",
+    "ready": "Listo cuando tú lo estés.",
+    "cta": "Solic<span class="cursor">█</span>
