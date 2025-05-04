@@ -347,6 +347,7 @@
       height: 20px;
       display: inline-block;
     }
+
     /* Responsive Styles */
     @media (max-width: 768px) {
       h1 {
@@ -445,222 +446,6 @@
       max-width: 100%;
     }
   </style>
-</head>
-    <div id="contact" class="tab-content" data-aos="fade-up">
-      <h2 data-i18n="contact.title">Need copy that actually converts? I've got you.</h2>
-      <p data-i18n="contact.intro">I'm Alan Holding, a copywriter who helps brands sell without sounding salesy.<br>
-      Whether it's a bold landing page, email sequence, or full sales system, I craft clear, confident messaging that gets results.</p>
-      <ul>
-        <li data-i18n="contact.point1">Boost conversions without chasing leads</li>
-        <li data-i18n="contact.point2">Sound like a pro, even if you're just getting started</li>
-        <li data-i18n="contact.point3">Use simple copy that drives action</li>
-      </ul>
-      <p><strong data-i18n="contact.ready">Ready when you are.</strong></p>
-      <p><a href="mailto:alan.s.holding@gmail.com?subject=Free Consultation" class="cta-button" data-i18n="contact.cta">Request a Free Consultation</a></p>
-    </div>
-
-  </div>
-
-  <!-- Scripts: Carga optimizada y en el orden correcto -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.umd.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/rellax@1.12.1/rellax.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
-  
-  <!-- Archivo de traducciones -->
-  <script src="js/language.js"></script>
-  
-  <script>
-    // Función para mostrar las pestañas
-    function showTab(event, tabId) {
-      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-      document.getElementById(tabId).classList.add('active');
-      
-      // Si el evento viene de un click (no desde un enlace)
-      if (event && event.currentTarget) {
-        event.currentTarget.classList.add('active');
-      }
-      
-      // Scroll suave hacia la pestaña
-      document.getElementById(tabId).scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-
-    // Inicializar componentes cuando se cargue el documento
-    document.addEventListener('DOMContentLoaded', () => {
-      // Formulario de Early Access
-      const earlyAccessForm = document.getElementById('earlyAccessForm');
-      if (earlyAccessForm) {
-        earlyAccessForm.addEventListener('submit', function(e) {
-          e.preventDefault();
-          const email = this.querySelector('input[type="email"]').value;
-          // Aquí normalmente enviarías el email a tu backend
-          alert('Thanks! We\'ll notify you at ' + email + ' when the templates are ready!');
-          this.reset();
-        });
-      }
-      
-      // Inicializar AOS
-      if (typeof AOS !== 'undefined') {
-        AOS.init({ 
-          duration: 800,
-          once: true,
-          disable: 'mobile' // Desactivar en dispositivos móviles para mejorar rendimiento
-        });
-      }
-
-      // Inicializar CountUp si existe el elemento
-      if (typeof countUp !== 'undefined' && document.getElementById('projectsCount')) {
-        const counter = new countUp.CountUp('projectsCount', 6, { suffix: ' Features' });
-        if (!counter.error) counter.start();
-      }
-
-      // Inicializar Rellax si la librería está disponible
-      if (typeof Rellax === 'function' && document.querySelector('.parallax-bg')) {
-        new Rellax('.parallax-bg');
-      }
-
-      // Inicializar VanillaTilt
-      if (typeof VanillaTilt !== 'undefined') {
-        VanillaTilt.init(document.querySelectorAll('[data-tilt]'), {
-          max: 15,
-          speed: 400,
-          glare: true,
-          'max-glare': 0.2
-        });
-      }
-
-      // Inicializar Swiper
-      setTimeout(() => {
-        if (typeof Swiper !== 'undefined' && document.querySelector('.swiper-container')) {
-          new Swiper('.swiper-container', {
-            loop: true,
-            autoplay: {
-              delay: 5000,
-              disableOnInteraction: false
-            },
-            pagination: {
-              el: '.swiper-pagination',
-              clickable: true
-            },
-            keyboard: {
-              enabled: true
-            },
-            slidesPerView: 1,
-            spaceBetween: 20,
-            breakpoints: {
-              768: {
-                slidesPerView: 1
-              }
-            }
-          });
-        }
-      }, 500); // Pequeño retraso para asegurar que todos los elementos estén cargados
-
-      // Botón de volver arriba
-      const backToTop = document.getElementById('backToTop');
-      if (backToTop) {
-        window.addEventListener('scroll', () => {
-          backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
-        });
-        
-        backToTop.addEventListener('click', () => {
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-          });
-        });
-      }
-
-      // Cambio de modo claro/oscuro
-      const modeToggle = document.getElementById('modeToggle');
-      if (modeToggle) {
-        // Verificar si había una preferencia guardada
-        const savedMode = localStorage.getItem('themeMode');
-        if (savedMode === 'light') {
-          document.body.classList.add('light-mode');
-          modeToggle.textContent = '🌙';
-        }
-        
-        modeToggle.addEventListener('click', () => {
-          document.body.classList.toggle('light-mode');
-          const isLight = document.body.classList.contains('light-mode');
-          modeToggle.textContent = isLight ? '🌙' : '☀️';
-          // Guardar preferencia
-          localStorage.setItem('themeMode', isLight ? 'light' : 'dark');
-        });
-      }
-    });
-
-    // Inicializar Particles.js con una configuración más ligera
-    window.addEventListener('load', () => {
-      if (typeof particlesJS !== 'undefined') {
-        particlesJS('particles-js', {
-          particles: {
-            number: { 
-              value: 40, // Reducido para mejor rendimiento
-              density: { enable: true, value_area: 800 } 
-            },
-            color: { value: '#ffffff' },
-            shape: { type: 'circle' },
-            opacity: { value: 0.5, random: false },
-            size: { value: 3, random: true },
-            move: { 
-              enable: true, 
-              speed: 2, 
-              direction: 'none',
-              out_mode: 'out'
-            }
-          },
-          interactivity: {
-            detect_on: 'canvas',
-            events: {
-              onhover: { 
-                enable: true, 
-                mode: 'repulse' 
-              },
-              onclick: { 
-                enable: true, 
-                mode: 'push' 
-              },
-              resize: true
-            },
-            modes: {
-              repulse: { distance: 100 },
-              push: { particles_nb: 4 }
-            }
-          },
-          retina_detect: true
-        });
-      }
-    });
-    
-    // Efecto de ripple en botones
-    document.addEventListener('click', function(e) {
-      const target = e.target;
-      if (target.classList.contains('cta-button')) {
-        const rect = target.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        
-        const ripple = document.createElement('span');
-        ripple.classList.add('ripple');
-        ripple.style.left = x + 'px';
-        ripple.style.top = y + 'px';
-        
-        target.appendChild(ripple);
-        
-        setTimeout(() => {
-          ripple.remove();
-        }, 600);
-      }
-    });
-  </script>
-</body>
-</html>
 </head>
 <body>
   <div class="parallax-bg" data-rellax-speed="-2"></div>
@@ -873,3 +658,220 @@
         <div class="swiper-pagination"></div>
       </div>
     </div>
+
+    <div id="contact" class="tab-content" data-aos="fade-up">
+      <h2 data-i18n="contact.title">Need copy that actually converts? I've got you.</h2>
+      <p data-i18n="contact.intro">I'm Alan Holding, a copywriter who helps brands sell without sounding salesy.<br>
+      Whether it's a bold landing page, email sequence, or full sales system, I craft clear, confident messaging that gets results.</p>
+      <ul>
+        <li data-i18n="contact.point1">Boost conversions without chasing leads</li>
+        <li data-i18n="contact.point2">Sound like a pro, even if you're just getting started</li>
+        <li data-i18n="contact.point3">Use simple copy that drives action</li>
+      </ul>
+      <p><strong data-i18n="contact.ready">Ready when you are.</strong></p
+            <p><strong data-i18n="contact.ready">Ready when you are.</strong></p>
+      <p><a href="mailto:alan.s.holding@gmail.com?subject=Free Consultation" class="cta-button" data-i18n="contact.cta">Request a Free Consultation</a></p>
+    </div>
+
+  </div>
+
+  <!-- Scripts: Carga optimizada y en el orden correcto -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.umd.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/rellax@1.12.1/rellax.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+  
+  <!-- Archivo de traducciones -->
+  <script src="js/language.js"></script>
+  
+  <script>
+    // Función para mostrar las pestañas
+    function showTab(event, tabId) {
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      
+      // Si el evento viene de un click (no desde un enlace)
+      if (event && event.currentTarget) {
+        event.currentTarget.classList.add('active');
+      }
+      
+      // Scroll suave hacia la pestaña
+      document.getElementById(tabId).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // Inicializar componentes cuando se cargue el documento
+    document.addEventListener('DOMContentLoaded', () => {
+      // Formulario de Early Access
+      const earlyAccessForm = document.getElementById('earlyAccessForm');
+      if (earlyAccessForm) {
+        earlyAccessForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const email = this.querySelector('input[type="email"]').value;
+          // Aquí normalmente enviarías el email a tu backend
+          alert('Thanks! We\'ll notify you at ' + email + ' when the templates are ready!');
+          this.reset();
+        });
+      }
+      
+      // Inicializar AOS
+      if (typeof AOS !== 'undefined') {
+        AOS.init({ 
+          duration: 800,
+          once: true,
+          disable: 'mobile' // Desactivar en dispositivos móviles para mejorar rendimiento
+        });
+      }
+
+      // Inicializar CountUp si existe el elemento
+      if (typeof countUp !== 'undefined' && document.getElementById('projectsCount')) {
+        const counter = new countUp.CountUp('projectsCount', 6, { suffix: ' Features' });
+        if (!counter.error) counter.start();
+      }
+
+      // Inicializar Rellax si la librería está disponible
+      if (typeof Rellax === 'function' && document.querySelector('.parallax-bg')) {
+        new Rellax('.parallax-bg');
+      }
+
+      // Inicializar VanillaTilt
+      if (typeof VanillaTilt !== 'undefined') {
+        VanillaTilt.init(document.querySelectorAll('[data-tilt]'), {
+          max: 15,
+          speed: 400,
+          glare: true,
+          'max-glare': 0.2
+        });
+      }
+
+      // Inicializar Swiper
+      setTimeout(() => {
+        if (typeof Swiper !== 'undefined' && document.querySelector('.swiper-container')) {
+          new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+              delay: 5000,
+              disableOnInteraction: false
+            },
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true
+            },
+            keyboard: {
+              enabled: true
+            },
+            slidesPerView: 1,
+            spaceBetween: 20,
+            breakpoints: {
+              768: {
+                slidesPerView: 1
+              }
+            }
+          });
+        }
+      }, 500); // Pequeño retraso para asegurar que todos los elementos estén cargados
+
+      // Botón de volver arriba
+      const backToTop = document.getElementById('backToTop');
+      if (backToTop) {
+        window.addEventListener('scroll', () => {
+          backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+        });
+        
+        backToTop.addEventListener('click', () => {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      }
+
+      // Cambio de modo claro/oscuro
+      const modeToggle = document.getElementById('modeToggle');
+      if (modeToggle) {
+        // Verificar si había una preferencia guardada
+        const savedMode = localStorage.getItem('themeMode');
+        if (savedMode === 'light') {
+          document.body.classList.add('light-mode');
+          modeToggle.textContent = '🌙';
+        }
+        
+        modeToggle.addEventListener('click', () => {
+          document.body.classList.toggle('light-mode');
+          const isLight = document.body.classList.contains('light-mode');
+          modeToggle.textContent = isLight ? '🌙' : '☀️';
+          // Guardar preferencia
+          localStorage.setItem('themeMode', isLight ? 'light' : 'dark');
+        });
+      }
+    });
+
+    // Inicializar Particles.js con una configuración más ligera
+    window.addEventListener('load', () => {
+      if (typeof particlesJS !== 'undefined') {
+        particlesJS('particles-js', {
+          particles: {
+            number: { 
+              value: 40, // Reducido para mejor rendimiento
+              density: { enable: true, value_area: 800 } 
+            },
+            color: { value: '#ffffff' },
+            shape: { type: 'circle' },
+            opacity: { value: 0.5, random: false },
+            size: { value: 3, random: true },
+            move: { 
+              enable: true, 
+              speed: 2, 
+              direction: 'none',
+              out_mode: 'out'
+            }
+          },
+          interactivity: {
+            detect_on: 'canvas',
+            events: {
+              onhover: { 
+                enable: true, 
+                mode: 'repulse' 
+              },
+              onclick: { 
+                enable: true, 
+                mode: 'push' 
+              },
+              resize: true
+            },
+            modes: {
+              repulse: { distance: 100 },
+              push: { particles_nb: 4 }
+            }
+          },
+          retina_detect: true
+        });
+      }
+    });
+    
+    // Efecto de ripple en botones
+    document.addEventListener('click', function(e) {
+      const target = e.target;
+      if (target.classList.contains('cta-button')) {
+        const rect = target.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const ripple = document.createElement('span');
+        ripple.classList.add('ripple');
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        
+        target.appendChild(ripple);
+        
+        setTimeout(() => {
+          ripple.remove();
+        }, 600);
+      }
+    });
+  </script>
+</body>
+</html>                                                                  
