@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
+  <!-- Preconnect para dominios externos -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://docs.google.com">
+  
   <!-- Open Graph & SEO Meta Tags -->
   <meta property="og:title" content="Alan Holding | Freelance Copywriter & AI Enthusiast" />
   <meta property="og:description" content="Get high-converting website copy, email sequences, and sales funnels. Book a free consultation and download 5 proven headline templates." />
@@ -21,18 +25,10 @@
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-  <!-- Core Libraries -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.umd.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/rellax@1.12.1/rellax.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
-
-  <!-- Swiper for testimonials -->
+  <!-- Core Libraries - Optimizadas y reducidas -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
+  
   <style>
     /* Variables and resets */
     :root {
@@ -49,232 +45,297 @@
       transition: color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
     }
     body {
-      margin:0;
-      font-family:Arial,sans-serif;
-      color:var(--text-dark);
-      background:var(--bg-dark);
-      overflow-x:hidden;
-      scroll-behavior:smooth;
-      line-height:1.6;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--text-dark);
+      background: var(--bg-dark);
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      line-height: 1.6;
     }
     body.light-mode {
-      background:var(--bg-light);
-      color:var(--text-light);
+      background: var(--bg-light);
+      color: var(--text-light);
     }
     img {
-      max-width:100%;
-      display:block;
+      max-width: 100%;
+      display: block;
+      height: auto;
     }
     a {
-      text-decoration:none;
-      color:inherit;
+      text-decoration: none;
+      color: inherit;
     }
 
     /* Background effects */
     #particles-js, .parallax-bg {
-      position:fixed;
-      width:100%;
-      height:100%;
-      top:0;
-      left:0;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
     }
     #particles-js {
-      z-index:-2;
+      z-index: -2;
     }
     .parallax-bg {
-      background:url('futuristic-texture.jpg') center/cover no-repeat;
-      opacity:0.25;
-      z-index:-3;
+      background: url('futuristic-texture.jpg') center/cover no-repeat;
+      opacity: 0.25;
+      z-index: -3;
     }
 
     /* Container */
     .container {
-      max-width:800px;
-      margin:0 auto;
-      padding:20px;
-      position:relative;
-      z-index:1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      position: relative;
+      z-index: 1;
     }
 
     /* Header & Hero */
     header {
-      text-align:center;
-      margin-top:50px;
-      position:relative;
+      text-align: center;
+      margin-top: 50px;
+      position: relative;
     }
     h1 {
-      font-size:3rem;
-      margin-bottom:0.5em;
+      font-size: 3rem;
+      margin-bottom: 0.5em;
     }
     .profile-image {
-      width:220px;
-      height:220px;
-      border-radius:50%;
-      object-fit:cover;
-      margin:30px auto;
-      box-shadow:0 4px 15px rgba(0,0,0,0.25);
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 30px auto;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
     }
     p.lead {
-      font-size:1.1rem;
-      margin-bottom:1em;
+      font-size: 1.1rem;
+      margin-bottom: 1em;
     }
     .mode-toggle {
-      position:absolute;
-      top:20px;
-      right:20px;
-      background:#fff;
-      color:var(--primary-dark);
-      border:none;
-      border-radius:50%;
-      width:40px;
-      height:40px;
-      cursor:pointer;
-      box-shadow:0 2px 5px rgba(0,0,0,0.2);
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #fff;
+      color: var(--primary-dark);
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      z-index: 10;
     }
 
     /* Buttons */
     .cta-button {
-      display:inline-block;
-      margin-top:20px;
-      padding:12px 24px;
-      background:var(--primary-dark);
-      color:#fff;
-      border:none;
-      border-radius:5px;
-      font-size:1rem;
-      font-weight:bold;
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: var(--primary-dark);
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: center;
     }
     .cta-button:hover {
-      background:var(--primary-light);
-      transform:scale(1.05);
+      background: var(--primary-light);
+      transform: scale(1.05);
     }
 
     /* Sections */
     section {
-      margin:60px 0;
+      margin: 60px 0;
     }
     h2 {
-      font-size:2rem;
-      margin-bottom:0.5em;
+      font-size: 2rem;
+      margin-bottom: 0.5em;
     }
 
     /* Lists */
     ul {
-      list-style:none;
-      padding:0;
+      list-style: none;
+      padding: 0;
     }
     ul li {
-      position:relative;
-      padding-left:1.5em;
-      margin-bottom:0.5em;
+      position: relative;
+      padding-left: 1.5em;
+      margin-bottom: 0.5em;
     }
     ul li::before {
-      content:'✅';
-      position:absolute;
-      left:0;
-      top:0;
+      content: '✅';
+      position: absolute;
+      left: 0;
+      top: 0;
     }
     ul li:hover {
-      transform:translateX(5px);
+      transform: translateX(5px);
     }
 
     /* Tabs */
     .tabs {
-      display:flex;
-      justify-content:center;
-      margin-top:30px;
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      flex-wrap: wrap;
     }
     .tab {
-      background:rgba(255,255,255,0.2);
-      padding:10px 20px;
-      margin:0 5px;
-      border-radius:5px;
-      cursor:pointer;
+      background: rgba(255,255,255,0.2);
+      padding: 10px 20px;
+      margin: 0 5px 5px;
+      border-radius: 5px;
+      cursor: pointer;
     }
     .tab.active, .tab:hover {
-      background:#fff;
-      color:var(--primary-dark);
+      background: #fff;
+      color: var(--primary-dark);
     }
     .tab-content {
-      display:none;
-      margin-top:30px;
+      display: none;
+      margin-top: 30px;
     }
     .tab-content.active {
-      display:block;
+      display: block;
     }
 
     /* Packages grid */
     .package-grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-      gap:20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
     .package {
-      background:#fff;
-      padding:20px;
-      border-radius:8px;
-      box-shadow:0 2px 10px rgba(0,0,0,0.1);
-      color:#333;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      color: #333;
     }
     .package .price {
-      font-size:1.25rem;
-      font-weight:bold;
-      margin:10px 0;
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin: 10px 0;
     }
 
     /* Back to top */
     #backToTop {
-      position:fixed;
-      bottom:30px;
-      right:30px;
-      background:#fff;
-      color:var(--primary-dark);
-      border:none;
-      padding:10px 15px;
-      border-radius:5px;
-      cursor:pointer;
-      box-shadow:0 2px 5px rgba(0,0,0,0.2);
-      display:none;
-      z-index:2;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #fff;
+      color: var(--primary-dark);
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      display: none;
+      z-index: 99;
     }
 
     /* Swiper */
     .swiper-container {
-      width:100%;
-      padding:20px 0;
+      width: 100%;
+      padding: 20px 0;
     }
     .swiper-slide {
-      background:#fff;
-      color:#333;
-      padding:20px;
-      border-radius:10px;
-      box-shadow:0 2px 10px rgba(0,0,0,0.1);
+      background: #fff;
+      color: #333;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
     .swiper-slide blockquote {
-      margin:0;
-      font-style:italic;
+      margin: 0;
+      font-style: italic;
     }
     .swiper-slide cite {
-      display:block;
-      margin-top:10px;
-      text-align:right;
-      font-weight:bold;
-      color:var(--primary-dark);
+      display: block;
+      margin-top: 10px;
+      text-align: right;
+      font-weight: bold;
+      color: var(--primary-dark);
     }
 
     /* Ripple */
     .ripple {
-      position:absolute;
-      border-radius:50%;
-      transform:scale(0);
-      background:rgba(0,0,0,0.1);
-      animation:ripple .6s linear;
+      position: absolute;
+      border-radius: 50%;
+      transform: scale(0);
+      background: rgba(0,0,0,0.1);
+      animation: ripple .6s linear;
     }
     @keyframes ripple {
       to {
-        transform:scale(4);
-        opacity:0;
+        transform: scale(4);
+        opacity: 0;
       }
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      
+      .profile-image {
+        width: 180px;
+        height: 180px;
+      }
+      
+      .tabs {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .tab {
+        margin: 5px;
+        flex: 0 1 calc(50% - 10px);
+        text-align: center;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .container {
+        padding: 15px;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      .profile-image {
+        width: 150px;
+        height: 150px;
+      }
+      
+      .tab {
+        flex: 0 1 100%;
+        margin: 3px 0;
+      }
+      
+      .package-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    /* Iframe styling */
+    iframe {
+      border: none;
+      width: 100%;
+      height: 600px;
+      max-width: 100%;
     }
   </style>
 </head>
@@ -286,23 +347,22 @@
 
     <header data-aos="fade-down">
       <button class="mode-toggle" id="modeToggle" title="Toggle light/dark mode">☀️</button>
-      <img src="avatar.png" alt="Alan Holding copywriter and AI enthusiast" class="profile-image" data-tilt data-tilt-max="15" data-tilt-speed="400">
+      <img src="avatar.png" alt="Alan Holding copywriter and AI enthusiast" class="profile-image" loading="lazy" data-tilt data-tilt-max="15" data-tilt-speed="400">
       <h1><span id="typed"></span></h1>
       <p class="lead">
-        I’m Alan Holding. I write copy that makes people pay attention—and pay you.<br>
+        I'm Alan Holding. I write copy that makes people pay attention—and pay you.<br>
         I help small brands and growing businesses stand out, sound sharp, and sell without begging for attention.<br>
         From headlines to landing pages, I build the words that do the heavy lifting for you—day and night.
       </p>
-      <a href="#contact" class="cta-button" data-aos="zoom-in" onclick="showTab(event,'contact')">Let’s turn your message into money.</a>
+      <a href="#contact" class="cta-button" data-aos="zoom-in" onclick="showTab(event,'contact')">Let's turn your message into money.</a>
     </header>
 
     <!-- Lead Magnet: Free Guide -->
     <section id="guide" data-aos="fade-up">
       <h2>Free Download: 5 Irresistible Headline Templates</h2>
       <p>Get five proven formulas now to grab your audience's attention.</p>
-      <!-- Google Form Embed -->
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfDUMMYURL/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-      <!-- End Google Form Embed -->
+      <!-- Google Form Embed - ACTUALIZA EL ID DEL FORMULARIO -->
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfYourActualFormIDHere/viewform?embedded=true">Loading…</iframe>
     </section>
 
     <div class="tabs" data-aos="fade-up">
@@ -321,7 +381,7 @@
       <p>I operate with a results-based model: free trials on initial projects, commission only on successful outcomes.</p>
     </div>
 
-    <section id="packages" class="tab-content" data-aos="fade-up">
+    <div id="packages" class="tab-content" data-aos="fade-up">
       <h2>Choose Your Package</h2>
       <div class="package-grid">
         <div class="package">
@@ -354,7 +414,7 @@
           <button class="cta-button">Select Empire</button>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- What I Do Section -->
     <section id="services" data-aos="fade-up">
@@ -380,7 +440,7 @@
       <h2>Why Work With Me?</h2>
       <ul>
         <li>Results-first, low-risk model for real growth</li>
-        <li>Clear, high-converting copy that speaks your customer’s language</li>
+        <li>Clear, high-converting copy that speaks your customer's language</li>
         <li>Friendly, collaborative process tailored to your goals</li>
       </ul>
     </section>
@@ -401,20 +461,30 @@
 
     <div id="testimonials" class="tab-content" data-aos="fade-up">
       <h2>What Clients Say</h2>
-      <section class="testimonials-list">
-        <blockquote>"Working with Alan was a game-changer, our conversions doubled!"<cite>– Maria G.</cite></blockquote>
-        <blockquote>"His AI solutions saved us hours each week and boosted engagement."<cite>– Carlos M.</cite></blockquote>
-        <blockquote>"The copy he wrote captured our brand voice perfectly."<cite>– Sofia R.</cite></blockquote>
-      </section>
+      <!-- Estructura Swiper corregida -->
+      <div class="swiper-container testimonials-list">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <blockquote>"Working with Alan was a game-changer, our conversions doubled!"<cite>– Maria G.</cite></blockquote>
+          </div>
+          <div class="swiper-slide">
+            <blockquote>"His AI solutions saved us hours each week and boosted engagement."<cite>– Carlos M.</cite></blockquote>
+          </div>
+          <div class="swiper-slide">
+            <blockquote>"The copy he wrote captured our brand voice perfectly."<cite>– Sofia R.</cite></blockquote>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
     </div>
 
     <div id="contact" class="tab-content" data-aos="fade-up">
-      <h2>Need copy that actually converts? I’ve got you.</h2>
-      <p>I’m Alan Holding, a copywriter who helps brands sell without sounding salesy.<br>
-      Whether it’s a bold landing page, email sequence, or full sales system, I craft clear, confident messaging that gets results.</p>
+      <h2>Need copy that actually converts? I've got you.</h2>
+      <p>I'm Alan Holding, a copywriter who helps brands sell without sounding salesy.<br>
+      Whether it's a bold landing page, email sequence, or full sales system, I craft clear, confident messaging that gets results.</p>
       <ul>
         <li>Boost conversions without chasing leads</li>
-        <li>Sound like a pro, even if you’re just getting started</li>
+        <li>Sound like a pro, even if you're just getting started</li>
         <li>Use simple copy that drives action</li>
       </ul>
       <p><strong>Ready when you are.</strong></p>
@@ -423,77 +493,199 @@
 
   </div>
 
-  <!-- Scripts -->
+  <!-- Scripts: Carga optimizada y en el orden correcto -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.umd.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/rellax@1.12.1/rellax.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+
   <script>
+    // Función para mostrar las pestañas
     function showTab(event, tabId) {
       document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
       document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
       document.getElementById(tabId).classList.add('active');
-      event.currentTarget.classList.add('active');
-      document.getElementById(tabId).scrollIntoView({ behavior: 'smooth' });
+      
+      // Si el evento viene de un click (no desde un enlace)
+      if (event && event.currentTarget) {
+        event.currentTarget.classList.add('active');
+      }
+      
+      // Scroll suave hacia la pestaña
+      document.getElementById(tabId).scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
-    // Initialize Particles.js with inline configuration
-    particlesJS('particles-js', {
-      particles: {
-        number: { value: 80, density: { enable: true, value_area: 800 } },
-        color: { value: '#ffffff' },
-        shape: { type: 'circle' },
-        opacity: { value: 0.5, random: false },
-        size: { value: 3, random: true },
-        move: { enable: true, speed: 2, direction: 'none', out_mode: 'out' }
-      },
-      interactivity: {
-        detect_on: 'canvas',
-        events: {
-          onhover: { enable: true, mode: 'repulse' },
-          onclick: { enable: true, mode: 'push' },
-          resize: true
-        },
-        modes: {
-          repulse: { distance: 100 },
-          push: { particles_nb: 4 }
+    // Inicializar componentes cuando se cargue el documento
+    document.addEventListener('DOMContentLoaded', () => {
+      // Inicializar AOS
+      if (typeof AOS !== 'undefined') {
+        AOS.init({ 
+          duration: 800,
+          once: true,
+          disable: 'mobile' // Desactivar en dispositivos móviles para mejorar rendimiento
+        });
+      }
+      
+      // Inicializar Typed.js
+      if (typeof Typed !== 'undefined') {
+        new Typed('#typed', {
+          strings: ['Crafting Words That Command Attention and Drive Action.'],
+          typeSpeed: 60,
+          backSpeed: 30,
+          showCursor: true,
+          cursorChar: '|'
+        });
+      }
+
+      // Inicializar CountUp si existe el elemento
+      if (typeof countUp !== 'undefined' && document.getElementById('projectsCount')) {
+        const counter = new countUp.CountUp('projectsCount', 6, { suffix: ' Features' });
+        if (!counter.error) counter.start();
+      }
+
+      // Inicializar Rellax si la librería está disponible
+      if (typeof Rellax === 'function' && document.querySelector('.parallax-bg')) {
+        new Rellax('.parallax-bg');
+      }
+
+      // Inicializar VanillaTilt
+      if (typeof VanillaTilt !== 'undefined') {
+        VanillaTilt.init(document.querySelectorAll('[data-tilt]'), {
+          max: 15,
+          speed: 400,
+          glare: true,
+          'max-glare': 0.2
+        });
+      }
+
+      // Inicializar Swiper
+      setTimeout(() => {
+        if (typeof Swiper !== 'undefined' && document.querySelector('.swiper-container')) {
+          new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+              delay: 5000,
+              disableOnInteraction: false
+            },
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true
+            },
+            keyboard: {
+              enabled: true
+            },
+            slidesPerView: 1,
+            spaceBetween: 20,
+            breakpoints: {
+              768: {
+                slidesPerView: 1
+              }
+            }
+          });
         }
-      },
-      retina_detect: true
+      }, 500); // Pequeño retraso para asegurar que todos los elementos estén cargados
+
+      // Botón de volver arriba
+      const backToTop = document.getElementById('backToTop');
+      if (backToTop) {
+        window.addEventListener('scroll', () => {
+          backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+        });
+        
+        backToTop.addEventListener('click', () => {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      }
+
+      // Cambio de modo claro/oscuro
+      const modeToggle = document.getElementById('modeToggle');
+      if (modeToggle) {
+        // Verificar si había una preferencia guardada
+        const savedMode = localStorage.getItem('themeMode');
+        if (savedMode === 'light') {
+          document.body.classList.add('light-mode');
+          modeToggle.textContent = '🌙';
+        }
+        
+        modeToggle.addEventListener('click', () => {
+          document.body.classList.toggle('light-mode');
+          const isLight = document.body.classList.contains('light-mode');
+          modeToggle.textContent = isLight ? '🌙' : '☀️';
+          // Guardar preferencia
+          localStorage.setItem('themeMode', isLight ? 'light' : 'dark');
+        });
+      }
     });
 
-    document.addEventListener('DOMContentLoaded', () => {
-      new Typed('#typed', {
-        strings: ['Crafting Words That Command Attention and Drive Action.'],
-        typeSpeed: 60,
-        backSpeed: 30,
-        showCursor: true,
-        cursorChar: '|'
-      });
-
-      AOS.init({ duration: 800 });
-
-      const countUp = new countUp.CountUp('projectsCount', 6, { suffix: ' Features' });
-      if (!countUp.error) countUp.start();
-
-      new Rellax('.parallax-bg');
-      VanillaTilt.init(document.querySelectorAll('.profile-image'), { max: 15, speed: 400 });
-
-      new Swiper('.swiper-container', { loop: true, autoplay: { delay: 5000 }, pagination: { el: '.swiper-pagination' } });
-
-      const backToTop = document.getElementById('backToTop');
-      window.addEventListener('scroll', () => {
-        backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
-      });
-      backToTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-
-      // Toggle light/dark mode
-      const modeToggle = document.getElementById('modeToggle');
-      modeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('light-mode');
-        modeToggle.textContent = document.body.classList.contains('light-mode') ? '🌙' : '☀️';
-      });
+    // Inicializar Particles.js con una configuración más ligera
+    window.addEventListener('load', () => {
+      if (typeof particlesJS !== 'undefined') {
+        particlesJS('particles-js', {
+          particles: {
+            number: { 
+              value: 40, // Reducido para mejor rendimiento
+              density: { enable: true, value_area: 800 } 
+            },
+            color: { value: '#ffffff' },
+            shape: { type: 'circle' },
+            opacity: { value: 0.5, random: false },
+            size: { value: 3, random: true },
+            move: { 
+              enable: true, 
+              speed: 2, 
+              direction: 'none',
+              out_mode: 'out'
+            }
+          },
+          interactivity: {
+            detect_on: 'canvas',
+            events: {
+              onhover: { 
+                enable: true, 
+                mode: 'repulse' 
+              },
+              onclick: { 
+                enable: true, 
+                mode: 'push' 
+              },
+              resize: true
+            },
+            modes: {
+              repulse: { distance: 100 },
+              push: { particles_nb: 4 }
+            }
+          },
+          retina_detect: true
+        });
+      }
+    });
+    
+    // Efecto de ripple en botones
+    document.addEventListener('click', function(e) {
+      const target = e.target;
+      if (target.classList.contains('cta-button')) {
+        const rect = target.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const ripple = document.createElement('span');
+        ripple.classList.add('ripple');
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        
+        target.appendChild(ripple);
+        
+        setTimeout(() => {
+          ripple.remove();
+        }, 600);
+      }
     });
   </script>
 </body>
 </html>
-
-
