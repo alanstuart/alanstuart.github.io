@@ -1,0 +1,149 @@
+{
+  "hero": {
+    "lead": "Not just nice to look at—built to bring in leads, sales, and results.<br>I work with small brands and growing businesses to create fast, mobile-friendly websites with clean code, smart SEO, and design that gets people to take action.<br>Whether you need a simple site or a full digital setup, I'll build something that works hard for your business—day and night.",
+    "cta": "Let's turn your message into money."
+  },
+  "guide": {
+    "title": "Free Download: 5 Irresistible Headline Templates",
+    "description": "Get five proven headline formulas that will instantly grab attention and drive engagement. Coming soon!",
+    "alert": "🚀 Templates in development!",
+    "alert_text": "Be the first to receive them when ready:",
+    "email_placeholder": "Your email address",
+    "button": "Get Early Access",
+    "note": "No spam, ever. Unsubscribe anytime."
+  },
+  "tabs": {
+    "about": "About Me",
+    "packages": "Packages",
+    "projects": "Projects",
+    "testimonials": "Testimonials",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "About Me",
+    "p1": "I transform businesses into digital success stories through powerful websites built with persuasive copywriting and strategic SEO that <em>actually converts</em>.",
+    "p2": "While my foundation is in crafting high-performance websites that drive real business results, I'm expanding my toolkit to include cutting-edge AI solutions. <strong>Coming soon:</strong> custom chatbots and voicebots that engage your customers 24/7, turning visitors into leads while you sleep.",
+    "value_title": "My Value Proposition",
+    "value_p1": "I operate with a results-based model: see the value before you commit. I'm currently building my portfolio with select clients who want beautiful, functional websites that actually deliver business outcomes.",
+    "value_p2": "As a student of digital marketing constantly learning from top industry experts, I bring fresh perspectives and innovative approaches to every project—without the agency price tag."
+  },
+  "packages": {
+    "title": "Choose Your Package",
+    "essentials": {
+      "title": "Essentials",
+      "item1": "Professional responsive website",
+      "item2": "Up to 5 pages",
+      "item3": "Basic SEO setup",
+      "item4": "Mobile optimization",
+      "item5": "Contact form integration",
+      "price": "£300",
+      "button": "Select Essentials"
+    },
+    "performance": {
+      "title": "Performance",
+      "item1": "Everything in Essentials",
+      "item2": "Conversion-focused copywriting",
+      "item3": "Advanced SEO optimization",
+      "item4": "Content strategy",
+      "item5": "2 rounds of revisions",
+      "price": "£550",
+      "button": "Select Performance"
+    },
+    "complete": {
+      "title": "Complete Solution",
+      "item1": "Everything in Performance",
+      "item2": "Extended website (up to 10 pages)",
+      "item3": "Priority support",
+      "item4": "Monthly performance report",
+      "item5": "AI chatbot integration",
+      "coming_soon": "Coming soon:",
+      "chatbot": "AI chatbot integration",
+      "price": "£850",
+      "button": "Select Complete Solution"
+    }
+  },
+  "services": {
+    "title": "What I Do",
+    "websites": {
+      "title": "✍️ Performance Websites",
+      "description": "Clean, fast-loading websites that present your business with clarity and purpose. From simple information sites to product showcases and lead generation engines."
+    },
+    "seo": {
+      "title": "🔍 SEO Foundations",
+      "description": "Every site built with search visibility in mind. Proper structure, metadata, and content optimization to help customers find you organically."
+    },
+    "development": {
+      "title": "💼 Custom Development",
+      "description": "Websites tailored exactly to your requirements—whether you need specific functionality, integrations, or unique design elements."
+    }
+  },
+  "services_explained": {
+    "title": "Services Explained: What This All Means For You",
+    "simple_terms": "In simple terms:",
+    "web": {
+      "title": "🌐 Website Development",
+      "simple": "I build websites that look professional on all devices (phones, tablets, computers) and load quickly so visitors don't get frustrated and leave.",
+      "analogy": "Think of it like having a 24/7 storefront or office that represents your business perfectly, even when you're asleep."
+    },
+    "seo": {
+      "title": "🔍 SEO (Search Engine Optimization)",
+      "simple": "I make sure people can find your website when they search on Google for what you offer.",
+      "analogy": "It's like making sure your business is on the main street where customers can see it, rather than hidden down a back alley."
+    },
+    "copy": {
+      "title": "💬 Copywriting",
+      "simple": "I write the words on your website that explain what you do and convince visitors to contact you, buy your product, or take whatever action you want.",
+      "analogy": "Good website words work like your best salesperson, available 24/7."
+    },
+    "not_sure": "Not sure what you need? That's okay!",
+    "contact_link": "Contact me",
+    "chat": "for a friendly chat about your business goals, and I'll explain how I can help without the technical jargon."
+  },
+  "why_me": {
+    "title": "Why Work With Me?",
+    "item1": "Results-first, low-risk model for real growth",
+    "item2": "Clear, high-converting copy that speaks your customer's language",
+    "item3": "Friendly, collaborative process tailored to your goals"
+  },
+  "projects": {
+    "title": "Current Portfolio Projects",
+    "costa_rica": {
+      "title": "Costa Rica Supermarket Website",
+      "description": "Currently developing a digital presence for a local supermarket in Costa Rica, focusing on showcasing their product range and streamlining the ordering process for customers.",
+      "item1": "Modern, mobile-first design",
+      "item2": "Product category organization",
+      "item3": "SEO optimization for local search",
+      "item4": "Bilingual content (English/Spanish)",
+      "completion": "Completion expected: June 2025"
+    },
+    "alan_holding": {
+      "title": "AlanHolding.co.uk",
+      "description": "This website was designed and developed entirely by me:",
+      "item1": "Website structure",
+      "item2": "Copywriting",
+      "item3": "Branding tone",
+      "item4": "Visual design",
+      "item5": "User experience",
+      "item6": "SEO optimization"
+    },
+    "note": "As a student continuously improving my skills, I'm selectively taking on projects to build my portfolio. This means you get professional-quality work at student-friendly rates."
+  },
+  "testimonials": {
+    "title": "What Clients Say",
+    "quote1": "\"Working with Alan was a game-changer, our conversions doubled!\"",
+    "author1": "– Maria G.",
+    "quote2": "\"His AI solutions saved us hours each week and boosted engagement.\"",
+    "author2": "– Carlos M.",
+    "quote3": "\"The copy he wrote captured our brand voice perfectly.\"",
+    "author3": "– Sofia R."
+  },
+  "contact": {
+    "title": "Need copy that actually converts? I've got you.",
+    "intro": "I'm Alan Holding, a copywriter who helps brands sell without sounding salesy.<br>Whether it's a bold landing page, email sequence, or full sales system, I craft clear, confident messaging that gets results.",
+    "point1": "Boost conversions without chasing leads",
+    "point2": "Sound like a pro, even if you're just getting started",
+    "point3": "Use simple copy that drives action",
+    "ready": "Ready when you are.",
+    "cta": "Request a Free Consultation"
+  }
+}
