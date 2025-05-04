@@ -301,44 +301,6 @@ const translations = {
 
 let currentLanguage = 'en';
 
-// Función simplificada para aplicar traducciones
-function loadLanguage(lang) {
-  console.log(`Cargando idioma: ${lang}`);
-  
-  if (!translations[lang]) {
-    console.error(`El idioma ${lang} no está disponible`);
-    return;
-  }
-  
-  // Aplica las traducciones al contenido
-  applyTranslations(translations[lang]);
-  
-  // Actualiza la URL con el parámetro de idioma
-  const url = new URL(window.location);
-  url.searchParams.set('lang', lang);
-  window.history.replaceState({}, '', url);
-  
-  // Actualiza el atributo lang del HTML
-  document.documentElement.lang = lang === 'es' ? 'es' : 'en-GB';
-  
-  // Guarda la preferencia del usuario
-  localStorage.setItem('preferredLanguage', lang);
-  
-  // Actualiza los botones de idioma
-  document.querySelectorAll('.language-toggle').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.lang === lang);
-  });
-  
-  // Actualiza el idioma actual
-  currentLanguage = lang;
-  
-  // Reinicia Typed.js si está presente
-  if (window.typedInstance) {
-    window.typedInstance.destroy();
-    initTyped();
-  }
-}
-
 // Aplicar traducciones al DOM
 function applyTranslations(langData) {
   if (!langData) {
@@ -381,22 +343,76 @@ function getNestedValue(obj, path) {
     prev && prev[curr] !== undefined ? prev[curr] : undefined, obj);
 }
 
-// Función para inicializar Typed.js según el idioma
+// FUNCIÓN MEJORADA: Inicializar Typed.js
 function initTyped() {
   const element = document.getElementById('typed');
-  if (!element || typeof Typed === 'undefined') return;
+  if (!element || typeof Typed === 'undefined') {
+    console.log('Typed.js no está disponible o el elemento no existe');
+    return;
+  }
   
-  const strings = currentLanguage === 'es' 
-    ? ['Diseño Web y Soluciones Digitales Que Generan Resultados.']
-    : ['Web Design & Digital Solutions That Drive Results.'];
+  // Si ya existe una instancia, destruirla primero
+  if (window.typedInstance) {
+    window.typedInstance.destroy();
+  }
   
-  window.typedInstance = new Typed('#typed', {
-    strings: strings,
-    typeSpeed: 60,
-    backSpeed: 30,
-    showCursor: true,
-    cursorChar: '|'
+  // Esperar un pequeño tiempo para asegurar que el DOM está actualizado
+  setTimeout(() => {
+    const strings = currentLanguage === 'es' 
+      ? ['Diseño Web y Soluciones Digitales Que Generan Resultados.']
+      : ['Web Design & Digital Solutions That Drive Results.'];
+    
+    console.log('Inicializando Typed.js con:', strings);
+    
+    window.typedInstance = new Typed('#typed', {
+      strings: strings,
+      typeSpeed: 60,
+      backSpeed: 30,
+      showCursor: true,
+      cursorChar: '|',
+      onBegin: (self) => {
+        console.log('Typed.js iniciado');
+      },
+      onComplete: (self) => {
+        console.log('Typed.js completado');
+      }
+    });
+  }, 300);
+}
+
+// FUNCIÓN MEJORADA: Cargar idioma 
+function loadLanguage(lang) {
+  console.log(`Cargando idioma: ${lang}`);
+  
+  if (!translations[lang]) {
+    console.error(`El idioma ${lang} no está disponible`);
+    return;
+  }
+  
+  // Actualizar el idioma actual antes de aplicar traducciones
+  currentLanguage = lang;
+  
+  // Aplica las traducciones al contenido
+  applyTranslations(translations[lang]);
+  
+  // Actualiza la URL con el parámetro de idioma
+  const url = new URL(window.location);
+  url.searchParams.set('lang', lang);
+  window.history.replaceState({}, '', url);
+  
+  // Actualiza el atributo lang del HTML
+  document.documentElement.lang = lang === 'es' ? 'es' : 'en-GB';
+  
+  // Guarda la preferencia del usuario
+  localStorage.setItem('preferredLanguage', lang);
+  
+  // Actualiza los botones de idioma
+  document.querySelectorAll('.language-toggle').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
   });
+  
+  // Reinicia Typed.js después de un breve retraso
+  initTyped();
 }
 
 // Inicializar componentes cuando se cargue el documento
@@ -434,19 +450,4 @@ document.addEventListener('DOMContentLoaded', () => {
   loadLanguage(languageToUse);
 });
 
-// Añadir un botón de depuración
-document.addEventListener('DOMContentLoaded', () => {
-  const debugButton = document.createElement('button');
-  debugButton.textContent = 'Debug';
-  debugButton.style.cssText = 'position:fixed;bottom:10px;left:10px;z-index:9999;background:red;color:white;padding:5px;';
-  debugButton.onclick = () => {
-    console.log('Idioma actual:', currentLanguage);
-    console.log('Traducciones disponibles:', Object.keys(translations));
-    const elements = document.querySelectorAll('[data-i18n]');
-    console.log(`Elementos con data-i18n: ${elements.length}`);
-    
-    alert(`Idioma actual: ${currentLanguage}. Elementos a traducir: ${elements.length}. Ver consola para más detalles.`);
-  };
-  
-  document.body.appendChild(debugButton);
-  });
+// SE ELIMINA EL CÓDIGO DEL BOTÓN DEBUG
