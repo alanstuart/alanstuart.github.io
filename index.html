@@ -5,21 +5,21 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="preconnect" href="https://docs.google.com">
   
-  <!-- Open Graph & SEO Meta Tags -->
-  <meta property="og:title" content="Alan Holding | Freelance Copywriter & AI Enthusiast" />
-  <meta property="og:description" content="Get high-converting website copy, email sequences, and sales funnels. Book a free consultation and download 5 proven headline templates." />
+  <!-- Open Graph & SEO Meta Tags - ACTUALIZADOS -->
+  <meta property="og:title" content="Alan Holding | Web Design & Digital Solutions" />
+  <meta property="og:description" content="Professional website design with SEO optimization and conversion-focused copy. Choose from affordable packages tailored to your business needs." />
   <meta property="og:url" content="https://alanholding.co.uk/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://alanholding.co.uk/og-preview.jpg" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Alan Holding">
-  <meta name="keywords" content="copywriting, freelance copywriter UK, website copy, email marketing, sales copy, AI automation, headline templates">
+  <meta name="keywords" content="web design, website development, SEO, digital solutions, chatbots, affordable websites UK">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alan Holding | Copywriting and Automation</title>
+  <title>Alan Holding | Web Design & Digital Solutions</title>
 
-  <!-- SEO Meta -->
-  <meta name="description" content="Copywriting & AI automation for UK businesses. Free headline templates. Choose your package and stand out today." />
+  <!-- SEO Meta - ACTUALIZADO -->
+  <meta name="description" content="Web design and digital solutions for UK businesses. Professional websites with SEO optimization and conversion-focused copy. Choose your package today." />
   <link rel="canonical" href="https://alanholding.co.uk/" />
 
   <!-- Favicon -->
@@ -263,6 +263,31 @@
       color: var(--primary-dark);
     }
 
+    /* Form styles */
+    .form-container {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    
+    input[type="email"] {
+      padding: 10px;
+      flex: 1;
+      min-width: 200px;
+      border-radius: 4px;
+      border: none;
+      font-size: 1rem;
+    }
+
+    /* Project highlight */
+    .project-highlight {
+      background: rgba(0,198,255,0.1);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    
     /* Ripple */
     .ripple {
       position: absolute;
@@ -357,12 +382,19 @@
       <a href="#contact" class="cta-button" data-aos="zoom-in" onclick="showTab(event,'contact')">Let's turn your message into money.</a>
     </header>
 
-    <!-- Lead Magnet: Free Guide -->
+    <!-- Lead Magnet: Free Guide - ACTUALIZADO -->
     <section id="guide" data-aos="fade-up">
       <h2>Free Download: 5 Irresistible Headline Templates</h2>
-      <p>Get five proven formulas now to grab your audience's attention.</p>
-      <!-- Google Form Embed - ACTUALIZA EL ID DEL FORMULARIO -->
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfYourActualFormIDHere/viewform?embedded=true">Loading…</iframe>
+      <p>Get five proven headline formulas that will instantly grab attention and drive engagement. Coming soon!</p>
+      
+      <div class="form-container">
+        <p><strong>🚀 Templates in development!</strong> Be the first to receive them when ready:</p>
+        <form id="earlyAccessForm" style="display: flex; flex-wrap: wrap; gap: 10px;">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit" class="cta-button" style="margin-top: 0;">Get Early Access</button>
+        </form>
+        <p style="font-size: 0.9rem; margin-top: 10px;">No spam, ever. Unsubscribe anytime.</p>
+      </div>
     </section>
 
     <div class="tabs" data-aos="fade-up">
@@ -373,64 +405,77 @@
       <div class="tab" onclick="showTab(event,'contact')">Contact</div>
     </div>
 
+    <!-- About Me - ACTUALIZADO -->
     <div id="about" class="tab-content active" data-aos="fade-right">
       <h2>About Me</h2>
-      <p>As a digital marketing consultant and copywriter, I help businesses grow their online presence through smart content strategies and innovative web solutions.<br>
-      Constantly learning AI and copywriting under top mentors, I prove action beats theory and results trump titles.</p>
-      <h3>My Working Model</h3>
-      <p>I operate with a results-based model: free trials on initial projects, commission only on successful outcomes.</p>
+      <p>I transform businesses into digital success stories through powerful websites built with persuasive copywriting and strategic SEO that <em>actually converts</em>.</p>
+      
+      <p>While my foundation is in crafting high-performance websites that drive real business results, I'm expanding my toolkit to include cutting-edge AI solutions. <strong>Coming soon:</strong> custom chatbots and voicebots that engage your customers 24/7, turning visitors into leads while you sleep.</p>
+      
+      <h3>My Value Proposition</h3>
+      <p>I operate with a results-based model: see the value before you commit. I'm currently building my portfolio with select clients who want beautiful, functional websites that actually deliver business outcomes.</p>
+      
+      <p>As a student of digital marketing constantly learning from top industry experts, I bring fresh perspectives and innovative approaches to every project—without the agency price tag.</p>
     </div>
 
+    <!-- Packages - ACTUALIZADO -->
     <div id="packages" class="tab-content" data-aos="fade-up">
       <h2>Choose Your Package</h2>
       <div class="package-grid">
         <div class="package">
-          <h3>Starter</h3>
+          <h3>Essentials</h3>
           <ul>
-            <li>3 headlines + 1 optimized landing page</li>
-            <li>Basic optimisation</li>
+            <li>Professional responsive website</li>
+            <li>Up to 5 pages</li>
+            <li>Basic SEO setup</li>
+            <li>Mobile optimization</li>
+            <li>Contact form integration</li>
           </ul>
-          <p class="price">£60</p>
-          <button class="cta-button">Select Starter</button>
+          <p class="price">£300</p>
+          <button class="cta-button">Select Essentials</button>
         </div>
         <div class="package">
-          <h3>Growth</h3>
+          <h3>Performance</h3>
           <ul>
-            <li>Everything in Starter</li>
-            <li>5 welcome emails</li>
-            <li>Existing copy audit</li>
+            <li>Everything in Essentials</li>
+            <li>Conversion-focused copywriting</li>
+            <li>Advanced SEO optimization</li>
+            <li>Content strategy</li>
+            <li>2 rounds of revisions</li>
           </ul>
-          <p class="price">£150–£200</p>
-          <button class="cta-button">Select Growth</button>
+          <p class="price">£550</p>
+          <button class="cta-button">Select Performance</button>
         </div>
         <div class="package">
-          <h3>Empire</h3>
+          <h3>Complete Solution</h3>
           <ul>
-            <li>Everything in Growth</li>
-            <li>Complete funnel strategy</li>
+            <li>Everything in Performance</li>
+            <li>Extended website (up to 10 pages)</li>
+            <li>Priority support</li>
             <li>Monthly performance report</li>
+            <li><strong>Coming soon:</strong> AI chatbot integration</li>
           </ul>
-          <p class="price">£300–£400</p>
-          <button class="cta-button">Select Empire</button>
+          <p class="price">£850</p>
+          <button class="cta-button">Select Complete Solution</button>
         </div>
       </div>
     </div>
 
-    <!-- What I Do Section -->
+    <!-- What I Do Section - ACTUALIZADO -->
     <section id="services" data-aos="fade-up">
       <h2>What I Do</h2>
       <div class="package-grid">
         <div class="package">
-          <h3>✍️ Website Copywriting</h3>
-          <p>Persuasive, SEO-friendly content that turns clicks into conversions.</p>
+          <h3>✍️ Performance Websites</h3>
+          <p>Clean, fast-loading websites that present your business with clarity and purpose. From simple information sites to product showcases and lead generation engines.</p>
         </div>
         <div class="package">
-          <h3>📧 Email Sequences</h3>
-          <p>Smart, automated messages that build trust and drive action.</p>
+          <h3>🔍 SEO Foundations</h3>
+          <p>Every site built with search visibility in mind. Proper structure, metadata, and content optimization to help customers find you organically.</p>
         </div>
         <div class="package">
-          <h3>📄 Sales Pages</h3>
-          <p>High-converting copy built to sell—without sounding pushy.</p>
+          <h3>💼 Custom Development</h3>
+          <p>Websites tailored exactly to your requirements—whether you need specific functionality, integrations, or unique design elements.</p>
         </div>
       </div>
     </section>
@@ -445,9 +490,23 @@
       </ul>
     </section>
 
+    <!-- Projects - ACTUALIZADO -->
     <div id="projects" class="tab-content" data-aos="fade-left">
-      <h2>Example Project: AlanHolding.co.uk</h2>
-      <h3>Full Website Build, Concept to Completion <span id="projectsCount"></span></h3>
+      <h2>Current Portfolio Projects</h2>
+      
+      <div class="project-highlight">
+        <h3>Costa Rica Supermarket Website</h3>
+        <p>Currently developing a digital presence for a local supermarket in Costa Rica, focusing on showcasing their product range and streamlining the ordering process for customers.</p>
+        <ul>
+          <li>Modern, mobile-first design</li>
+          <li>Product category organization</li>
+          <li>SEO optimization for local search</li>
+          <li>Bilingual content (English/Spanish)</li>
+        </ul>
+        <p><em>Completion expected: June 2025</em></p>
+      </div>
+      
+      <h3>AlanHolding.co.uk <span id="projectsCount"></span></h3>
       <p>This website was designed and developed entirely by me:</p>
       <ul>
         <li>Website structure</li>
@@ -457,6 +516,8 @@
         <li>User experience</li>
         <li>SEO optimization</li>
       </ul>
+      
+      <p style="margin-top: 30px;"><em>As a student continuously improving my skills, I'm selectively taking on projects to build my portfolio. This means you get professional-quality work at student-friendly rates.</em></p>
     </div>
 
     <div id="testimonials" class="tab-content" data-aos="fade-up">
@@ -520,6 +581,18 @@
 
     // Inicializar componentes cuando se cargue el documento
     document.addEventListener('DOMContentLoaded', () => {
+      // Formulario de Early Access
+      const earlyAccessForm = document.getElementById('earlyAccessForm');
+      if (earlyAccessForm) {
+        earlyAccessForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const email = this.querySelector('input[type="email"]').value;
+          // Aquí normalmente enviarías el email a tu backend
+          alert('Thanks! We\'ll notify you at ' + email + ' when the templates are ready!');
+          this.reset();
+        });
+      }
+      
       // Inicializar AOS
       if (typeof AOS !== 'undefined') {
         AOS.init({ 
@@ -532,7 +605,7 @@
       // Inicializar Typed.js
       if (typeof Typed !== 'undefined') {
         new Typed('#typed', {
-          strings: ['Crafting Words That Command Attention and Drive Action.'],
+          strings: ['Web Design & Digital Solutions That Drive Results.'],
           typeSpeed: 60,
           backSpeed: 30,
           showCursor: true,
