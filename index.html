@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <!-- Preconnect para dominios externos -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="preconnect" href="https://docs.google.com">
   
-  <!-- Open Graph & SEO Meta Tags -->
+  <!-- Open Graph & SEO Meta Tags - ACTUALIZADOS -->
   <meta property="og:title" content="Alan Holding | Web Design & Digital Solutions" />
   <meta property="og:description" content="Professional website design with SEO optimization and conversion-focused copy. Choose from affordable packages tailored to your business needs." />
   <meta property="og:url" content="https://alanholding.co.uk/" />
@@ -18,14 +18,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alan Holding | Web Design & Digital Solutions</title>
 
-  <!-- SEO Meta -->
+  <!-- SEO Meta - ACTUALIZADO -->
   <meta name="description" content="Web design and digital solutions for UK businesses. Professional websites with SEO optimization and conversion-focused copy. Choose your package today." />
   <link rel="canonical" href="https://alanholding.co.uk/" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-  <!-- Core Libraries -->
+  <!-- Core Libraries - Optimizadas y reducidas -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   
@@ -40,43 +40,48 @@
       --text-dark: #fff;
       --transition-fast: 0.3s ease;
     }
-    
     *, *::before, *::after {
       box-sizing: border-box;
       transition: color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
     }
-    
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-    }
-    
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
       color: var(--text-dark);
       background: var(--bg-dark);
       overflow-x: hidden;
       scroll-behavior: smooth;
       line-height: 1.6;
-      position: relative;
     }
-    
     body.light-mode {
       background: var(--bg-light);
       color: var(--text-light);
     }
-    
     img {
       max-width: 100%;
       display: block;
       height: auto;
     }
-    
     a {
       text-decoration: none;
       color: inherit;
+    }
+
+    /* Background effects */
+    #particles-js, .parallax-bg {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+    #particles-js {
+      z-index: -2;
+    }
+    .parallax-bg {
+      background: url('futuristic-texture.jpg') center/cover no-repeat;
+      opacity: 0.25;
+      z-index: -3;
     }
 
     /* Container */
@@ -94,12 +99,10 @@
       margin-top: 50px;
       position: relative;
     }
-    
     h1 {
       font-size: 3rem;
       margin-bottom: 0.5em;
     }
-    
     .profile-image {
       width: 220px;
       height: 220px;
@@ -108,12 +111,10 @@
       margin: 30px auto;
       box-shadow: 0 4px 15px rgba(0,0,0,0.25);
     }
-    
     p.lead {
       font-size: 1.1rem;
       margin-bottom: 1em;
     }
-    
     .mode-toggle {
       position: absolute;
       top: 20px;
@@ -127,57 +128,6 @@
       cursor: pointer;
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
       z-index: 10;
-    }
-
-    /* Language selector styles */
-    .language-selector {
-      position: absolute;
-      top: 20px;
-      right: 70px; /* Positioned next to the mode toggle */
-      z-index: 10;
-    }
-
-    #languageToggle {
-      background: #fff;
-      color: var(--primary-dark);
-      border: none;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      cursor: pointer;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-      position: relative;
-      font-weight: bold;
-    }
-
-    .language-dropdown {
-      position: absolute;
-      top: 100%;
-      right: 0;
-      background: white;
-      border-radius: 5px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-      display: none;
-      flex-direction: column;
-      overflow: hidden;
-      min-width: 120px;
-      margin-top: 5px;
-    }
-
-    #languageToggle:hover .language-dropdown,
-    #languageToggle:focus .language-dropdown {
-      display: flex;
-    }
-
-    .language-option {
-      padding: 10px 15px;
-      cursor: pointer;
-      color: var(--primary-dark);
-      text-align: left;
-    }
-
-    .language-option:hover {
-      background-color: #f0f0f0;
     }
 
     /* Buttons */
@@ -194,7 +144,6 @@
       cursor: pointer;
       text-align: center;
     }
-    
     .cta-button:hover {
       background: var(--primary-light);
       transform: scale(1.05);
@@ -204,7 +153,6 @@
     section {
       margin: 60px 0;
     }
-    
     h2 {
       font-size: 2rem;
       margin-bottom: 0.5em;
@@ -215,20 +163,17 @@
       list-style: none;
       padding: 0;
     }
-    
     ul li {
       position: relative;
       padding-left: 1.5em;
       margin-bottom: 0.5em;
     }
-    
     ul li::before {
       content: '✅';
       position: absolute;
       left: 0;
       top: 0;
     }
-    
     ul li:hover {
       transform: translateX(5px);
     }
@@ -240,7 +185,6 @@
       margin-top: 30px;
       flex-wrap: wrap;
     }
-    
     .tab {
       background: rgba(255,255,255,0.2);
       padding: 10px 20px;
@@ -248,17 +192,14 @@
       border-radius: 5px;
       cursor: pointer;
     }
-    
     .tab.active, .tab:hover {
       background: #fff;
       color: var(--primary-dark);
     }
-    
     .tab-content {
       display: none;
       margin-top: 30px;
     }
-    
     .tab-content.active {
       display: block;
     }
@@ -269,7 +210,6 @@
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
-    
     .package {
       background: #fff;
       padding: 20px;
@@ -277,7 +217,6 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       color: #333;
     }
-    
     .package .price {
       font-size: 1.25rem;
       font-weight: bold;
@@ -305,7 +244,6 @@
       width: 100%;
       padding: 20px 0;
     }
-    
     .swiper-slide {
       background: #fff;
       color: #333;
@@ -313,12 +251,10 @@
       border-radius: 10px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
-    
     .swiper-slide blockquote {
       margin: 0;
       font-style: italic;
     }
-    
     .swiper-slide cite {
       display: block;
       margin-top: 10px;
@@ -360,7 +296,6 @@
       background: rgba(0,0,0,0.1);
       animation: ripple .6s linear;
     }
-    
     @keyframes ripple {
       to {
         transform: scale(4);
@@ -418,16 +353,6 @@
       .package-grid {
         grid-template-columns: 1fr;
       }
-      
-      .language-selector {
-        right: 70px;
-      }
-      
-      .mode-toggle, #languageToggle {
-        width: 35px;
-        height: 35px;
-        font-size: 0.9rem;
-      }
     }
     
     /* Iframe styling */
@@ -440,21 +365,14 @@
   </style>
 </head>
 <body>
+  <div class="parallax-bg" data-rellax-speed="-2"></div>
+  <div id="particles-js"></div>
   <button id="backToTop" title="Back to top">↑</button>
   <div class="container">
 
     <header data-aos="fade-down">
       <button class="mode-toggle" id="modeToggle" title="Toggle light/dark mode">☀️</button>
-      <div class="language-selector">
-        <button id="languageToggle" title="Change language">
-          <span id="currentLanguage">EN</span>
-          <span class="language-dropdown">
-            <span class="language-option" data-lang="en">English</span>
-            <span class="language-option" data-lang="es">Español</span>
-          </span>
-        </button>
-      </div>
-      <img src="avatar.png" alt="Alan Holding copywriter and AI enthusiast" class="profile-image" loading="lazy">
+      <img src="avatar.png" alt="Alan Holding copywriter and AI enthusiast" class="profile-image" loading="lazy" data-tilt data-tilt-max="15" data-tilt-speed="400">
       <h1><span id="typed"></span></h1>
       <!-- TEXTO PRINCIPAL ACTUALIZADO -->
       <p class="lead">
@@ -666,11 +584,14 @@
 
   </div>
 
-  <!-- Scripts: Carga optimizada -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <!-- Scripts: Carga optimizada y en el orden correcto -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.umd.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.umd.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/rellax@1.12.1/rellax.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
 
   <script>
     // Función para mostrar las pestañas
@@ -688,82 +609,186 @@
       document.getElementById(tabId).scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
-    // Language translations
-    const translations = {
-      en: {
-        // Header
-        "typed": ["Web Design & Digital Solutions That Drive Results."],
-        "lead": "Not just nice to look at—built to bring in leads, sales, and results.<br>I work with small brands and growing businesses to create fast, mobile-friendly websites with clean code, smart SEO, and design that gets people to take action.<br>Whether you need a simple site or a full digital setup, I'll build something that works hard for your business—day and night.",
-        "cta_main": "Let's turn your message into money.",
+    // Inicializar componentes cuando se cargue el documento
+    document.addEventListener('DOMContentLoaded', () => {
+      // Formulario de Early Access
+      const earlyAccessForm = document.getElementById('earlyAccessForm');
+      if (earlyAccessForm) {
+        earlyAccessForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const email = this.querySelector('input[type="email"]').value;
+          // Aquí normalmente enviarías el email a tu backend
+          alert('Thanks! We\'ll notify you at ' + email + ' when the templates are ready!');
+          this.reset();
+        });
+      }
+      
+      // Inicializar AOS
+      if (typeof AOS !== 'undefined') {
+        AOS.init({ 
+          duration: 800,
+          once: true,
+          disable: 'mobile' // Desactivar en dispositivos móviles para mejorar rendimiento
+        });
+      }
+      
+      // Inicializar Typed.js
+      if (typeof Typed !== 'undefined') {
+        new Typed('#typed', {
+          strings: ['Web Design & Digital Solutions That Drive Results.'],
+          typeSpeed: 60,
+          backSpeed: 30,
+          showCursor: true,
+          cursorChar: '|'
+        });
+      }
+
+      // Inicializar CountUp si existe el elemento
+      if (typeof countUp !== 'undefined' && document.getElementById('projectsCount')) {
+        const counter = new countUp.CountUp('projectsCount', 6, { suffix: ' Features' });
+        if (!counter.error) counter.start();
+      }
+
+      // Inicializar Rellax si la librería está disponible
+      if (typeof Rellax === 'function' && document.querySelector('.parallax-bg')) {
+        new Rellax('.parallax-bg');
+      }
+
+      // Inicializar VanillaTilt
+      if (typeof VanillaTilt !== 'undefined') {
+        VanillaTilt.init(document.querySelectorAll('[data-tilt]'), {
+          max: 15,
+          speed: 400,
+          glare: true,
+          'max-glare': 0.2
+        });
+      }
+
+      // Inicializar Swiper
+      setTimeout(() => {
+        if (typeof Swiper !== 'undefined' && document.querySelector('.swiper-container')) {
+          new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+              delay: 5000,
+              disableOnInteraction: false
+            },
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true
+            },
+            keyboard: {
+              enabled: true
+            },
+            slidesPerView: 1,
+            spaceBetween: 20,
+            breakpoints: {
+              768: {
+                slidesPerView: 1
+              }
+            }
+          });
+        }
+      }, 500); // Pequeño retraso para asegurar que todos los elementos estén cargados
+
+      // Botón de volver arriba
+      const backToTop = document.getElementById('backToTop');
+      if (backToTop) {
+        window.addEventListener('scroll', () => {
+          backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+        });
         
-        // Guide section
-        "guide_title": "Free Download: 5 Irresistible Headline Templates",
-        "guide_desc": "Get five proven headline formulas that will instantly grab attention and drive engagement. Coming soon!",
-        "guide_dev": "🚀 Templates in development! Be the first to receive them when ready:",
-        "email_placeholder": "Your email address",
-        "get_access": "Get Early Access",
-        "no_spam": "No spam, ever. Unsubscribe anytime.",
+        backToTop.addEventListener('click', () => {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      }
+
+      // Cambio de modo claro/oscuro
+      const modeToggle = document.getElementById('modeToggle');
+      if (modeToggle) {
+        // Verificar si había una preferencia guardada
+        const savedMode = localStorage.getItem('themeMode');
+        if (savedMode === 'light') {
+          document.body.classList.add('light-mode');
+          modeToggle.textContent = '🌙';
+        }
         
-        // Tabs
-        "tab_about": "About Me",
-        "tab_packages": "Packages",
-        "tab_projects": "Projects",
-        "tab_testimonials": "Testimonials",
-        "tab_contact": "Contact",
+        modeToggle.addEventListener('click', () => {
+          document.body.classList.toggle('light-mode');
+          const isLight = document.body.classList.contains('light-mode');
+          modeToggle.textContent = isLight ? '🌙' : '☀️';
+          // Guardar preferencia
+          localStorage.setItem('themeMode', isLight ? 'light' : 'dark');
+        });
+      }
+    });
+
+    // Inicializar Particles.js con una configuración más ligera
+    window.addEventListener('load', () => {
+      if (typeof particlesJS !== 'undefined') {
+        particlesJS('particles-js', {
+          particles: {
+            number: { 
+              value: 40, // Reducido para mejor rendimiento
+              density: { enable: true, value_area: 800 } 
+            },
+            color: { value: '#ffffff' },
+            shape: { type: 'circle' },
+            opacity: { value: 0.5, random: false },
+            size: { value: 3, random: true },
+            move: { 
+              enable: true, 
+              speed: 2, 
+              direction: 'none',
+              out_mode: 'out'
+            }
+          },
+          interactivity: {
+            detect_on: 'canvas',
+            events: {
+              onhover: { 
+                enable: true, 
+                mode: 'repulse' 
+              },
+              onclick: { 
+                enable: true, 
+                mode: 'push' 
+              },
+              resize: true
+            },
+            modes: {
+              repulse: { distance: 100 },
+              push: { particles_nb: 4 }
+            }
+          },
+          retina_detect: true
+        });
+      }
+    });
+    
+    // Efecto de ripple en botones
+    document.addEventListener('click', function(e) {
+      const target = e.target;
+      if (target.classList.contains('cta-button')) {
+        const rect = target.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
         
-        // About section
-        "about_title": "About Me",
-        "about_p1": "I transform businesses into digital success stories through powerful websites built with persuasive copywriting and strategic SEO that <em>actually converts</em>.",
-        "about_p2": "While my foundation is in crafting high-performance websites that drive real business results, I'm expanding my toolkit to include cutting-edge AI solutions. <strong>Coming soon:</strong> custom chatbots and voicebots that engage your customers 24/7, turning visitors into leads while you sleep.",
-        "value_prop": "My Value Proposition",
-        "value_p1": "I operate with a results-based model: see the value before you commit. I'm currently building my portfolio with select clients who want beautiful, functional websites that actually deliver business outcomes.",
-        "value_p2": "As a student of digital marketing constantly learning from top industry experts, I bring fresh perspectives and innovative approaches to every project—without the agency price tag.",
+        const ripple = document.createElement('span');
+        ripple.classList.add('ripple');
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
         
-        // Packages section
-        "packages_title": "Choose Your Package",
-        "essentials_title": "Essentials",
-        "essentials_1": "Professional responsive website",
-        "essentials_2": "Up to 5 pages",
-        "essentials_3": "Basic SEO setup",
-        "essentials_4": "Mobile optimization",
-        "essentials_5": "Contact form integration",
-        "select_essentials": "Select Essentials",
+        target.appendChild(ripple);
         
-        "performance_title": "Performance",
-        "performance_1": "Everything in Essentials",
-        "performance_2": "Conversion-focused copywriting",
-        "performance_3": "Advanced SEO optimization",
-        "performance_4": "Content strategy",
-        "performance_5": "2 rounds of revisions",
-        "select_performance": "Select Performance",
-        
-        "complete_title": "Complete Solution",
-        "complete_1": "Everything in Performance",
-        "complete_2": "Extended website (up to 10 pages)",
-        "complete_3": "Priority support",
-        "complete_4": "Monthly performance report",
-        "complete_5": "<strong>Coming soon:</strong> AI chatbot integration",
-        "select_complete": "Select Complete Solution",
-        
-        // What I Do section
-        "services_title": "What I Do",
-        "web_title": "✍️ Performance Websites",
-        "web_desc": "Clean, fast-loading websites that present your business with clarity and purpose. From simple information sites to product showcases and lead generation engines.",
-        "seo_title": "🔍 SEO Foundations",
-        "seo_desc": "Every site built with search visibility in mind. Proper structure, metadata, and content optimization to help customers find you organically.",
-        "dev_title": "💼 Custom Development",
-        "dev_desc": "Websites tailored exactly to your requirements—whether you need specific functionality, integrations, or unique design elements.",
-        
-        // Contact section
-        "contact_title": "Need copy that actually converts? I've got you.",
-        "contact_desc": "I'm Alan Holding, a copywriter who helps brands sell without sounding salesy.<br>Whether it's a bold landing page, email sequence, or full sales system, I craft clear, confident messaging that gets results.",
-        "contact_li1": "Boost conversions without chasing leads",
-        "contact_li2": "Sound like a pro, even if you're just getting started",
-        "contact_li3": "Use simple copy that drives action",
-        "contact_ready": "Ready when you are.",
-        "contact_btn": "Request a Free Consultation"
-      },
-      es: {
-        // Header
-        "typed": ["Diseño Web y Soluciones Digitales que Generan Resultados."],
-        "lea
+        setTimeout(() => {
+          ripple.remove();
+        }, 600);
+      }
+    });
+  </script>
+</body>
+</html>
