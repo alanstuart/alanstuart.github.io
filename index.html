@@ -14,24 +14,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alan Holding | Copywriting and Automation</title>
 
-  <!-- Primary SEO Meta -->
+  <!-- SEO Meta -->
   <meta name="description" content="Copywriting & AI automation for UK businesses. Free headline templates. Choose your package and stand out today." />
   <link rel="canonical" href="https://alanholding.co.uk/" />
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Alan Holding",
-    "url": "https://alanholding.co.uk/",
-    "logo": "https://alanholding.co.uk/favicon.ico",
-    "description": "Copywriting & AI automation for UK businesses. Free headline templates.",
-    "email": "alan.s.holding@gmail.com",
-    "serviceType": ["Website Copywriting","Email Sequences","Sales Pages"],
-    "areaServed": "GB"
-  }
-  </script>
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -86,16 +71,18 @@
     }
 
     /* Background effects */
-    .parallax-bg, #particles-js {
+    #particles-js, .parallax-bg {
       position:fixed;
       width:100%;
       height:100%;
       top:0;
       left:0;
     }
-    #particles-js { z-index:-2; }
+    #particles-js {
+      z-index:-2;
+    }
     .parallax-bg {
-      background:url('futuristic-texture.webp') center/cover no-repeat;
+      background:url('futuristic-texture.jpg') center/cover no-repeat;
       opacity:0.25;
       z-index:-3;
     }
@@ -115,76 +102,180 @@
       margin-top:50px;
       position:relative;
     }
-    h1 { font-size:3rem; margin-bottom:0.5em; }
-    .profile-image {
-      width:220px; height:220px; border-radius:50%; object-fit:cover;
-      margin:30px auto; box-shadow:0 4px 15px rgba(0,0,0,0.25);
+    h1 {
+      font-size:3rem;
+      margin-bottom:0.5em;
     }
-    p.lead { font-size:1.1rem; margin-bottom:1em; }
+    .profile-image {
+      width:220px;
+      height:220px;
+      border-radius:50%;
+      object-fit:cover;
+      margin:30px auto;
+      box-shadow:0 4px 15px rgba(0,0,0,0.25);
+    }
+    p.lead {
+      font-size:1.1rem;
+      margin-bottom:1em;
+    }
     .mode-toggle {
-      position:absolute; top:20px; right:20px; background:#fff;
-      color:var(--primary-dark); border:none; border-radius:50%;
-      width:40px; height:40px; cursor:pointer;
+      position:absolute;
+      top:20px;
+      right:20px;
+      background:#fff;
+      color:var(--primary-dark);
+      border:none;
+      border-radius:50%;
+      width:40px;
+      height:40px;
+      cursor:pointer;
       box-shadow:0 2px 5px rgba(0,0,0,0.2);
     }
 
-    /* Sticky Navigation */
-    .tabs {
-      position:sticky; top:0; background:var(--bg-dark);
-      display:flex; justify-content:center; padding:10px 0; z-index:10;
-    }
-    body.light-mode .tabs { background:var(--bg-light); }
-
     /* Buttons */
     .cta-button {
-      display:inline-block; margin-top:20px; padding:12px 24px;
-      background:var(--primary-dark); color:#fff;
-      border:none; border-radius:5px; font-size:1rem; font-weight:bold;
+      display:inline-block;
+      margin-top:20px;
+      padding:12px 24px;
+      background:var(--primary-dark);
+      color:#fff;
+      border:none;
+      border-radius:5px;
+      font-size:1rem;
+      font-weight:bold;
     }
-    .cta-button:hover { background:var(--primary-light); transform:scale(1.05); }
+    .cta-button:hover {
+      background:var(--primary-light);
+      transform:scale(1.05);
+    }
 
     /* Sections */
-    section { margin:60px 0; }
-    h2 { font-size:2rem; margin-bottom:0.5em; }
+    section {
+      margin:60px 0;
+    }
+    h2 {
+      font-size:2rem;
+      margin-bottom:0.5em;
+    }
 
     /* Lists */
-    ul { list-style:none; padding:0; }
-    ul li { position:relative; padding-left:1.5em; margin-bottom:0.5em; }
-    ul li::before { content:'✅'; position:absolute; left:0; top:0; }
-    ul li:hover { transform:translateX(5px); }
+    ul {
+      list-style:none;
+      padding:0;
+    }
+    ul li {
+      position:relative;
+      padding-left:1.5em;
+      margin-bottom:0.5em;
+    }
+    ul li::before {
+      content:'✅';
+      position:absolute;
+      left:0;
+      top:0;
+    }
+    ul li:hover {
+      transform:translateX(5px);
+    }
 
-    /* Tabs content */
-    .tab { background:rgba(255,255,255,0.2); padding:10px 20px; margin:0 5px; border-radius:5px; cursor:pointer; }
-    .tab.active, .tab:hover { background:#fff; color:var(--primary-dark); }
-    .tab-content { display:none; margin-top:30px; }
-    .tab-content.active { display:block; }
+    /* Tabs */
+    .tabs {
+      display:flex;
+      justify-content:center;
+      margin-top:30px;
+    }
+    .tab {
+      background:rgba(255,255,255,0.2);
+      padding:10px 20px;
+      margin:0 5px;
+      border-radius:5px;
+      cursor:pointer;
+    }
+    .tab.active, .tab:hover {
+      background:#fff;
+      color:var(--primary-dark);
+    }
+    .tab-content {
+      display:none;
+      margin-top:30px;
+    }
+    .tab-content.active {
+      display:block;
+    }
 
     /* Packages grid */
-    .package-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; }
-    .package { background:#fff; padding:20px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1); color:#333; }
-    .package .price { font-size:1.25rem; font-weight:bold; margin:10px 0; }
+    .package-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:20px;
+    }
+    .package {
+      background:#fff;
+      padding:20px;
+      border-radius:8px;
+      box-shadow:0 2px 10px rgba(0,0,0,0.1);
+      color:#333;
+    }
+    .package .price {
+      font-size:1.25rem;
+      font-weight:bold;
+      margin:10px 0;
+    }
 
     /* Back to top */
     #backToTop {
-      position:fixed; bottom:30px; right:30px; background:#fff;
-      color:var(--primary-dark); border:none; padding:10px 15px;
-      border-radius:5px; cursor:pointer; box-shadow:0 2px 5px rgba(0,0,0,0.2);
-      display:none; z-index:2;
+      position:fixed;
+      bottom:30px;
+      right:30px;
+      background:#fff;
+      color:var(--primary-dark);
+      border:none;
+      padding:10px 15px;
+      border-radius:5px;
+      cursor:pointer;
+      box-shadow:0 2px 5px rgba(0,0,0,0.2);
+      display:none;
+      z-index:2;
     }
 
     /* Swiper */
-    .swiper-container { width:100%; padding:20px 0; }
-    .swiper-slide { background:#fff; color:#333; padding:20px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.1); }
-    .swiper-slide blockquote { margin:0; font-style:italic; }
-    .swiper-slide cite { display:block; margin-top:10px; text-align:right; font-weight:bold; color:var(--primary-dark); }
+    .swiper-container {
+      width:100%;
+      padding:20px 0;
+    }
+    .swiper-slide {
+      background:#fff;
+      color:#333;
+      padding:20px;
+      border-radius:10px;
+      box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    }
+    .swiper-slide blockquote {
+      margin:0;
+      font-style:italic;
+    }
+    .swiper-slide cite {
+      display:block;
+      margin-top:10px;
+      text-align:right;
+      font-weight:bold;
+      color:var(--primary-dark);
+    }
 
-    /* Ripple effect */
-    .ripple { position:absolute; border-radius:50%; transform:scale(0); background:rgba(0,0,0,0.1); animation:ripple .6s linear; }
-    @keyframes ripple { to { transform:scale(4); opacity:0; } }
-
-    /* Footer */
-    footer { background:var(--primary-dark); color:#fff; padding:20px 0; text-align:center; font-size:0.9rem; }
-    footer a { color:#fff; text-decoration:underline; }
+    /* Ripple */
+    .ripple {
+      position:absolute;
+      border-radius:50%;
+      transform:scale(0);
+      background:rgba(0,0,0,0.1);
+      animation:ripple .6s linear;
+    }
+    @keyframes ripple {
+      to {
+        transform:scale(4);
+        opacity:0;
+      }
+    }
   </style>
 </head>
 <body>
@@ -195,10 +286,7 @@
 
     <header data-aos="fade-down">
       <button class="mode-toggle" id="modeToggle" title="Toggle light/dark mode">☀️</button>
-      <picture>
-        <source srcset="avatar.webp" type="image/webp">
-        <img src="avatar.png" alt="Alan Holding copywriter and AI enthusiast" class="profile-image" data-tilt data-tilt-max="15" data-tilt-speed="400">
-      </picture>
+      <img src="avatar.png" alt="Alan Holding copywriter and AI enthusiast" class="profile-image" data-tilt data-tilt-max="15" data-tilt-speed="400">
       <h1><span id="typed"></span></h1>
       <p class="lead">
         I’m Alan Holding. I write copy that makes people pay attention—and pay you.<br>
@@ -208,5 +296,204 @@
       <a href="#contact" class="cta-button" data-aos="zoom-in" onclick="showTab(event,'contact')">Let’s turn your message into money.</a>
     </header>
 
+    <!-- Lead Magnet: Free Guide -->
     <section id="guide" data-aos="fade-up">
-      <h2>Free Download: 5 Irresistible Headline Templates</n
+      <h2>Free Download: 5 Irresistible Headline Templates</h2>
+      <p>Get five proven formulas now to grab your audience's attention.</p>
+      <!-- Google Form Embed -->
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfDUMMYURL/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      <!-- End Google Form Embed -->
+    </section>
+
+    <div class="tabs" data-aos="fade-up">
+      <div class="tab active" onclick="showTab(event,'about')">About Me</div>
+      <div class="tab" onclick="showTab(event,'packages')">Packages</div>
+      <div class="tab" onclick="showTab(event,'projects')">Projects</div>
+      <div class="tab" onclick="showTab(event,'testimonials')">Testimonials</div>
+      <div class="tab" onclick="showTab(event,'contact')">Contact</div>
+    </div>
+
+    <div id="about" class="tab-content active" data-aos="fade-right">
+      <h2>About Me</h2>
+      <p>As a digital marketing consultant and copywriter, I help businesses grow their online presence through smart content strategies and innovative web solutions.<br>
+      Constantly learning AI and copywriting under top mentors, I prove action beats theory and results trump titles.</p>
+      <h3>My Working Model</h3>
+      <p>I operate with a results-based model: free trials on initial projects, commission only on successful outcomes.</p>
+    </div>
+
+    <section id="packages" class="tab-content" data-aos="fade-up">
+      <h2>Choose Your Package</h2>
+      <div class="package-grid">
+        <div class="package">
+          <h3>Starter</h3>
+          <ul>
+            <li>3 headlines + 1 optimized landing page</li>
+            <li>Basic optimisation</li>
+          </ul>
+          <p class="price">£60</p>
+          <button class="cta-button">Select Starter</button>
+        </div>
+        <div class="package">
+          <h3>Growth</h3>
+          <ul>
+            <li>Everything in Starter</li>
+            <li>5 welcome emails</li>
+            <li>Existing copy audit</li>
+          </ul>
+          <p class="price">£150–£200</p>
+          <button class="cta-button">Select Growth</button>
+        </div>
+        <div class="package">
+          <h3>Empire</h3>
+          <ul>
+            <li>Everything in Growth</li>
+            <li>Complete funnel strategy</li>
+            <li>Monthly performance report</li>
+          </ul>
+          <p class="price">£300–£400</p>
+          <button class="cta-button">Select Empire</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- What I Do Section -->
+    <section id="services" data-aos="fade-up">
+      <h2>What I Do</h2>
+      <div class="package-grid">
+        <div class="package">
+          <h3>✍️ Website Copywriting</h3>
+          <p>Persuasive, SEO-friendly content that turns clicks into conversions.</p>
+        </div>
+        <div class="package">
+          <h3>📧 Email Sequences</h3>
+          <p>Smart, automated messages that build trust and drive action.</p>
+        </div>
+        <div class="package">
+          <h3>📄 Sales Pages</h3>
+          <p>High-converting copy built to sell—without sounding pushy.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Work With Me Section -->
+    <section id="why-me" data-aos="fade-up">
+      <h2>Why Work With Me?</h2>
+      <ul>
+        <li>Results-first, low-risk model for real growth</li>
+        <li>Clear, high-converting copy that speaks your customer’s language</li>
+        <li>Friendly, collaborative process tailored to your goals</li>
+      </ul>
+    </section>
+
+    <div id="projects" class="tab-content" data-aos="fade-left">
+      <h2>Example Project: AlanHolding.co.uk</h2>
+      <h3>Full Website Build, Concept to Completion <span id="projectsCount"></span></h3>
+      <p>This website was designed and developed entirely by me:</p>
+      <ul>
+        <li>Website structure</li>
+        <li>Copywriting</li>
+        <li>Branding tone</li>
+        <li>Visual design</li>
+        <li>User experience</li>
+        <li>SEO optimization</li>
+      </ul>
+    </div>
+
+    <div id="testimonials" class="tab-content" data-aos="fade-up">
+      <h2>What Clients Say</h2>
+      <section class="testimonials-list">
+        <blockquote>"Working with Alan was a game-changer, our conversions doubled!"<cite>– Maria G.</cite></blockquote>
+        <blockquote>"His AI solutions saved us hours each week and boosted engagement."<cite>– Carlos M.</cite></blockquote>
+        <blockquote>"The copy he wrote captured our brand voice perfectly."<cite>– Sofia R.</cite></blockquote>
+      </section>
+    </div>
+
+    <div id="contact" class="tab-content" data-aos="fade-up">
+      <h2>Need copy that actually converts? I’ve got you.</h2>
+      <p>I’m Alan Holding, a copywriter who helps brands sell without sounding salesy.<br>
+      Whether it’s a bold landing page, email sequence, or full sales system, I craft clear, confident messaging that gets results.</p>
+      <ul>
+        <li>Boost conversions without chasing leads</li>
+        <li>Sound like a pro, even if you’re just getting started</li>
+        <li>Use simple copy that drives action</li>
+      </ul>
+      <p><strong>Ready when you are.</strong></p>
+      <p><a href="mailto:alan.s.holding@gmail.com?subject=Free Consultation" class="cta-button">Request a Free Consultation</a></p>
+    </div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    function showTab(event, tabId) {
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      event.currentTarget.classList.add('active');
+      document.getElementById(tabId).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Initialize Particles.js with inline configuration
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: '#ffffff' },
+        shape: { type: 'circle' },
+        opacity: { value: 0.5, random: false },
+        size: { value: 3, random: true },
+        move: { enable: true, speed: 2, direction: 'none', out_mode: 'out' }
+      },
+      interactivity: {
+        detect_on: 'canvas',
+        events: {
+          onhover: { enable: true, mode: 'repulse' },
+          onclick: { enable: true, mode: 'push' },
+          resize: true
+        },
+        modes: {
+          repulse: { distance: 100 },
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      new Typed('#typed', {
+        strings: ['Crafting Words That Command Attention and Drive Action.'],
+        typeSpeed: 60,
+        backSpeed: 30,
+        showCursor: true,
+        cursorChar: '|'
+      });
+
+      AOS.init({ duration: 800 });
+
+      const countUp = new countUp.CountUp('projectsCount', 6, { suffix: ' Features' });
+      if (!countUp.error) countUp.start();
+
+      new Rellax('.parallax-bg');
+      VanillaTilt.init(document.querySelectorAll('.profile-image'), { max: 15, speed: 400 });
+
+      new Swiper('.swiper-container', { loop: true, autoplay: { delay: 5000 }, pagination: { el: '.swiper-pagination' } });
+
+      const backToTop = document.getElementById('backToTop');
+      window.addEventListener('scroll', () => {
+        backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+      });
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // Toggle light/dark mode
+      const modeToggle = document.getElementById('modeToggle');
+      modeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('light-mode');
+        modeToggle.textContent = document.body.classList.contains('light-mode') ? '🌙' : '☀️';
+      });
+    });
+  </script>
+</body>
+</html>
+
+
