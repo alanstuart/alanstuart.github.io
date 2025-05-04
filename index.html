@@ -14,9 +14,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alan Holding | Copywriting and Automation</title>
 
-  <!-- SEO Meta -->
+  <!-- Primary SEO Meta -->
   <meta name="description" content="Copywriting & AI automation for UK businesses. Free headline templates. Choose your package and stand out today." />
   <link rel="canonical" href="https://alanholding.co.uk/" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Alan Holding",
+    "url": "https://alanholding.co.uk/",
+    "logo": "https://alanholding.co.uk/favicon.ico",
+    "description": "Copywriting & AI automation for UK businesses. Free headline templates.",
+    "email": "alan.s.holding@gmail.com",
+    "serviceType": ["Website Copywriting","Email Sequences","Sales Pages"],
+    "areaServed": "GB"
+  }
+  </script>
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -82,7 +97,7 @@
       z-index:-2;
     }
     .parallax-bg {
-      background:url('futuristic-texture.jpg') center/cover no-repeat;
+      background:url('futuristic-texture.webp') center/cover no-repeat;
       opacity:0.25;
       z-index:-3;
     }
@@ -132,6 +147,20 @@
       box-shadow:0 2px 5px rgba(0,0,0,0.2);
     }
 
+    /* Sticky Navigation */
+    .tabs {
+      position:sticky;
+      top:0;
+      background:var(--bg-dark);
+      display:flex;
+      justify-content:center;
+      padding:10px 0;
+      z-index:10;
+    }
+    body.light-mode .tabs {
+      background:var(--bg-light);
+    }
+
     /* Buttons */
     .cta-button {
       display:inline-block;
@@ -179,11 +208,6 @@
     }
 
     /* Tabs */
-    .tabs {
-      display:flex;
-      justify-content:center;
-      margin-top:30px;
-    }
     .tab {
       background:rgba(255,255,255,0.2);
       padding:10px 20px;
@@ -276,6 +300,16 @@
         opacity:0;
       }
     }
+
+    /* Footer */
+    footer {
+      background:var(--primary-dark);
+      color:#fff;
+      padding:20px 0;
+      text-align:center;
+      font-size:0.9rem;
+    }
+    footer a { color:#fff; text-decoration:underline; }
   </style>
 </head>
 <body>
@@ -286,8 +320,11 @@
 
     <header data-aos="fade-down">
       <button class="mode-toggle" id="modeToggle" title="Toggle light/dark mode">☀️</button>
-      <img src="avatar.png" alt="Alan Holding copywriter and AI enthusiast" class="profile-image" data-tilt data-tilt-max="15" data-tilt-speed="400">
-      <h1><span id="typed"></span></h1>
+      <picture>
+        <source srcset="avatar.webp" type="image/webp">
+        <img src="avatar.png" alt="Alan Holding copywriter and AI enthusiast" class="profile-image" data-tilt data-tilt-max="15" data-tilt-speed="400">
+      </picture>
+      <h1><span id="typed">Crafting Words That Command Attention and Drive Action.</span></h1>
       <p class="lead">
         I’m Alan Holding. I write copy that makes people pay attention—and pay you.<br>
         I help small brands and growing businesses stand out, sound sharp, and sell without begging for attention.<br>
@@ -301,8 +338,11 @@
       <h2>Free Download: 5 Irresistible Headline Templates</h2>
       <p>Get five proven formulas now to grab your audience's attention.</p>
       <!-- Google Form Embed -->
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfDUMMYURL/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-      <!-- End Google Form Embed -->
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfDUMMYURL/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" title="Headline Templates Sign-Up"></iframe>
+      <noscript>
+        <p>Please enable JavaScript or <a href="mailto:alan.s.holding@gmail.com?subject=Headline Templates">email me</a> to get the free guide.</p>
+      </noscript>
+      <!-- End Embed -->
     </section>
 
     <div class="tabs" data-aos="fade-up">
@@ -397,14 +437,18 @@
         <li>User experience</li>
         <li>SEO optimization</li>
       </ul>
+      <a href="/case-study.html" class="cta-button">View Case Study</a>
     </div>
 
     <div id="testimonials" class="tab-content" data-aos="fade-up">
       <h2>What Clients Say</h2>
-      <section class="testimonials-list">
-        <blockquote>"Working with Alan was a game-changer, our conversions doubled!"<cite>– Maria G.</cite></blockquote>
-        <blockquote>"His AI solutions saved us hours each week and boosted engagement."<cite>– Carlos M.</cite></blockquote>
-        <blockquote>"The copy he wrote captured our brand voice perfectly."<cite>– Sofia R.</cite></blockquote>
+      <section class="testimonials-list swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><blockquote>"Working with Alan was a game-changer, our conversions doubled!"<cite>– Maria G.</cite></blockquote></div>
+          <div class="swiper-slide"><blockquote>"His AI solutions saved us hours each week and boosted engagement."<cite>– Carlos M.</cite></blockquote></div>
+          <div class="swiper-slide"><blockquote>"The copy he wrote captured our brand voice perfectly."<cite>– Sofia R.</cite></blockquote></div>
+        </div>
+        <div class="swiper-pagination"></div>
       </section>
     </div>
 
@@ -423,6 +467,15 @@
 
   </div>
 
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>Contact: <a href="mailto:alan.s.holding@gmail.com">alan.s.holding@gmail.com</a></p>
+      <p><a href="https://linkedin.com/in/alanholding" target="_blank">LinkedIn</a> | <a href="https://twitter.com/alanholding" target="_blank">Twitter</a></p>
+      <p><a href="/privacy-policy.html">Privacy Policy</a> | <a href="/terms.html">Terms & Conditions</a></p>
+    </div>
+  </footer>
+
   <!-- Scripts -->
   <script>
     function showTab(event, tabId) {
@@ -433,65 +486,10 @@
       document.getElementById(tabId).scrollIntoView({ behavior: 'smooth' });
     }
 
-    // Initialize Particles.js with inline configuration
-    particlesJS('particles-js', {
-      particles: {
-        number: { value: 80, density: { enable: true, value_area: 800 } },
-        color: { value: '#ffffff' },
-        shape: { type: 'circle' },
-        opacity: { value: 0.5, random: false },
-        size: { value: 3, random: true },
-        move: { enable: true, speed: 2, direction: 'none', out_mode: 'out' }
-      },
-      interactivity: {
-        detect_on: 'canvas',
-        events: {
-          onhover: { enable: true, mode: 'repulse' },
-          onclick: { enable: true, mode: 'push' },
-          resize: true
-        },
-        modes: {
-          repulse: { distance: 100 },
-          push: { particles_nb: 4 }
-        }
-      },
-      retina_detect: true
-    });
+    particlesJS('particles-js', { particles: { number: { value: 80, density: { enable: true, value_area: 800 } }, color: { value: '#ffffff' }, shape: { type: 'circle' }, opacity: { value: 0.5, random: false }, size: { value: 3, random: true }, move: { enable: true, speed: 2, direction: 'none', out_mode: 'out' } }, interactivity: { detect_on: 'canvas', events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true }, modes: { repulse: { distance: 100 }, push: { particles_nb: 4 } } }, retina_detect: true });
 
     document.addEventListener('DOMContentLoaded', () => {
-      new Typed('#typed', {
-        strings: ['Crafting Words That Command Attention and Drive Action.'],
-        typeSpeed: 60,
-        backSpeed: 30,
-        showCursor: true,
-        cursorChar: '|'
-      });
-
+      new Typed('#typed', { strings: ['Crafting Words That Command Attention and Drive Action.'], typeSpeed: 60, backSpeed: 30, showCursor: true, cursorChar: '|' });
       AOS.init({ duration: 800 });
-
-      const countUp = new countUp.CountUp('projectsCount', 6, { suffix: ' Features' });
-      if (!countUp.error) countUp.start();
-
-      new Rellax('.parallax-bg');
-      VanillaTilt.init(document.querySelectorAll('.profile-image'), { max: 15, speed: 400 });
-
-      new Swiper('.swiper-container', { loop: true, autoplay: { delay: 5000 }, pagination: { el: '.swiper-pagination' } });
-
-      const backToTop = document.getElementById('backToTop');
-      window.addEventListener('scroll', () => {
-        backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
-      });
-      backToTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-
-      // Toggle light/dark mode
-      const modeToggle = document.getElementById('modeToggle');
-      modeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('light-mode');
-        modeToggle.textContent = document.body.classList.contains('light-mode') ? '🌙' : '☀️';
-      });
-    });
-  </script>
-</body>
-</html>
+      const countUp = new countUp.CountUp('projectsCount', 6, { suffix: ' Features' }); if (!countUp.error) countUp.start();
+      new Rellax('.parallax
