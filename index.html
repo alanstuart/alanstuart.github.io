@@ -653,3 +653,348 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.umd.js" defer></script>
   <script src="https://cdn
+  <script src="https://cdn.jsdelivr.net/npm/rellax@1.12.1/rellax.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+  
+  <!-- Archivo de traducciones -->
+  <script src="js/translations.js"></script>
+  
+  <script>
+    // Objeto global para traducciones
+    let translations = {};
+    let currentLanguage = 'en';
+    
+    // Cargar archivo de traducciones y aplicarlas
+    async function loadLanguage(lang) {
+      try {
+        if (!translations[lang]) {
+          // Cargar traducciones bajo demanda
+          const response = await fetch(`translations/${lang}.json`);
+          if (!response.ok) throw new Error(`Failed to load language ${lang}`);
+          translations[lang] = await response.json();
+        }
+        
+        // Aplica las traducciones al contenido
+        applyTranslations(translations[lang]);
+        
+        // Actualiza la URL con el parámetro de idioma
+        const url = new URL(window.location);
+        url.searchParams.set('lang', lang);
+        window.history.replaceState({}, '', url);
+        
+        // Actualiza el atributo lang del HTML
+        document.documentElement.lang = lang === 'es' ? 'es' : 'en-GB';
+        
+        // Guarda la preferencia del usuario
+        localStorage.setItem('preferredLanguage', lang);
+        
+        // Actualiza los botones de idioma
+        document.querySelectorAll('.language-toggle').forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.lang === lang);
+        });
+        
+        // Actualiza el idioma actual
+        currentLanguage = lang;
+        
+        // Reinicia Typed.js si está presente
+        if (window.typedInstance) {
+          window.typedInstance.destroy();
+          initTyped();
+        }
+      } catch (error) {
+        console.error('Error loading language:', error);
+      }
+    }
+    
+    // Aplicar traducciones al DOM
+    function applyTranslations(langData) {
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        const value = getNestedValue(langData, key);
+        
+        if (value) {
+          // Si tiene innerHTML complejo (con etiquetas), lo respetamos
+          if (element.innerHTML.includes('<')) {
+            // Preservar etiquetas internas reemplazando solo texto
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = element.innerHTML;
+            
+            // Intentamos reemplazar el texto manteniendo las etiquetas
+            const textNodes = [...tempDiv.childNodes].filter(node => 
+              node.nodeType === Node.TEXT_NODE || 
+              (node.nodeType === Node.ELEMENT_NODE && !node.innerHTML.includes('<'))
+            );
+            
+            if (textNodes.length > 0) {
+              textNodes.forEach(node => {
+                if (node.nodeType === Node.TEXT_NODE) {
+                  node.textContent = value;
+                } else {
+                  node.innerHTML = value;
+                }
+              });
+            } else {
+              element.innerHTML = value;
+            }
+          } else {
+            // Si es texto simple, simplemente lo reemplazamos
+            element.innerHTML = value;
+          }
+        }
+      });
+      
+      // Manejar atributos placeholder para elementos input
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-i18n-placeholder');
+        const value = getNestedValue(langData, key);
+        if (value) element.placeholder = value;
+      });
+    }
+    
+    // Obtener valor anidado de un objeto usando notación de punto
+    function getNestedValue(obj, path) {
+      return path.split('.').reduce((prev, curr) => 
+        prev && prev[curr] !== undefined ? prev[curr] : undefined, obj);
+    }
+    
+    // Función para inicializar Typed.js según el idioma
+    function initTyped() {
+      const element = document.getElementById('typed');
+      if (!element || typeof Typed === 'undefined') return;
+      
+      const strings = currentLanguage === 'es' 
+        ? ['Diseño Web y Soluciones Digitales Que Generan Resultados.']
+        : ['Web Design & Digital Solutions That Drive Results.'];
+      
+      window.typedInstance = new Typed('#typed', {
+        strings: strings,
+        typeSpeed: 60,
+        backSpeed: 30,
+        showCursor: true,
+        cursorChar: '|'
+      });
+    }
+    
+    // Función para mostrar las pestañas
+    function showTab(event, tabId) {
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      
+      // Si el evento viene de un click (no desde un enlace)
+      if (event && event.currentTarget) {
+        event.currentTarget.classList.add('active');
+      }
+      
+      // Scroll suave hacia la pestaña
+      document.getElementById(tabId).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // Inicializar componentes cuando se cargue el documento
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Detectar idioma de la URL o usar el guardado
+      const params = new URLSearchParams(window.location.search);
+      const urlLang = params.get('lang');
+      const savedLang = localStorage.getItem('preferredLanguage');
+      const browserLang = navigator.language.split('-')[0];
+      
+      // Prioridad: URL > localStorage > navegador (si es español) > inglés
+      let detectedLang = urlLang || savedLang;
+      
+      // Si no hay idioma establecido, detectar del navegador (solo si es español)
+      if (!detectedLang && browserLang === 'es') {
+        detectedLang = 'es';
+      }
+      
+      // Cargar el idioma predeterminado o el detectado
+      const languageToUse = ['en', 'es'].includes(detectedLang) ? detectedLang : 'en';
+      await loadLanguage(languageToUse);
+      
+      // Configurar listeners de idioma
+      document.querySelectorAll('.language-toggle').forEach(button => {
+        button.addEventListener('click', () => {
+          const lang = button.dataset.lang;
+          if (lang !== currentLanguage) {
+            loadLanguage(lang);
+          }
+        });
+      });
+      
+      // Formulario de Early Access
+      const earlyAccessForm = document.getElementById('earlyAccessForm');
+      if (earlyAccessForm) {
+        earlyAccessForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const email = this.querySelector('input[type="email"]').value;
+          // Aquí normalmente enviarías el email a tu backend
+          const message = currentLanguage === 'es' 
+            ? `¡Gracias! Te notificaremos en ${email} cuando las plantillas estén listas!` 
+            : `Thanks! We'll notify you at ${email} when the templates are ready!`;
+          alert(message);
+          this.reset();
+        });
+      }
+      
+      // Inicializar AOS
+      if (typeof AOS !== 'undefined') {
+        AOS.init({ 
+          duration: 800,
+          once: true,
+          disable: 'mobile' // Desactivar en dispositivos móviles para mejorar rendimiento
+        });
+      }
+      
+      // Inicializar Typed.js
+      initTyped();
+
+      // Inicializar CountUp si existe el elemento
+      if (typeof countUp !== 'undefined' && document.getElementById('projectsCount')) {
+        const suffix = currentLanguage === 'es' ? ' Características' : ' Features';
+        const counter = new countUp.CountUp('projectsCount', 6, { suffix: suffix });
+        if (!counter.error) counter.start();
+      }
+
+      // Inicializar Rellax si la librería está disponible
+      if (typeof Rellax === 'function' && document.querySelector('.parallax-bg')) {
+        new Rellax('.parallax-bg');
+      }
+
+      // Inicializar VanillaTilt
+      if (typeof VanillaTilt !== 'undefined') {
+        VanillaTilt.init(document.querySelectorAll('[data-tilt]'), {
+          max: 15,
+          speed: 400,
+          glare: true,
+          'max-glare': 0.2
+        });
+      }
+
+      // Inicializar Swiper
+      setTimeout(() => {
+        if (typeof Swiper !== 'undefined' && document.querySelector('.swiper-container')) {
+          new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+              delay: 5000,
+              disableOnInteraction: false
+            },
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true
+            },
+            keyboard: {
+              enabled: true
+            },
+            slidesPerView: 1,
+            spaceBetween: 20,
+            breakpoints: {
+              768: {
+                slidesPerView: 1
+              }
+            }
+          });
+        }
+      }, 500); // Pequeño retraso para asegurar que todos los elementos estén cargados
+
+      // Botón de volver arriba
+      const backToTop = document.getElementById('backToTop');
+      if (backToTop) {
+        window.addEventListener('scroll', () => {
+          backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+        });
+        
+        backToTop.addEventListener('click', () => {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      }
+
+      // Cambio de modo claro/oscuro
+      const modeToggle = document.getElementById('modeToggle');
+      if (modeToggle) {
+        // Verificar si había una preferencia guardada
+        const savedMode = localStorage.getItem('themeMode');
+        if (savedMode === 'light') {
+          document.body.classList.add('light-mode');
+          modeToggle.textContent = '🌙';
+        }
+        
+        modeToggle.addEventListener('click', () => {
+          document.body.classList.toggle('light-mode');
+          const isLight = document.body.classList.contains('light-mode');
+          modeToggle.textContent = isLight ? '🌙' : '☀️';
+          // Guardar preferencia
+          localStorage.setItem('themeMode', isLight ? 'light' : 'dark');
+        });
+      }
+    });
+
+    // Inicializar Particles.js con una configuración más ligera
+    window.addEventListener('load', () => {
+      if (typeof particlesJS !== 'undefined') {
+        particlesJS('particles-js', {
+          particles: {
+            number: { 
+              value: 40, // Reducido para mejor rendimiento
+              density: { enable: true, value_area: 800 } 
+            },
+            color: { value: '#ffffff' },
+            shape: { type: 'circle' },
+            opacity: { value: 0.5, random: false },
+            size: { value: 3, random: true },
+            move: { 
+              enable: true, 
+              speed: 2, 
+              direction: 'none',
+              out_mode: 'out'
+            }
+          },
+          interactivity: {
+            detect_on: 'canvas',
+            events: {
+              onhover: { 
+                enable: true, 
+                mode: 'repulse' 
+              },
+              onclick: { 
+                enable: true, 
+                mode: 'push' 
+              },
+              resize: true
+            },
+            modes: {
+              repulse: { distance: 100 },
+              push: { particles_nb: 4 }
+            }
+          },
+          retina_detect: true
+        });
+      }
+    });
+    
+    // Efecto de ripple en botones
+    document.addEventListener('click', function(e) {
+      const target = e.target;
+      if (target.classList.contains('cta-button')) {
+        const rect = target.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const ripple = document.createElement('span');
+        ripple.classList.add('ripple');
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        
+        target.appendChild(ripple);
+        
+        setTimeout(() => {
+          ripple.remove();
+        }, 600);
+      }
+    });
+  </script>
+</body>
+</html>
