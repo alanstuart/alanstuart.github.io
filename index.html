@@ -5,7 +5,7 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="preconnect" href="https://docs.google.com">
   
-  <!-- Open Graph & SEO Meta Tags - ACTUALIZADOS -->
+  <!-- Open Graph & SEO Meta Tags -->
   <meta property="og:title" content="Alan Holding | Web Design & Digital Solutions" />
   <meta property="og:description" content="Professional website design with SEO optimization and conversion-focused copy. Choose from affordable packages tailored to your business needs." />
   <meta property="og:url" content="https://alanholding.co.uk/" />
@@ -18,14 +18,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alan Holding | Web Design & Digital Solutions</title>
 
-  <!-- SEO Meta - ACTUALIZADO -->
+  <!-- SEO Meta -->
   <meta name="description" content="Web design and digital solutions for UK businesses. Professional websites with SEO optimization and conversion-focused copy. Choose your package today." />
   <link rel="canonical" href="https://alanholding.co.uk/" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-  <!-- Core Libraries - Optimizadas y reducidas -->
+  <!-- Core Libraries -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   
@@ -40,48 +40,43 @@
       --text-dark: #fff;
       --transition-fast: 0.3s ease;
     }
+    
     *, *::before, *::after {
       box-sizing: border-box;
       transition: color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
     }
-    body {
+    
+    html, body {
       margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    body {
       font-family: Arial, sans-serif;
       color: var(--text-dark);
       background: var(--bg-dark);
       overflow-x: hidden;
       scroll-behavior: smooth;
       line-height: 1.6;
+      position: relative;
     }
+    
     body.light-mode {
       background: var(--bg-light);
       color: var(--text-light);
     }
+    
     img {
       max-width: 100%;
       display: block;
       height: auto;
     }
+    
     a {
       text-decoration: none;
       color: inherit;
-    }
-
-    /* Background effects */
-    #particles-js, .parallax-bg {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-    }
-    #particles-js {
-      z-index: -2;
-    }
-    .parallax-bg {
-      background: url('futuristic-texture.jpg') center/cover no-repeat;
-      opacity: 0.25;
-      z-index: -3;
     }
 
     /* Container */
@@ -99,10 +94,12 @@
       margin-top: 50px;
       position: relative;
     }
+    
     h1 {
       font-size: 3rem;
       margin-bottom: 0.5em;
     }
+    
     .profile-image {
       width: 220px;
       height: 220px;
@@ -111,10 +108,12 @@
       margin: 30px auto;
       box-shadow: 0 4px 15px rgba(0,0,0,0.25);
     }
+    
     p.lead {
       font-size: 1.1rem;
       margin-bottom: 1em;
     }
+    
     .mode-toggle {
       position: absolute;
       top: 20px;
@@ -195,6 +194,7 @@
       cursor: pointer;
       text-align: center;
     }
+    
     .cta-button:hover {
       background: var(--primary-light);
       transform: scale(1.05);
@@ -204,6 +204,7 @@
     section {
       margin: 60px 0;
     }
+    
     h2 {
       font-size: 2rem;
       margin-bottom: 0.5em;
@@ -214,17 +215,20 @@
       list-style: none;
       padding: 0;
     }
+    
     ul li {
       position: relative;
       padding-left: 1.5em;
       margin-bottom: 0.5em;
     }
+    
     ul li::before {
       content: '✅';
       position: absolute;
       left: 0;
       top: 0;
     }
+    
     ul li:hover {
       transform: translateX(5px);
     }
@@ -236,6 +240,7 @@
       margin-top: 30px;
       flex-wrap: wrap;
     }
+    
     .tab {
       background: rgba(255,255,255,0.2);
       padding: 10px 20px;
@@ -243,14 +248,17 @@
       border-radius: 5px;
       cursor: pointer;
     }
+    
     .tab.active, .tab:hover {
       background: #fff;
       color: var(--primary-dark);
     }
+    
     .tab-content {
       display: none;
       margin-top: 30px;
     }
+    
     .tab-content.active {
       display: block;
     }
@@ -261,6 +269,7 @@
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
+    
     .package {
       background: #fff;
       padding: 20px;
@@ -268,6 +277,7 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       color: #333;
     }
+    
     .package .price {
       font-size: 1.25rem;
       font-weight: bold;
@@ -295,6 +305,7 @@
       width: 100%;
       padding: 20px 0;
     }
+    
     .swiper-slide {
       background: #fff;
       color: #333;
@@ -302,10 +313,12 @@
       border-radius: 10px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
+    
     .swiper-slide blockquote {
       margin: 0;
       font-style: italic;
     }
+    
     .swiper-slide cite {
       display: block;
       margin-top: 10px;
@@ -347,6 +360,7 @@
       background: rgba(0,0,0,0.1);
       animation: ripple .6s linear;
     }
+    
     @keyframes ripple {
       to {
         transform: scale(4);
@@ -426,8 +440,6 @@
   </style>
 </head>
 <body>
-  <div class="parallax-bg" data-rellax-speed="-2"></div>
-  <div id="particles-js"></div>
   <button id="backToTop" title="Back to top">↑</button>
   <div class="container">
 
@@ -442,7 +454,7 @@
           </span>
         </button>
       </div>
-      <img src="avatar.png" alt="Alan Holding copywriter and AI enthusiast" class="profile-image" loading="lazy" data-tilt data-tilt-max="15" data-tilt-speed="400">
+      <img src="avatar.png" alt="Alan Holding copywriter and AI enthusiast" class="profile-image" loading="lazy">
       <h1><span id="typed"></span></h1>
       <!-- TEXTO PRINCIPAL ACTUALIZADO -->
       <p class="lead">
@@ -654,14 +666,11 @@
 
   </div>
 
-  <!-- Scripts: Carga optimizada y en el orden correcto -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
+  <!-- Scripts: Carga optimizada -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.umd.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/rellax@1.12.1/rellax.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
   <script>
     // Función para mostrar las pestañas
@@ -742,4 +751,19 @@
         "web_desc": "Clean, fast-loading websites that present your business with clarity and purpose. From simple information sites to product showcases and lead generation engines.",
         "seo_title": "🔍 SEO Foundations",
         "seo_desc": "Every site built with search visibility in mind. Proper structure, metadata, and content optimization to help customers find you organically.",
-        "dev_title": "💼 Custom
+        "dev_title": "💼 Custom Development",
+        "dev_desc": "Websites tailored exactly to your requirements—whether you need specific functionality, integrations, or unique design elements.",
+        
+        // Contact section
+        "contact_title": "Need copy that actually converts? I've got you.",
+        "contact_desc": "I'm Alan Holding, a copywriter who helps brands sell without sounding salesy.<br>Whether it's a bold landing page, email sequence, or full sales system, I craft clear, confident messaging that gets results.",
+        "contact_li1": "Boost conversions without chasing leads",
+        "contact_li2": "Sound like a pro, even if you're just getting started",
+        "contact_li3": "Use simple copy that drives action",
+        "contact_ready": "Ready when you are.",
+        "contact_btn": "Request a Free Consultation"
+      },
+      es: {
+        // Header
+        "typed": ["Diseño Web y Soluciones Digitales que Generan Resultados."],
+        "lea
