@@ -26,53 +26,14 @@
   <link rel="alternate" hreflang="en" href="https://alanholding.co.uk/" />
   <link rel="alternate" hreflang="es" href="https://alanholding.co.uk/?lang=es" />
 
-  <!-- Favicon -->
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="alternate icon" href="favicon.ico"> <!-- Fallback para navegadores antiguos -->
+  <!-- Favicon actualizado -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" href="favicon.ico"> <!-- Fallback para navegadores antiguos -->
 
   <!-- Core Libraries - Optimizadas y reducidas -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   
-  /* Animación para el logo SVG */
-  
-@keyframes logoEntrance {
-  0% {
-    opacity: 0;
-    transform: scale(0.8) rotate(-10deg);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) rotate(0deg);
-  }
-}
-
-.profile-image.logo-svg {
-  animation: logoEntrance 1.2s ease-out forwards;
-}
-
-/* Animación para las letras individuales del logo */
-@keyframes letterAppear {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.logo-svg .letter-a {
-  animation: letterAppear 0.8s ease-out 0.3s forwards;
-  opacity: 0;
-}
-
-.logo-svg .letter-h {
-  animation: letterAppear 0.8s ease-out 0.6s forwards;
-  opacity: 0;
-}
-
   <style>
     /* Variables and resets */
     :root {
@@ -173,7 +134,6 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
       z-index: 10;
     }
-
     /* Buttons */
     .cta-button {
       display: inline-block;
@@ -221,6 +181,7 @@
     ul li:hover {
       transform: translateX(5px);
     }
+
     /* Tabs */
     .tabs {
       display: flex;
@@ -370,7 +331,6 @@
       align-items: center;
       gap: 5px;
     }
-    
     .language-toggle:hover {
       background: var(--primary-light);
       color: #fff;
@@ -427,6 +387,80 @@
     
     .about-profile-image:hover {
       transform: scale(1.05);
+    }
+
+    /* Animación para el logo SVG */
+    @keyframes logoEntrance {
+      0% {
+        opacity: 0;
+        transform: scale(0.8) rotate(-10deg);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+      }
+    }
+
+    .profile-image.logo-svg {
+      animation: logoEntrance 1.2s ease-out forwards;
+    }
+
+    /* Animación para las letras individuales del logo */
+    @keyframes letterAppear {
+      0% {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .logo-svg .letter-a {
+      animation: letterAppear 0.8s ease-out 0.3s forwards;
+      opacity: 0;
+    }
+
+    .logo-svg .letter-h {
+      animation: letterAppear 0.8s ease-out 0.6s forwards;
+      opacity: 0;
+    }
+    
+    /* Mejoras para el modo oscuro */
+    body.light-mode .profile-image.logo-svg {
+      filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    body.light-mode .logo-svg defs stop:first-child {
+      stop-color: #0095ff; /* Azul más brillante para modo claro */
+    }
+
+    body.light-mode .logo-svg defs stop:last-child {
+      stop-color: #0050aa; /* Azul más oscuro para modo claro */
+    }
+
+    /* Transición suave al cambiar de modo */
+    .logo-svg defs stop {
+      transition: stop-color 0.5s ease;
+    }
+    
+    /* Estilos para el logo del footer */
+    .footer-logo {
+      transition: transform 0.3s ease;
+    }
+
+    .footer-logo:hover {
+      transform: scale(1.1);
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    body.light-mode footer {
+      border-top: 1px solid rgba(0,0,0,0.1);
     }
 
     /* Responsive Styles */
@@ -549,31 +583,31 @@
     <header data-aos="fade-down">
       <button class="mode-toggle" id="modeToggle" title="Toggle light/dark mode">☀️</button>
       
-      <!-- CAMBIO: Reemplazada la imagen por el logo SVG -->
+      <!-- SVG Logo con clases para animación -->
       <svg class="profile-image logo-svg" width="220" height="220" viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg" loading="lazy" data-tilt data-tilt-max="15" data-tilt-speed="400">
-    <defs>
-        <linearGradient id="logo-blue3d" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#0af" />
-            <stop offset="100%" stop-color="#003366" />
-        </linearGradient>
-        <filter id="logo-shadow" x="-20%" y="-20%" width="140%" height="140%">
-            <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#222" flood-opacity="0.5"/>
-        </filter>
-    </defs>
-    <g filter="url(#logo-shadow)">
-        <!-- 3D "A" con clase para animación -->
-        <g class="letter-a">
-            <polygon points="15,85 40,15 65,85 55,85 40,50 25,85" fill="url(#logo-blue3d)" />
-            <rect x="37" y="65" width="6" height="20" fill="#222" opacity="0.7" />
-        </g>
-        <!-- 3D "H" con clase para animación -->
-        <g class="letter-h">
-            <rect x="75" y="30" width="10" height="55" fill="url(#logo-blue3d)" />
-            <rect x="100" y="30" width="10" height="55" fill="url(#logo-blue3d)" />
-            <rect x="75" y="60" width="35" height="10" fill="#222" opacity="0.7" />
-        </g>
-    </g>
-</svg>
+          <defs>
+              <linearGradient id="logo-blue3d" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#0af" />
+                  <stop offset="100%" stop-color="#003366" />
+              </linearGradient>
+              <filter id="logo-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#222" flood-opacity="0.5"/>
+              </filter>
+          </defs>
+          <g filter="url(#logo-shadow)">
+              <!-- 3D "A" con clase para animación -->
+              <g class="letter-a">
+                  <polygon points="15,85 40,15 65,85 55,85 40,50 25,85" fill="url(#logo-blue3d)" />
+                  <rect x="37" y="65" width="6" height="20" fill="#222" opacity="0.7" />
+              </g>
+              <!-- 3D "H" con clase para animación -->
+              <g class="letter-h">
+                  <rect x="75" y="30" width="10" height="55" fill="url(#logo-blue3d)" />
+                  <rect x="100" y="30" width="10" height="55" fill="url(#logo-blue3d)" />
+                  <rect x="75" y="60" width="35" height="10" fill="#222" opacity="0.7" />
+              </g>
+          </g>
+      </svg>
       
       <h1><span id="typed"></span></h1>
       <!-- TEXTO PRINCIPAL ACTUALIZADO -->
@@ -701,6 +735,7 @@
         
         <div class="package">
           <h3 data-i18n="services_explained.seo.title">🔍 SEO (Search Engine Optimization)</h3>
+          <p><strong data-i18n="services_explained.simple_terms">In simple terms:</strong> <span data-i18n="services_explained.seo.simple">I make sure people can find your website when they search on Google for          <h3 data-i18n="services_explained.seo.title">🔍 SEO (Search Engine Optimization)</h3>
           <p><strong data-i18n="services_explained.simple_terms">In simple terms:</strong> <span data-i18n="services_explained.seo.simple">I make sure people can find your website when they search on Google for what you offer.</span></p>
           <p data-i18n="services_explained.seo.analogy">It's like making sure your business is on the main street where customers can see it, rather than hidden down a back alley.</p>
         </div>
@@ -736,8 +771,6 @@
         <p data-i18n="projects.costa_rica.description">Currently developing a digital presence for a local supermarket in Costa Rica, focusing on showcasing their product range and streamlining the ordering process for customers.</p>
         <ul>
           <li data-i18n="projects.costa_rica.item1">Modern, mobile-first design</li>
-          <li data-i18n="projects.costa_rica.item2
-                      <li data-i18n="projects.costa_rica.item1">Modern, mobile-first design</li>
           <li data-i18n="projects.costa_rica.item2">Product category organization</li>
           <li data-i18n="projects.costa_rica.item3">SEO optimization for local search</li>
           <li data-i18n="projects.costa_rica.item4">Bilingual content (English/Spanish)</li>
@@ -790,6 +823,34 @@
       <p><strong data-i18n="contact.ready">Ready when you are.</strong></p>
       <p><a href="mailto:alan.s.holding@gmail.com?subject=Free Consultation" class="cta-button" data-i18n="contact.cta">Request a Free Consultation</a></p>
     </div>
+
+    <!-- NUEVO: Footer con logo -->
+    <footer style="text-align: center; margin-top: 60px; padding: 30px 0; border-top: 1px solid rgba(255,255,255,0.1);">
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+        <svg class="footer-logo" width="80" height="60" viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="footer-gradient" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#0af" />
+                    <stop offset="100%" stop-color="#003366" />
+                </linearGradient>
+                <filter id="footer-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#222" flood-opacity="0.3"/>
+                </filter>
+            </defs>
+            <g filter="url(#footer-shadow)" transform="scale(0.95) translate(5,5)">
+                <polygon points="15,85 40,15 65,85 55,85 40,50 25,85" fill="url(#footer-gradient)" />
+                <rect x="37" y="65" width="6" height="20" fill="#222" opacity="0.7" />
+                <rect x="75" y="30" width="10" height="55" fill="url(#footer-gradient)" />
+                <rect x="100" y="30" width="10" height="55" fill="url(#footer-gradient)" />
+                <rect x="75" y="60" width="35" height="10" fill="#222" opacity="0.7" />
+            </g>
+        </svg>
+        <div>
+          <p style="margin: 0; font-size: 0.9rem; opacity: 0.8;">© 2025 Alan Holding | Web Design & Digital Solutions</p>
+          <p style="margin: 5px 0 0; font-size: 0.8rem; opacity: 0.6;">Creating websites that deliver real business results</p>
+        </div>
+      </div>
+    </footer>
 
   </div>
 
