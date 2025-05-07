@@ -147,10 +147,13 @@
       font-weight: bold;
       cursor: pointer;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
     .cta-button:hover {
       background: var(--primary-light);
       transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
     /* Sections */
@@ -171,15 +174,21 @@
       position: relative;
       padding-left: 1.5em;
       margin-bottom: 0.5em;
+      transition: transform 0.2s ease, padding-left 0.2s ease;
     }
     ul li::before {
       content: '✅';
       position: absolute;
       left: 0;
       top: 0;
+      transition: transform 0.2s ease;
     }
     ul li:hover {
       transform: translateX(5px);
+      padding-left: 0.3em;
+    }
+    ul li:hover::before {
+      transform: scale(1.2);
     }
 
     /* Tabs */
@@ -195,6 +204,29 @@
       margin: 0 5px 5px;
       border-radius: 5px;
       cursor: pointer;
+      transition: transform 0.2s ease, background 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .tab:hover {
+      transform: translateY(-2px);
+    }
+    .tab::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: var(--primary-light);
+      transition: width 0.3s ease;
+    }
+    .tab:hover::after {
+      width: 100%;
+    }
+    .tab.active::after {
+      width: 100%;
+      background: var(--primary-dark);
     }
     .tab.active, .tab:hover {
       background: #fff;
@@ -206,6 +238,11 @@
     }
     .tab-content.active {
       display: block;
+      animation: fadeIn 0.5s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     /* Packages grid */
@@ -220,11 +257,22 @@
       border-radius: 8px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       color: #333;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .package:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
     }
     .package .price {
       font-size: 1.25rem;
       font-weight: bold;
       margin: 10px 0;
+    }
+    .package .cta-button {
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+    .package:hover .cta-button {
+      transform: scale(1.05);
     }
 
     /* Back to top */
@@ -241,8 +289,13 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
       display: none;
       z-index: 99;
+      transition: transform 0.3s ease, background 0.3s ease, opacity 0.3s ease;
     }
-
+    #backToTop:hover {
+      transform: translateY(-3px);
+      background: var(--primary-light);
+      color: #fff;
+    }
     /* Swiper */
     .swiper-container {
       width: 100%;
@@ -254,6 +307,10 @@
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .swiper-slide:hover {
+      transform: scale(1.02);
     }
     .swiper-slide blockquote {
       margin: 0;
@@ -273,6 +330,11 @@
       padding: 20px;
       border-radius: 8px;
       margin-top: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .form-container:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.15);
     }
     
     input[type="email"] {
@@ -282,6 +344,11 @@
       border-radius: 4px;
       border: none;
       font-size: 1rem;
+      transition: box-shadow 0.3s ease;
+    }
+    input[type="email"]:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px var(--primary-light);
     }
 
     /* Project highlight */
@@ -290,6 +357,12 @@
       border-radius: 8px;
       padding: 20px;
       margin-bottom: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-highlight:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      background: rgba(0,198,255,0.15);
     }
     
     /* Ripple */
@@ -330,10 +403,13 @@
       display: flex;
       align-items: center;
       gap: 5px;
+      transition: transform 0.2s ease, background 0.3s ease;
     }
+    
     .language-toggle:hover {
       background: var(--primary-light);
       color: #fff;
+      transform: translateY(-2px);
     }
     
     .language-toggle.active {
@@ -382,14 +458,15 @@
       border-radius: 50%;
       object-fit: cover;
       box-shadow: 0 4px 15px rgba(0,0,0,0.25);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     
     .about-profile-image:hover {
       transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
     }
 
-    /* Animación para el logo SVG */
+    /* Corrección Animación para el logo SVG */
     @keyframes logoEntrance {
       0% {
         opacity: 0;
@@ -401,11 +478,15 @@
       }
     }
 
+    /* Solución al problema de superposición de estilos */
     .profile-image.logo-svg {
       animation: logoEntrance 1.2s ease-out forwards;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      transition: background 0.3s ease, transform 0.3s ease;
     }
 
-    /* Animación para las letras individuales del logo */
+    /* Separamos las animaciones de los elementos internos */
     @keyframes letterAppear {
       0% {
         opacity: 0;
@@ -417,6 +498,7 @@
       }
     }
 
+    /* Aseguramos que las clases se aplican correctamente */
     .logo-svg .letter-a {
       animation: letterAppear 0.8s ease-out 0.3s forwards;
       opacity: 0;
@@ -426,7 +508,6 @@
       animation: letterAppear 0.8s ease-out 0.6s forwards;
       opacity: 0;
     }
-    
     /* Mejoras para el modo oscuro */
     body.light-mode .profile-image.logo-svg {
       filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));
@@ -455,12 +536,48 @@
       transform: scale(1.1);
     }
 
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 30px 0;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      transition: transform 0.3s ease;
+    }
+
     footer p {
       margin: 5px 0;
     }
 
     body.light-mode footer {
       border-top: 1px solid rgba(0,0,0,0.1);
+    }
+
+    /* Indicador de scroll */
+    .scroll-indicator {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 90;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .scroll-indicator::after {
+      content: "↓";
+      color: var(--text-dark);
+      font-size: 1.2rem;
+    }
+
+    .scroll-indicator.visible {
+      opacity: 0.8;
     }
 
     /* Responsive Styles */
@@ -564,6 +681,10 @@
       width: 100%;
       height: 600px;
       max-width: 100%;
+      transition: box-shadow 0.3s ease;
+    }
+    iframe:hover {
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
   </style>
 </head>
@@ -618,7 +739,7 @@
       </p>
       <a href="#contact" class="cta-button" data-aos="zoom-in" onclick="showTab(event,'contact')" data-i18n="hero.cta">Let's turn your message into money.</a>
     </header>
-<!-- Lead Magnet: Free Guide - ACTUALIZADO -->
+    <!-- Lead Magnet: Free Guide - ACTUALIZADO -->
     <section id="guide" data-aos="fade-up">
       <h2 data-i18n="guide.title">Free Download: 5 Irresistible Headline Templates</h2>
       <p data-i18n="guide.description">Get five proven headline formulas that will instantly grab attention and drive engagement. Coming soon!</p>
@@ -668,6 +789,10 @@
           <h3 data-i18n="packages.essentials.title">Essentials</h3>
           <ul>
             <li data-i18n="packages.essentials.item1">Professional responsive website</li>
+            <li data-i18n="packages.essentials.item2">Up to 5 pages</li>
+            <li data-i18n="packages.essentials.item3">Basic SEO setup</li>
+            <li data-i18n="packages.essentials.item5">Contact form integration</li>
+<li data-i18n="packages.essentials.item1">Professional responsive website</li>
             <li data-i18n="packages.essentials.item2">Up to 5 pages</li>
             <li data-i18n="packages.essentials.item3">Basic SEO setup</li>
             <li data-i18n="packages.essentials.item4">Mobile optimization</li>
@@ -735,7 +860,6 @@
         
         <div class="package">
           <h3 data-i18n="services_explained.seo.title">🔍 SEO (Search Engine Optimization)</h3>
-          <p><strong data-i18n="services_explained.simple_terms">In simple terms:</strong> <span data-i18n="services_explained.seo.simple">I make sure people can find your website when they search on Google for          <h3 data-i18n="services_explained.seo.title">🔍 SEO (Search Engine Optimization)</h3>
           <p><strong data-i18n="services_explained.simple_terms">In simple terms:</strong> <span data-i18n="services_explained.seo.simple">I make sure people can find your website when they search on Google for what you offer.</span></p>
           <p data-i18n="services_explained.seo.analogy">It's like making sure your business is on the main street where customers can see it, rather than hidden down a back alley.</p>
         </div>
@@ -825,7 +949,7 @@
     </div>
 
     <!-- NUEVO: Footer con logo -->
-    <footer style="text-align: center; margin-top: 60px; padding: 30px 0; border-top: 1px solid rgba(255,255,255,0.1);">
+    <footer>
       <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
         <svg class="footer-logo" width="80" height="60" viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -986,6 +1110,21 @@
           localStorage.setItem('themeMode', isLight ? 'light' : 'dark');
         });
       }
+      
+      // Mejorar la interacción en los tabs
+      document.querySelectorAll('.tab').forEach(tab => {
+        tab.addEventListener('mouseenter', () => {
+          if (!tab.classList.contains('active')) {
+            tab.style.transform = 'translateY(-2px)';
+          }
+        });
+        
+        tab.addEventListener('mouseleave', () => {
+          if (!tab.classList.contains('active')) {
+            tab.style.transform = 'translateY(0)';
+          }
+        });
+      });
     });
 
     // Inicializar Particles.js con una configuración más ligera
@@ -1050,6 +1189,30 @@
           ripple.remove();
         }, 600);
       }
+    });
+    
+    // Crear indicador de scroll
+    const scrollIndicator = document.createElement('div');
+    scrollIndicator.classList.add('scroll-indicator');
+    document.body.appendChild(scrollIndicator);
+
+    // Controlar visibilidad del indicador de scroll
+    window.addEventListener('scroll', () => {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      
+      // Mostrar solo cuando no se ha hecho scroll y hay contenido abajo
+      if (scrollPosition < 100 && documentHeight > windowHeight + 300) {
+        scrollIndicator.classList.add('visible');
+      } else {
+        scrollIndicator.classList.remove('visible');
+      }
+      
+      // Ocultar después de 5 segundos si no hay interacción
+      setTimeout(() => {
+        scrollIndicator.classList.remove('visible');
+      }, 5000);
     });
   </script>
 </body>
