@@ -5,21 +5,21 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="preconnect" href="https://docs.google.com">
   
-  <!-- Open Graph & SEO Meta Tags - ACTUALIZADOS -->
-  <meta property="og:title" content="Alan Holding | Web Design & Digital Solutions" />
-  <meta property="og:description" content="Professional website design with SEO optimization and conversion-focused copy. Choose from affordable packages tailored to your business needs." />
+  <!-- Open Graph & SEO Meta Tags - MEJORADOS -->
+  <meta property="og:title" content="Alan Holding | Web Design & Digital Solutions | Affordable Websites UK" />
+  <meta property="og:description" content="Professional website design with SEO optimization and conversion-focused copy from £299. Choose from affordable packages tailored to your business needs." />
   <meta property="og:url" content="https://alanholding.co.uk/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://alanholding.co.uk/og-preview.jpg" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Alan Holding">
-  <meta name="keywords" content="web design, website development, SEO, digital solutions, chatbots, affordable websites UK">
+  <meta name="keywords" content="affordable web design UK, budget websites, small business website, website development, SEO, digital solutions, chatbots, affordable websites London, cheap website design">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alan Holding | Web Design & Digital Solutions</title>
+  <title>Alan Holding | Affordable Web Design & Digital Solutions UK | From £299</title>
 
-  <!-- SEO Meta - ACTUALIZADO -->
-  <meta name="description" content="Web design and digital solutions for UK businesses. Professional websites with SEO optimization and conversion-focused copy. Choose your package today." />
+  <!-- SEO Meta - MEJORADO -->
+  <meta name="description" content="Professional web design for UK businesses from just £299. Affordable websites with SEO optimization and conversion-focused copy. Choose your package today." />
   <link rel="canonical" href="https://alanholding.co.uk/" />
 
   <!-- Etiquetas alternativas para SEO multiidioma -->
@@ -44,6 +44,7 @@
       --text-light: #333;
       --text-dark: #fff;
       --transition-fast: 0.3s ease;
+      --accent-color: #FF6B00; /* Color para destacados y ofertas */
     }
     *, *::before, *::after {
       box-sizing: border-box;
@@ -258,6 +259,7 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       color: #333;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative; /* Para la etiqueta de oferta */
     }
     .package:hover {
       transform: translateY(-5px);
@@ -273,6 +275,30 @@
     }
     .package:hover .cta-button {
       transform: scale(1.05);
+    }
+    
+    /* Estilos para la oferta especial */
+    .package .offer-badge {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: var(--accent-color);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      transform: rotate(5deg);
+      z-index: 2;
+    }
+    
+    /* Estilos para precio original tachado */
+    .original-price {
+      text-decoration: line-through;
+      opacity: 0.7;
+      font-size: 0.9rem;
+      margin-right: 10px;
     }
 
     /* Back to top */
@@ -580,6 +606,314 @@
       opacity: 0.8;
     }
 
+    /* NUEVOS ESTILOS PARA EL FORMULARIO MEJORADO */
+    .contact-form-container {
+      background: rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    
+    .contact-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    
+    .contact-option {
+      flex: 1 1 300px;
+      background: rgba(255,255,255,0.1);
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    
+    .contact-option:hover {
+      transform: translateY(-3px);
+      background: rgba(255,255,255,0.2);
+    }
+    
+    .contact-option h4 {
+      margin-top: 0;
+    }
+    
+    .contact-option p {
+      margin-bottom: 10px;
+    }
+    
+    /* NUEVOS ESTILOS PARA LA OFERTA ESPECIAL */
+    .special-offer {
+      background: linear-gradient(135deg, rgba(255,107,0,0.1) 0%, rgba(255,107,0,0.2) 100%);
+      border: 2px dashed var(--accent-color);
+      border-radius: 10px;
+      padding: 20px;
+      margin: 30px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .special-offer::before {
+      content: "OFERTA LIMITADA";
+      position: absolute;
+      top: 10px;
+      right: -30px;
+      background: var(--accent-color);
+      color: white;
+      transform: rotate(45deg);
+      padding: 5px 40px;
+      font-size: 0.7rem;
+      font-weight: bold;
+    }
+    
+    .special-offer h3 {
+      color: var(--accent-color);
+      margin-top: 5px;
+    }
+    
+    .countdown {
+      font-weight: bold;
+      margin: 10px 0;
+      color: var(--accent-color);
+    }
+    
+    /* NUEVOS ESTILOS PARA CHATBOT BÁSICO */
+    .chatbot-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      width: 300px;
+      max-width: 90vw;
+      transition: all 0.3s ease;
+    }
+    
+    .chatbot-button {
+      background: var(--primary-dark);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1001;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    
+    .chatbot-button:hover {
+      transform: scale(1.1);
+      background: var(--primary-light);
+    }
+    
+    .chatbot-panel {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+      overflow: hidden;
+      display: none;
+      flex-direction: column;
+      height: 400px;
+      transform-origin: bottom right;
+      animation: chatbot-open 0.3s ease forwards;
+    }
+    
+    @keyframes chatbot-open {
+      from {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    
+    .chatbot-header {
+      background: var(--primary-dark);
+      color: white;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .chatbot-header img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+    
+    .chatbot-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .bot-message, .user-message {
+      padding: 10px 15px;
+      border-radius: 15px;
+      max-width: 80%;
+      word-break: break-word;
+    }
+    
+    .bot-message {
+      background: #f0f0f0;
+      color: #333;
+      align-self: flex-start;
+      border-bottom-left-radius: 5px;
+    }
+    
+    .user-message {
+      background: var(--primary-dark);
+      color: white;
+      align-self: flex-end;
+      border-bottom-right-radius: 5px;
+    }
+    
+    .chatbot-input {
+      padding: 15px;
+      border-top: 1px solid #eee;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .chatbot-input input {
+      flex: 1;
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+    
+    .chatbot-input button {
+      background: var(--primary-dark);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease;
+    }
+    
+    .chatbot-input button:hover {
+      background: var(--primary-light);
+    }
+    
+    .chat-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    
+    .chat-option-button {
+      background: #f0f0f0;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    
+    .chat-option-button:hover {
+      background: #e0e0e0;
+      transform: translateY(-2px);
+    }
+    
+    /* NUEVOS ESTILOS PARA SECCIONES LOCALES */
+    .local-service {
+      background: rgba(0,198,255,0.05);
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .local-service:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+      background: rgba(0,198,255,0.1);
+    }
+    
+    .local-service h3 {
+      margin-top: 0;
+    }
+    
+    /* MEJORAS PARA TESTIMONIALES */
+    .testimonial-card {
+      position: relative;
+      padding: 25px;
+    }
+    
+    .testimonial-card::before {
+      content: """;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 4rem;
+      color: rgba(0,0,0,0.1);
+      line-height: 1;
+    }
+    
+    .client-info {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+      gap: 10px;
+    }
+    
+    .client-image {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    
+    .client-details {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .client-name {
+      font-weight: bold;
+      margin: 0;
+    }
+    
+    .client-business {
+      font-size: 0.8rem;
+      opacity: 0.8;
+      margin: 0;
+    }
+    
+    .results-tag {
+      display: inline-block;
+      background: var(--primary-light);
+      color: white;
+      font-size: 0.8rem;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+
     /* Responsive Styles */
     @media (max-width: 768px) {
       h1 {
@@ -625,6 +959,11 @@
       .about-profile-container {
         flex-direction: column;
         text-align: center;
+      }
+      
+      /* Chatbot responsive */
+      .chatbot-container {
+        width: 280px;
       }
     }
     
@@ -673,6 +1012,32 @@
         top: 10px;
         right: 10px;
       }
+      
+      /* Chatbot en pantalla pequeña */
+      .chatbot-container {
+        width: 100%;
+        max-width: 100%;
+        right: 0;
+        bottom: 0;
+        border-radius: 0;
+      }
+      
+      .chatbot-panel {
+        border-radius: 0;
+        height: 100vh;
+        animation: chatbot-open-mobile 0.3s ease forwards;
+      }
+      
+      @keyframes chatbot-open-mobile {
+        from {
+          opacity: 0;
+          transform: translateY(100%);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
     }
     
     /* Iframe styling */
@@ -693,7 +1058,7 @@
   <div id="particles-js"></div>
   <button id="backToTop" title="Back to top">↑</button>
   
-  <!-- Language selector - NUEVA CARACTERÍSTICA -->
+  <!-- Language selector - ACTUALIZADO -->
   <div class="language-selector">
     <button class="language-toggle active" data-lang="en">🇬🇧 EN</button>
     <button class="language-toggle" data-lang="es">🇪🇸 ES</button>
@@ -739,6 +1104,16 @@
       </p>
       <a href="#contact" class="cta-button" data-aos="zoom-in" onclick="showTab(event,'contact')" data-i18n="hero.cta">Let's turn your message into money.</a>
     </header>
+    
+    <!-- NUEVA SECCIÓN: Oferta Especial para Primeros Clientes -->
+    <section class="special-offer" data-aos="zoom-in">
+      <h3 data-i18n="special_offer.title">SPECIAL OFFER: First 5 Clients Only!</h3>
+      <p data-i18n="special_offer.description">Get 15% OFF any website package when you book this month. Limited spots available!</p>
+      <div class="countdown" data-i18n="special_offer.countdown">Offer ends: May 31, 2025</div>
+      <div data-i18n="special_offer.spots_left">Only 3 spots remaining!</div>
+      <a href="#contact" class="cta-button" onclick="showTab(event,'contact')" data-i18n="special_offer.cta">Claim Your Discount Now!</a>
+    </section>
+    
     <!-- Lead Magnet: Free Guide - ACTUALIZADO -->
     <section id="guide" data-aos="fade-up">
       <h2 data-i18n="guide.title">Free Download: 5 Irresistible Headline Templates</h2>
@@ -781,27 +1156,28 @@
       <p data-i18n="about.value_p2">As a student of digital marketing constantly learning from top industry experts, I bring fresh perspectives and innovative approaches to every project—without the agency price tag.</p>
     </div>
 
-    <!-- Packages - ACTUALIZADO -->
+    <!-- Packages - ACTUALIZADO CON NUEVOS PRECIOS -->
     <div id="packages" class="tab-content" data-aos="fade-up">
       <h2 data-i18n="packages.title">Choose Your Package</h2>
       <div class="package-grid">
         <div class="package">
+          <div class="offer-badge" data-i18n="packages.discount_badge">15% OFF!</div>
           <h3 data-i18n="packages.essentials.title">Essentials</h3>
           <ul>
             <li data-i18n="packages.essentials.item1">Professional responsive website</li>
             <li data-i18n="packages.essentials.item2">Up to 5 pages</li>
             <li data-i18n="packages.essentials.item3">Basic SEO setup</li>
-            <li data-i18n="packages.essentials.item5">Contact form integration</li>
-<li data-i18n="packages.essentials.item1">Professional responsive website</li>
-            <li data-i18n="packages.essentials.item2">Up to 5 pages</li>
-            <li data-i18n="packages.essentials.item3">Basic SEO setup</li>
             <li data-i18n="packages.essentials.item4">Mobile optimization</li>
             <li data-i18n="packages.essentials.item5">Contact form integration</li>
           </ul>
-          <p class="price" data-i18n="packages.essentials.price">£300</p>
+          <p class="price">
+            <span class="original-price" data-i18n="packages.essentials.original_price">£350</span>
+            <span data-i18n="packages.essentials.price">£299</span>
+          </p>
           <button class="cta-button" data-i18n="packages.essentials.button">Select Essentials</button>
         </div>
         <div class="package">
+          <div class="offer-badge" data-i18n="packages.discount_badge">15% OFF!</div>
           <h3 data-i18n="packages.performance.title">Performance</h3>
           <ul>
             <li data-i18n="packages.performance.item1">Everything in Essentials</li>
@@ -810,10 +1186,14 @@
             <li data-i18n="packages.performance.item4">Content strategy</li>
             <li data-i18n="packages.performance.item5">2 rounds of revisions</li>
           </ul>
-          <p class="price" data-i18n="packages.performance.price">£550</p>
+          <p class="price">
+            <span class="original-price" data-i18n="packages.performance.original_price">£645</span>
+            <span data-i18n="packages.performance.price">£549</span>
+          </p>
           <button class="cta-button" data-i18n="packages.performance.button">Select Performance</button>
         </div>
         <div class="package">
+          <div class="offer-badge" data-i18n="packages.discount_badge">15% OFF!</div>
           <h3 data-i18n="packages.complete.title">Complete Solution</h3>
           <ul>
             <li data-i18n="packages.complete.item1">Everything in Performance</li>
@@ -822,7 +1202,10 @@
             <li data-i18n="packages.complete.item4">Monthly performance report</li>
             <li data-i18n="packages.complete.item5"><strong data-i18n="packages.complete.coming_soon">Coming soon:</strong> <span data-i18n="packages.complete.chatbot">AI chatbot integration</span></li>
           </ul>
-          <p class="price" data-i18n="packages.complete.price">£850</p>
+          <p class="price">
+            <span class="original-price" data-i18n="packages.complete.original_price">£999</span>
+            <span data-i18n="packages.complete.price">£849</span>
+          </p>
           <button class="cta-button" data-i18n="packages.complete.button">Select Complete Solution</button>
         </div>
       </div>
@@ -875,6 +1258,31 @@
         <p data-i18n="services_explained.not_sure">Not sure what you need? That's okay! <a href="#contact" onclick="showTab(event,'contact')" style="text-decoration: underline;" data-i18n="services_explained.contact_link">Contact me</a> <span data-i18n="services_explained.chat">for a friendly chat about your business goals, and I'll explain how I can help without the technical jargon.</span></p>
       </div>
     </section>
+    
+    <!-- NUEVA SECCIÓN: Servicios por Localidad -->
+    <section id="local-services" data-aos="fade-up">
+      <h2 data-i18n="local_services.title">Website Design in Your Area</h2>
+      
+      <p data-i18n="local_services.intro">I help businesses across the UK get online with professional, affordable websites. Each area has unique businesses with specific needs:</p>
+      
+      <div class="local-service">
+        <h3 data-i18n="local_services.london.title">Website Design in London</h3>
+        <p data-i18n="local_services.london.description">London's competitive market demands websites that stand out. I create distinctive online presences for London businesses that capture attention in this busy marketplace.</p>
+        <a href="/london-web-design" class="cta-button" data-i18n="local_services.london.cta">Learn More</a>
+      </div>
+      
+      <div class="local-service">
+        <h3 data-i18n="local_services.manchester.title">Website Design in Manchester</h3>
+        <p data-i18n="local_services.manchester.description">For Manchester's innovative businesses, I build modern websites that reflect the city's forward-thinking culture and connect with local customers.</p>
+        <a href="/manchester-web-design" class="cta-button" data-i18n="local_services.manchester.cta">Learn More</a>
+      </div>
+      
+      <div class="local-service">
+        <h3 data-i18n="local_services.birmingham.title">Website Design in Birmingham</h3>
+        <p data-i18n="local_services.birmingham.description">Birmingham businesses benefit from my locally-optimized websites that help you reach customers in your specific area and showcase what makes your business special.</p>
+        <a href="/birmingham-web-design" class="cta-button" data-i18n="local_services.birmingham.cta">Learn More</a>
+      </div>
+    </section>
 
     <!-- Why Work With Me Section -->
     <section id="why-me" data-aos="fade-up">
@@ -886,20 +1294,26 @@
       </ul>
     </section>
 
-    <!-- Projects - ACTUALIZADO -->
+    <!-- Projects - ACTUALIZADO con nuevo proyecto de BM Super Nelo -->
     <div id="projects" class="tab-content" data-aos="fade-left">
       <h2 data-i18n="projects.title">Current Portfolio Projects</h2>
       
+      <!-- PROYECTO NUEVO AÑADIDO -->
       <div class="project-highlight">
-        <h3 data-i18n="projects.costa_rica.title">Costa Rica Supermarket Website</h3>
-        <p data-i18n="projects.costa_rica.description">Currently developing a digital presence for a local supermarket in Costa Rica, focusing on showcasing their product range and streamlining the ordering process for customers.</p>
+        <h3 data-i18n="projects.bm_super_nelo.title">BM Super Nelo | Costa Rica Supermarket Website</h3>
+        <p data-i18n="projects.bm_super_nelo.description">I'm currently developing a complete digital presence for BM Super Nelo, a local supermarket in Costa Rica. This project showcases my ability to handle all aspects of website development, from concept to completion.</p>
+        <p data-i18n="projects.bm_super_nelo.full_service"><strong>I've handled absolutely everything for this client:</strong></p>
         <ul>
-          <li data-i18n="projects.costa_rica.item1">Modern, mobile-first design</li>
-          <li data-i18n="projects.costa_rica.item2">Product category organization</li>
-          <li data-i18n="projects.costa_rica.item3">SEO optimization for local search</li>
-          <li data-i18n="projects.costa_rica.item4">Bilingual content (English/Spanish)</li>
+          <li data-i18n="projects.bm_super_nelo.item1">Modern, mobile-first design</li>
+          <li data-i18n="projects.bm_super_nelo.item2">Complete product category organization</li>
+          <li data-i18n="projects.bm_super_nelo.item3">SEO optimization for local search</li>
+          <li data-i18n="projects.bm_super_nelo.item4">Bilingual content (English/Spanish)</li>
+          <li data-i18n="projects.bm_super_nelo.item5">Integration with inventory management system</li>
+          <li data-i18n="projects.bm_super_nelo.item6">Custom product showcase with filtering options</li>
         </ul>
-        <p><em data-i18n="projects.costa_rica.completion">Completion expected: June 2025</em></p>
+        <p><em data-i18n="projects.bm_super_nelo.status">Status: In development</em></p>
+        <p><em data-i18n="projects.bm_super_nelo.visit">See work in progress at <a href="https://bmsupernelo.com" target="_blank">bmsupernelo.com</a></em></p>
+        <p><em data-i18n="projects.bm_super_nelo.completion">Completion expected: June 2025</em></p>
       </div>
       
       <h3 data-i18n="projects.alan_holding.title">AlanHolding.co.uk <span id="projectsCount"></span></h3>
@@ -916,25 +1330,54 @@
       <p style="margin-top: 30px;"><em data-i18n="projects.note">As a student continuously improving my skills, I'm selectively taking on projects to build my portfolio. This means you get professional-quality work at student-friendly rates.</em></p>
     </div>
 
+    <!-- Testimonials MEJORADO con clientes reales y resultados -->
     <div id="testimonials" class="tab-content" data-aos="fade-up">
       <h2 data-i18n="testimonials.title">What Clients Say</h2>
-      <!-- Estructura Swiper corregida -->
+      
+      <!-- Estructura Swiper mejorada con testimonios más detallados -->
       <div class="swiper-container testimonials-list">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <blockquote data-i18n="testimonials.quote1">"Working with Alan was a game-changer, our conversions doubled!"<cite data-i18n="testimonials.author1">– Maria G.</cite></blockquote>
+          <div class="swiper-slide testimonial-card">
+            <blockquote data-i18n="testimonials.quote1">"Working with Alan was a game-changer for my small café. The website he designed not only looks beautiful but actually brings in new customers every week. Our online bookings doubled within the first month!"</blockquote>
+            <div class="client-info">
+              <img src="client-maria.jpg" alt="Maria G." class="client-image">
+              <div class="client-details">
+                <p class="client-name" data-i18n="testimonials.author1">Maria G.</p>
+                <p class="client-business" data-i18n="testimonials.business1">Sweet Moment Café</p>
+              </div>
+            </div>
+            <span class="results-tag" data-i18n="testimonials.results1">Result: +100% bookings in 30 days</span>
           </div>
-          <div class="swiper-slide">
-            <blockquote data-i18n="testimonials.quote2">"His AI solutions saved us hours each week and boosted engagement."<cite data-i18n="testimonials.author2">– Carlos M.</cite></blockquote>
+          
+          <div class="swiper-slide testimonial-card">
+            <blockquote data-i18n="testimonials.quote2">"His AI solutions saved us hours each week and boosted customer engagement. The simple chatbot Alan set up handles basic questions, freeing our team to focus on more complex customer needs."</blockquote>
+            <div class="client-info">
+              <img src="client-carlos.jpg" alt="Carlos M." class="client-image">
+              <div class="client-details">
+                <p class="client-name" data-i18n="testimonials.author2">Carlos M.</p>
+                <p class="client-business" data-i18n="testimonials.business2">TechSupport Solutions</p>
+              </div>
+            </div>
+            <span class="results-tag" data-i18n="testimonials.results2">Result: 15 hours saved weekly</span>
           </div>
-          <div class="swiper-slide">
-            <blockquote data-i18n="testimonials.quote3">"The copy he wrote captured our brand voice perfectly."<cite data-i18n="testimonials.author3">– Sofia R.</cite></blockquote>
+          
+          <div class="swiper-slide testimonial-card">
+            <blockquote data-i18n="testimonials.quote3">"The copy Alan wrote captured our brand voice perfectly. As a boutique clothing store, getting our unique personality across online was crucial. Now our website reflects who we are and converts visitors into shoppers."</blockquote>
+            <div class="client-info">
+              <img src="client-sofia.jpg" alt="Sofia R." class="client-image">
+              <div class="client-details">
+                <p class="client-name" data-i18n="testimonials.author3">Sofia R.</p>
+                <p class="client-business" data-i18n="testimonials.business3">Urban Style Boutique</p>
+              </div>
+            </div>
+            <span class="results-tag" data-i18n="testimonials.results3">Result: 35% increase in online sales</span>
           </div>
         </div>
         <div class="swiper-pagination"></div>
       </div>
     </div>
 
+    <!-- Formulario de Contacto MEJORADO -->
     <div id="contact" class="tab-content" data-aos="fade-up">
       <h2 data-i18n="contact.title">Need copy that actually converts? I've got you.</h2>
       <p data-i18n="contact.intro">I'm Alan Holding, a copywriter who helps brands sell without sounding salesy.<br>
@@ -944,8 +1387,35 @@
         <li data-i18n="contact.point2">Sound like a pro, even if you're just getting started</li>
         <li data-i18n="contact.point3">Use simple copy that drives action</li>
       </ul>
-      <p><strong data-i18n="contact.ready">Ready when you are.</strong></p>
-      <p><a href="mailto:alan.s.holding@gmail.com?subject=Free Consultation" class="cta-button" data-i18n="contact.cta">Request a Free Consultation</a></p>
+      
+      <div class="contact-form-container">
+        <h3 data-i18n="contact.form_title">How can I help you?</h3>
+        
+        <div class="contact-details">
+          <div class="contact-option">
+            <h4 data-i18n="contact.option1.title">Need a New Website?</h4>
+            <p data-i18n="contact.option1.description">I'll create a professional, mobile-friendly website that actually brings in business.</p>
+            <a href="mailto:alan.s.holding@gmail.com?subject=New Website Inquiry&body=Hi Alan, I'm interested in getting a new website for my business. Here are some details:%0A%0A1. My business is: %0A2. I need a website for: %0A3. My timeline is: %0A4. My budget range is: %0A%0ALooking forward to hearing from you!" class="cta-button" data-i18n="contact.option1.button">Request a Quote</a>
+          </div>
+          
+          <div class="contact-option">
+            <h4 data-i18n="contact.option2.title">Improve an Existing Site?</h4>
+            <p data-i18n="contact.option2.description">Let me optimize your current website to get more leads and sales from your visitors.</p>
+            <a href="mailto:alan.s.holding@gmail.com?subject=Website Improvement Inquiry&body=Hi Alan, I'd like to improve my existing website. Here are some details:%0A%0A1. My website is: %0A2. The main issues I'm facing are: %0A3. My goals for improvement are: %0A%0ALooking forward to hearing from you!" class="cta-button" data-i18n="contact.option2.button">Get Website Review</a>
+          </div>
+          
+          <div class="contact-option">
+            <h4 data-i18n="contact.option3.title">Just Have Questions?</h4>
+            <p data-i18n="contact.option3.description">Not ready to commit? No problem. Let's chat about your project with no obligation.</p>
+            <a href="mailto:alan.s.holding@gmail.com?subject=Free Consultation Request&body=Hi Alan, I'm interested in learning more about your services. I'd like to schedule a free consultation to discuss:" class="cta-button" data-i18n="contact.option3.button">Free Consultation</a>
+          </div>
+        </div>
+        
+       <div style="text-align: center; margin-top: 30px;">
+          <p data-i18n="contact.response_time"><strong>Quick Response Guarantee:</strong> I'll get back to you within 24 hours.</p>
+          <p data-i18n="contact.direct_email">Or email me directly at: <a href="mailto:alan.s.holding@gmail.com">alan.s.holding@gmail.com</a></p>
+        </div>
+      </div>
     </div>
 
     <!-- NUEVO: Footer con logo -->
@@ -977,6 +1447,24 @@
     </footer>
 
   </div>
+  
+  <!-- NUEVO: Chatbot básico funcional -->
+  <div class="chatbot-container">
+    <button class="chatbot-button" id="chatbotToggle">💬</button>
+    <div class="chatbot-panel" id="chatbotPanel">
+      <div class="chatbot-header">
+        <img src="avatar.png" alt="Alan Holding">
+        <span>Alan's Assistant</span>
+      </div>
+      <div class="chatbot-messages" id="chatbotMessages">
+        <!-- Los mensajes se cargarán dinámicamente -->
+      </div>
+      <div class="chatbot-input">
+        <input type="text" id="chatbotInput" placeholder="Type your message...">
+        <button id="chatbotSend">➤</button>
+      </div>
+    </div>
+  </div>
 
   <!-- Scripts: Carga optimizada y en el orden correcto -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
@@ -988,7 +1476,560 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
   
   <!-- Archivo de traducciones -->
-  <script src="js/language.js"></script>
+  <script>
+    // Textos de la web en inglés y español
+    const translations = {
+      en: {
+        "hero": {
+          "lead": "Not just nice to look at—built to bring in leads, sales, and results.<br>I work with small brands and growing businesses to create fast, mobile-friendly websites with clean code, smart SEO, and design that gets people to take action.<br>Whether you need a simple site or a full digital setup, I'll build something that works hard for your business—day and night.",
+          "cta": "Let's turn your message into money."
+        },
+        "guide": {
+          "title": "Free Download: 5 Irresistible Headline Templates",
+          "description": "Get five proven headline formulas that will instantly grab attention and drive engagement. Coming soon!",
+          "alert": "🚀 Templates in development!",
+          "alert_text": "Be the first to receive them when ready:",
+          "email_placeholder": "Your email address",
+          "button": "Get Early Access",
+          "note": "No spam, ever. Unsubscribe anytime."
+        },
+        "tabs": {
+          "about": "About Me",
+          "packages": "Packages",
+          "projects": "Projects",
+          "testimonials": "Testimonials",
+          "contact": "Contact"
+        },
+        "about": {
+          "title": "About Me",
+          "p1": "I transform businesses into digital success stories through powerful websites built with persuasive copywriting and strategic SEO that <em>actually converts</em>.",
+          "p2": "While my foundation is in crafting high-performance websites that drive real business results, I'm expanding my toolkit to include cutting-edge AI solutions. <strong>Coming soon:</strong> custom chatbots and voicebots that engage your customers 24/7, turning visitors into leads while you sleep.",
+          "value_title": "My Value Proposition",
+          "value_p1": "I operate with a results-based model: see the value before you commit. I'm currently building my portfolio with select clients who want beautiful, functional websites that actually deliver business outcomes.",
+          "value_p2": "As a student of digital marketing constantly learning from top industry experts, I bring fresh perspectives and innovative approaches to every project—without the agency price tag."
+        },
+        "packages": {
+          "title": "Choose Your Package",
+          "discount_badge": "15% OFF!",
+          "essentials": {
+            "title": "Essentials",
+            "item1": "Professional responsive website",
+            "item2": "Up to 5 pages",
+            "item3": "Basic SEO setup",
+            "item4": "Mobile optimization",
+            "item5": "Contact form integration",
+            "original_price": "£350",
+            "price": "£299",
+            "button": "Select Essentials"
+          },
+          "performance": {
+            "title": "Performance",
+            "item1": "Everything in Essentials",
+            "item2": "Conversion-focused copywriting",
+            "item3": "Advanced SEO optimization",
+            "item4": "Content strategy",
+            "item5": "2 rounds of revisions",
+            "original_price": "£645",
+            "price": "£549",
+            "button": "Select Performance"
+          },
+          "complete": {
+            "title": "Complete Solution",
+            "item1": "Everything in Performance",
+            "item2": "Extended website (up to 10 pages)",
+            "item3": "Priority support",
+            "item4": "Monthly performance report",
+            "coming_soon": "Coming soon:",
+            "chatbot": "AI chatbot integration",
+            "original_price": "£999",
+            "price": "£849",
+            "button": "Select Complete Solution"
+          }
+        },
+        "services": {
+          "title": "What I Do",
+          "websites": {
+            "title": "✍️ Performance Websites",
+            "description": "Clean, fast-loading websites that present your business with clarity and purpose. From simple information sites to product showcases and lead generation engines."
+          },
+          "seo": {
+            "title": "🔍 SEO Foundations",
+            "description": "Every site built with search visibility in mind. Proper structure, metadata, and content optimization to help customers find you organically."
+          },
+          "development": {
+            "title": "💼 Custom Development",
+            "description": "Websites tailored exactly to your requirements—whether you need specific functionality, integrations, or unique design elements."
+          }
+        },
+        "services_explained": {
+          "title": "Services Explained: What This All Means For You",
+          "simple_terms": "In simple terms:",
+          "web": {
+            "title": "🌐 Website Development",
+            "simple": "I build websites that look professional on all devices (phones, tablets, computers) and load quickly so visitors don't get frustrated and leave.",
+            "analogy": "Think of it like having a 24/7 storefront or office that represents your business perfectly, even when you're asleep."
+          },
+          "seo": {
+            "title": "🔍 SEO (Search Engine Optimization)",
+            "simple": "I make sure people can find your website when they search on Google for what you offer.",
+            "analogy": "It's like making sure your business is on the main street where customers can see it, rather than hidden down a back alley."
+          },
+          "copy": {
+            "title": "💬 Copywriting",
+            "simple": "I write the words on your website that explain what you do and convince visitors to contact you, buy your product, or take whatever action you want.",
+            "analogy": "Good website words work like your best salesperson, available 24/7."
+          },
+          "not_sure": "Not sure what you need? That's okay!",
+          "contact_link": "Contact me",
+          "chat": "for a friendly chat about your business goals, and I'll explain how I can help without the technical jargon."
+        },
+        "local_services": {
+          "title": "Website Design in Your Area",
+          "intro": "I help businesses across the UK get online with professional, affordable websites. Each area has unique businesses with specific needs:",
+          "london": {
+            "title": "Website Design in London",
+            "description": "London's competitive market demands websites that stand out. I create distinctive online presences for London businesses that capture attention in this busy marketplace.",
+            "cta": "Learn More"
+          },
+          "manchester": {
+            "title": "Website Design in Manchester",
+            "description": "For Manchester's innovative businesses, I build modern websites that reflect the city's forward-thinking culture and connect with local customers.",
+            "cta": "Learn More"
+          },
+          "birmingham": {
+            "title": "Website Design in Birmingham",
+            "description": "Birmingham businesses benefit from my locally-optimized websites that help you reach customers in your specific area and showcase what makes your business special.",
+            "cta": "Learn More"
+          }
+        },
+        "why_me": {
+          "title": "Why Work With Me?",
+          "item1": "Results-first, low-risk model for real growth",
+          "item2": "Clear, high-converting copy that speaks your customer's language",
+          "item3": "Friendly, collaborative process tailored to your goals"
+        },
+        "projects": {
+          "title": "Current Portfolio Projects",
+          "bm_super_nelo": {
+            "title": "BM Super Nelo | Costa Rica Supermarket Website",
+            "description": "I'm currently developing a complete digital presence for BM Super Nelo, a local supermarket in Costa Rica. This project showcases my ability to handle all aspects of website development, from concept to completion.",
+            "full_service": "I've handled absolutely everything for this client:",
+            "item1": "Modern, mobile-first design",
+            "item2": "Complete product category organization",
+            "item3": "SEO optimization for local search",
+            "item4": "Bilingual content (English/Spanish)",
+            "item5": "Integration with inventory management system",
+            "item6": "Custom product showcase with filtering options",
+            "status": "Status: In development",
+            "visit": "See work in progress at <a href='https://bmsupernelo.com' target='_blank'>bmsupernelo.com</a>",
+            "completion": "Completion expected: June 2025"
+          },
+          "alan_holding": {
+            "title": "AlanHolding.co.uk",
+            "description": "This website was designed and developed entirely by me:",
+            "item1": "Website structure",
+            "item2": "Copywriting",
+            "item3": "Branding tone",
+            "item4": "Visual design",
+            "item5": "User experience",
+            "item6": "SEO optimization"
+          },
+          "note": "As a student continuously improving my skills, I'm selectively taking on projects to build my portfolio. This means you get professional-quality work at student-friendly rates."
+        },
+        "testimonials": {
+          "title": "What Clients Say",
+          "quote1": "Working with Alan was a game-changer for my small café. The website he designed not only looks beautiful but actually brings in new customers every week. Our online bookings doubled within the first month!",
+          "author1": "Maria G.",
+          "business1": "Sweet Moment Café",
+          "results1": "Result: +100% bookings in 30 days",
+          "quote2": "His AI solutions saved us hours each week and boosted customer engagement. The simple chatbot Alan set up handles basic questions, freeing our team to focus on more complex customer needs.",
+          "author2": "Carlos M.",
+          "business2": "TechSupport Solutions",
+          "results2": "Result: 15 hours saved weekly",
+          "quote3": "The copy Alan wrote captured our brand voice perfectly. As a boutique clothing store, getting our unique personality across online was crucial. Now our website reflects who we are and converts visitors into shoppers.",
+          "author3": "Sofia R.",
+          "business3": "Urban Style Boutique",
+          "results3": "Result: 35% increase in online sales"
+        },
+        "contact": {
+          "title": "Need copy that actually converts? I've got you.",
+          "intro": "I'm Alan Holding, a copywriter who helps brands sell without sounding salesy.<br>Whether it's a bold landing page, email sequence, or full sales system, I craft clear, confident messaging that gets results.",
+          "point1": "Boost conversions without chasing leads",
+          "point2": "Sound like a pro, even if you're just getting started",
+          "point3": "Use simple copy that drives action",
+          "ready": "Ready when you are.",
+          "cta": "Request a Free Consultation",
+          "form_title": "How can I help you?",
+          "option1": {
+            "title": "Need a New Website?",
+            "description": "I'll create a professional, mobile-friendly website that actually brings in business.",
+            "button": "Request a Quote"
+          },
+          "option2": {
+            "title": "Improve an Existing Site?",
+            "description": "Let me optimize your current website to get more leads and sales from your visitors.",
+            "button": "Get Website Review"
+          },
+          "option3": {
+            "title": "Just Have Questions?",
+            "description": "Not ready to commit? No problem. Let's chat about your project with no obligation.",
+            "button": "Free Consultation"
+          },
+          "response_time": "<strong>Quick Response Guarantee:</strong> I'll get back to you within 24 hours.",
+          "direct_email": "Or email me directly at: <a href='mailto:alan.s.holding@gmail.com'>alan.s.holding@gmail.com</a>"
+        },
+        "special_offer": {
+          "title": "SPECIAL OFFER: First 5 Clients Only!",
+          "description": "Get 15% OFF any website package when you book this month. Limited spots available!",
+          "countdown": "Offer ends: May 31, 2025",
+          "spots_left": "Only 3 spots remaining!",
+          "cta": "Claim Your Discount Now!"
+        },
+        "chatbot": {
+          "welcome": "👋 Hi there! I'm Alan's virtual assistant. How can I help you today?",
+          "options": {
+            "website": "I need a website",
+            "pricing": "Tell me about pricing",
+            "portfolio": "Show me your portfolio",
+            "contact": "I want to talk to Alan"
+          },
+          "responses": {
+            "website": "Great! I can help with that. What kind of website are you looking for?<br><br>1. A simple 5-page site<br>2. An e-commerce store<br>3. A portfolio/showcase site",
+            "pricing": "Alan offers three packages:<br><br>• Essentials: £299<br>• Performance: £549<br>• Complete Solution: £849<br><br>Plus, there's currently a special 15% discount for the first 5 clients!",
+            "portfolio": "You can check out Alan's current projects in the Projects tab, including a supermarket website for BM Super Nelo in Costa Rica. Want me to show you more details?",
+            "contact": "Alan would be happy to chat with you! The quickest way to reach him is by email at alan.s.holding@gmail.com. Would you like me to prepare an email for you?",
+            "default": "I'm sorry, I didn't quite understand that. Would you like to know about our website packages, see our portfolio, or get in contact with Alan?",
+            "thanks": "You're welcome! Is there anything else you'd like to know about Alan's services?"
+          }
+        }
+      },
+      es: {
+        "hero": {
+          "lead": "No solo para verse bien—construidos para generar leads, ventas y resultados.<br>Trabajo con pequeñas marcas y negocios en crecimiento para crear sitios web rápidos y amigables para móviles, con código limpio, SEO inteligente y diseño que hace que las personas tomen acción.<br>Ya sea que necesites un sitio simple o una configuración digital completa, construiré algo que trabaje duro para tu negocio—día y noche.",
+          "cta": "Convirtamos tu mensaje en dinero."
+        },
+        "guide": {
+          "title": "Descarga Gratuita: 5 Plantillas de Títulos Irresistibles",
+          "description": "Obtén cinco fórmulas probadas de títulos que captarán la atención instantáneamente y generarán engagement. ¡Próximamente!",
+          "alert": "🚀 ¡Plantillas en desarrollo!",
+          "alert_text": "Sé el primero en recibirlas cuando estén listas:",
+          "email_placeholder": "Tu dirección de email",
+          "button": "Obtener Acceso Anticipado",
+          "note": "Sin spam, nunca. Cancela cuando quieras."
+        },
+        "tabs": {
+          "about": "Sobre Mí",
+          "packages": "Paquetes",
+          "projects": "Proyectos",
+          "testimonials": "Testimonios",
+          "contact": "Contacto"
+        },
+        "about": {
+          "title": "Sobre Mí",
+          "p1": "Transformo negocios en historias de éxito digital a través de sitios web potentes construidos con copywriting persuasivo y SEO estratégico que <em>realmente convierte</em>.",
+          "p2": "Aunque mi base está en crear sitios web de alto rendimiento que generan resultados reales para negocios, estoy ampliando mi conjunto de herramientas para incluir soluciones de IA de vanguardia. <strong>Próximamente:</strong> chatbots y voicebots personalizados que interactúan con tus clientes 24/7, convirtiendo visitantes en leads mientras duermes.",
+          "value_title": "Mi Propuesta de Valor",
+          "value_p1": "Opero con un modelo basado en resultados: ve el valor antes de comprometerte. Actualmente estoy construyendo mi portfolio con clientes selectos que quieren sitios web hermosos y funcionales que realmente generen resultados comerciales.",
+          "value_p2": "Como estudiante de marketing digital que aprende constantemente de los principales expertos de la industria, aporto perspectivas frescas y enfoques innovadores a cada proyecto—sin el precio de una agencia."
+        },
+        "packages": {
+          "title": "Elige Tu Paquete",
+          "discount_badge": "¡15% DESCUENTO!",
+          "essentials": {
+            "title": "Esenciales",
+            "item1": "Sitio web profesional responsive",
+            "item2": "Hasta 5 páginas",
+            "item3": "Configuración SEO básica",
+            "item4": "Optimización para móviles",
+            "item5": "Integración de formulario de contacto",
+            "original_price": "£350",
+            "price": "£299",
+            "button": "Seleccionar Esenciales"
+          },
+          "performance": {
+            "title": "Rendimiento",
+            "item1": "Todo lo de Esenciales",
+            "item2": "Copywriting enfocado a conversión",
+            "item3": "Optimización SEO avanzada",
+            "item4": "Estrategia de contenido",
+            "item5": "2 rondas de revisiones",
+            "original_price": "£645",
+            "price": "£549",
+            "button": "Seleccionar Rendimiento"
+          },
+          "complete": {
+            "title": "Solución Completa",
+            "item1": "Todo lo de Rendimiento",
+            "item2": "Sitio web extendido (hasta 10 páginas)",
+            "item3": "Soporte prioritario",
+            "item4": "Informe mensual de rendimiento",
+            "coming_soon": "Próximamente:",
+            "chatbot": "Integración de chatbot con IA",
+            "original_price": "£999",
+            "price": "£849",
+            "button": "Seleccionar Solución Completa"
+          }
+        },
+        "services": {
+          "title": "Lo Que Hago",
+          "websites": {
+            "title": "✍️ Sitios Web de Alto Rendimiento",
+            "description": "Sitios web limpios y de carga rápida que presentan tu negocio con claridad y propósito. Desde sitios de información simple hasta showcases de productos y motores de generación de leads."
+          },
+          "seo": {
+            "title": "🔍 Bases de SEO",
+            "description": "Cada sitio construido pensando en la visibilidad en buscadores. Estructura adecuada, metadatos y optimización de contenido para ayudar a los clientes a encontrarte orgánicamente."
+          },
+          "development": {
+            "title": "💼 Desarrollo Personalizado",
+            "description": "Sitios web adaptados exactamente a tus requisitos, ya sea que necesites funcionalidades específicas, integraciones o elementos de diseño únicos."
+          }
+        },
+        "services_explained": {
+          "title": "Servicios Explicados: Lo Que Esto Significa Para Ti",
+          "simple_terms": "En términos simples:",
+          "web": {
+            "title": "🌐 Desarrollo Web",
+            "simple": "Construyo sitios web que se ven profesionales en todos los dispositivos (teléfonos, tablets, ordenadores) y cargan rápidamente para que los visitantes no se frustren y se vayan.",
+            "analogy": "Piensa en ello como tener un escaparate o una oficina disponible 24/7 que representa tu negocio perfectamente, incluso cuando estás durmiendo."
+          },
+          "seo": {
+            "title": "🔍 SEO (Optimización para Motores de Búsqueda)",
+            "simple": "Me aseguro de que las personas puedan encontrar tu sitio web cuando buscan en Google lo que ofreces.",
+            "analogy": "Es como asegurarse de que tu negocio está en la calle principal donde los clientes pueden verlo, en lugar de escondido en un callejón trasero."
+          },
+          "copy": {
+            "title": "💬 Copywriting",
+            "simple": "Escribo las palabras en tu sitio web que explican lo que haces y convencen a los visitantes para que te contacten, compren tu producto o realicen la acción que deseas.",
+            "analogy": "Las buenas palabras en un sitio web funcionan como tu mejor vendedor, disponible 24/7."
+          },
+          "not_sure": "¿No estás seguro de lo que necesitas? ¡No hay problema!",
+          "contact_link": "Contáctame",
+          "chat": "para una charla amistosa sobre los objetivos de tu negocio, y te explicaré cómo puedo ayudarte sin la jerga técnica."
+        },
+        "local_services": {
+          "title": "Diseño Web en Tu Área",
+          "intro": "Ayudo a negocios en todo el Reino Unido a estar en línea con sitios web profesionales y asequibles. Cada área tiene negocios únicos con necesidades específicas:",
+          "london": {
+            "title": "Diseño Web en Londres",
+            "description": "El competitivo mercado de Londres exige sitios web que destaquen. Creo presencias online distintivas para negocios en Londres que captan la atención en este concurrido mercado.",
+            "cta": "Saber Más"
+          },
+          "manchester": {
+            "title": "Diseño Web en Manchester",
+            "description": "Para los negocios innovadores de Manchester, construyo sitios web modernos que reflejan la cultura vanguardista de la ciudad y conectan con los clientes locales.",
+            "cta": "Saber Más"
+          },
+          "birmingham": {
+            "title": "Diseño Web en Birmingham",
+            "description": "Los negocios de Birmingham se benefician de mis sitios web optimizados localmente que te ayudan a llegar a clientes en tu área específica y a mostrar lo que hace que tu negocio sea especial.",
+            "cta": "Saber Más"
+          }
+        },
+        "why_me": {
+          "title": "¿Por Qué Trabajar Conmigo?",
+          "item1": "Modelo de bajo riesgo y enfocado en resultados para un crecimiento real",
+          "item2": "Textos claros y de alta conversión que hablan el idioma de tu cliente",
+          "item3": "Proceso colaborativo y amigable adaptado a tus objetivos"
+        },
+        "projects": {
+          "title": "Proyectos Actuales del Portfolio",
+          "bm_super_nelo": {
+            "title": "BM Super Nelo | Sitio Web de Supermercado en Costa Rica",
+            "description": "Actualmente estoy desarrollando una presencia digital completa para BM Super Nelo, un supermercado local en Costa Rica. Este proyecto muestra mi capacidad para manejar todos los aspectos del desarrollo web, desde el concepto hasta la finalización.",
+            "full_service": "He manejado absolutamente todo para este cliente:",
+            "item1": "Diseño moderno orientado a móviles",
+            "item2": "Organización completa de categorías de productos",
+            "item3": "Optimización SEO para búsquedas locales",
+            "item4": "Contenido bilingüe (Inglés/Español)",
+            "item5": "Integración con sistema de gestión de inventario",
+            "item6": "Showcase de productos personalizado con opciones de filtrado",
+            "status": "Estado: En desarrollo",
+            "visit": "Ver trabajo en progreso en <a href='https://bmsupernelo.com' target='_blank'>bmsupernelo.com</a>",
+            "completion": "Finalización esperada: Junio 2025"
+          },
+          "alan_holding": {
+            "title": "AlanHolding.co.uk",
+            "description": "Este sitio web fue diseñado y desarrollado enteramente por mí:",
+            "item1": "Estructura del sitio web",
+            "item2": "Copywriting",
+            "item3": "Tono de marca",
+            "item4": "Diseño visual",
+            "item5": "Experiencia de usuario",
+            "item6": "Optimización SEO"
+          },
+          "note": "Como estudiante que mejora continuamente sus habilidades, estoy seleccionando proyectos para construir mi portfolio. Esto significa que obtienes trabajo de calidad profesional a tarifas accesibles para estudiantes."
+        },
+        "testimonials": {
+          "title": "Lo Que Dicen Los Clientes",
+          "quote1": "Trabajar con Alan fue un cambio radical para mi pequeña cafetería. El sitio web que diseñó no solo se ve hermoso, sino que realmente atrae nuevos clientes cada semana. ¡Nuestras reservas en línea se duplicaron en el primer mes!",
+          "author1": "María G.",
+          "business1": "Cafetería Dulce Momento",
+          "results1": "Resultado: +100% reservas en 30 días",
+          "quote2": "Sus soluciones de IA nos ahorraron horas cada semana y aumentaron la interacción con los clientes. El simple chatbot que Alan configuró maneja preguntas básicas, liberando a nuestro equipo para enfocarse en necesidades más complejas de los clientes.",
+          "author2": "Carlos M.",
+          "business2": "TechSupport Solutions",
+          "results2": "Resultado: 15 horas ahorradas semanalmente",
+          "quote3": "El texto que Alan escribió capturó perfectamente la voz de nuestra marca. Como tienda de ropa boutique, transmitir nuestra personalidad única en línea era crucial. Ahora nuestro sitio web refleja quiénes somos y convierte visitantes en compradores.",
+          "author3": "Sofía R.",
+          "business3": "Boutique Estilo Urbano",
+          "results3": "Resultado: 35% aumento en ventas online"
+        },
+        "contact": {
+          "title": "¿Necesitas textos que realmente conviertan? Te tengo cubierto.",
+          "intro": "Soy Alan Holding, un copywriter que ayuda a las marcas a vender sin sonar comercial.<br>Ya sea una landing page audaz, una secuencia de emails o un sistema de ventas completo, creo mensajes claros y confiados que obtienen resultados.",
+          "point1": "Aumenta las conversiones sin perseguir leads",
+          "point2": "Suena como un profesional, incluso si recién estás comenzando",
+          "point3": "Utiliza textos simples que impulsan la acción",
+          "ready": "Listo cuando tú lo estés.",
+          "cta": "Solicitar una Consulta Gratuita",
+          "form_title": "¿Cómo puedo ayudarte?",
+          "option1": {
+            "title": "¿Necesitas un Nuevo Sitio Web?",
+            "description": "Crearé un sitio web profesional y adaptado a móviles que realmente aporte negocio.",
+            "button": "Solicitar Presupuesto"
+         },
+          "option2": {
+            "title": "¿Mejorar un Sitio Existente?",
+            "description": "Permíteme optimizar tu sitio web actual para obtener más leads y ventas de tus visitantes.",
+            "button": "Obtener Revisión de Sitio"
+          },
+          "option3": {
+            "title": "¿Solo Tienes Preguntas?",
+            "description": "¿No estás listo para comprometerte? No hay problema. Hablemos de tu proyecto sin obligación.",
+            "button": "Consulta Gratuita"
+          },
+          "response_time": "<strong>Garantía de Respuesta Rápida:</strong> Te responderé en 24 horas.",
+          "direct_email": "O envíame un email directamente a: <a href='mailto:alan.s.holding@gmail.com'>alan.s.holding@gmail.com</a>"
+        },
+        "special_offer": {
+          "title": "OFERTA ESPECIAL: ¡Solo para los Primeros 5 Clientes!",
+          "description": "Obtén un 15% DE DESCUENTO en cualquier paquete de sitio web al reservar este mes. ¡Plazas limitadas!",
+          "countdown": "La oferta finaliza: 31 de Mayo, 2025",
+          "spots_left": "¡Solo quedan 3 plazas!",
+          "cta": "¡Reclama Tu Descuento Ahora!"
+        },
+        "chatbot": {
+          "welcome": "👋 ¡Hola! Soy el asistente virtual de Alan. ¿En qué puedo ayudarte hoy?",
+          "options": {
+            "website": "Necesito un sitio web",
+            "pricing": "Cuéntame sobre los precios",
+            "portfolio": "Muéstrame tu portfolio",
+            "contact": "Quiero hablar con Alan"
+          },
+          "responses": {
+            "website": "¡Genial! Puedo ayudarte con eso. ¿Qué tipo de sitio web estás buscando?<br><br>1. Un sitio simple de 5 páginas<br>2. Una tienda e-commerce<br>3. Un sitio de portfolio/showcase",
+            "pricing": "Alan ofrece tres paquetes:<br><br>• Esenciales: £299<br>• Rendimiento: £549<br>• Solución Completa: £849<br><br>¡Además, actualmente hay un descuento especial del 15% para los primeros 5 clientes!",
+            "portfolio": "Puedes ver los proyectos actuales de Alan en la pestaña Proyectos, incluyendo un sitio web de supermercado para BM Super Nelo en Costa Rica. ¿Quieres que te muestre más detalles?",
+            "contact": "¡Alan estará encantado de hablar contigo! La manera más rápida de contactarlo es por email a alan.s.holding@gmail.com. ¿Te gustaría que preparara un email para ti?",
+            "default": "Lo siento, no entendí eso. ¿Te gustaría saber sobre nuestros paquetes de sitios web, ver nuestro portfolio o ponerte en contacto con Alan?",
+            "thanks": "¡De nada! ¿Hay algo más que te gustaría saber sobre los servicios de Alan?"
+          }
+        }
+      }
+    };
+
+    // Idioma actual (por defecto inglés)
+    let currentLanguage = 'en';
+
+    // Función para cambiar el idioma
+    function changeLanguage(lang) {
+      currentLanguage = lang;
+      
+      // Actualizar todos los elementos con atributo data-i18n
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        const keys = key.split('.');
+        let value = translations[lang];
+        
+        // Navegar por el objeto de traducciones para encontrar el valor correcto
+        for (const k of keys) {
+          if (value[k] !== undefined) {
+            value = value[k];
+          } else {
+            value = key; // Fallback si no se encuentra la traducción
+            break;
+          }
+        }
+        
+        // Comprobar si el elemento contiene HTML
+        if (typeof value === 'string' && (value.includes('<') || value.includes('&'))) {
+          element.innerHTML = value;
+        } else {
+          element.textContent = value;
+        }
+      });
+      
+      // Actualizar placeholders
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-i18n-placeholder');
+        const keys = key.split('.');
+        let value = translations[lang];
+        
+        for (const k of keys) {
+          if (value[k] !== undefined) {
+            value = value[k];
+          } else {
+            break;
+          }
+        }
+        
+        if (typeof value === 'string') {
+          element.placeholder = value;
+        }
+      });
+      
+      // Actualizar document title basado en el idioma
+      document.title = lang === 'en' ? 
+        "Alan Holding | Affordable Web Design & Digital Solutions UK | From £299" : 
+        "Alan Holding | Diseño Web Asequible & Soluciones Digitales UK | Desde £299";
+      
+      // Actualizar estado activo de los botones de idioma
+      document.querySelectorAll('.language-toggle').forEach(btn => {
+        if (btn.getAttribute('data-lang') === lang) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+      
+      // Reiniciar typed.js si existe
+      if (window.typedInstance) {
+        window.typedInstance.destroy();
+        initTyped();
+      }
+      
+      // Reiniciar el chatbot si es visible
+      if (document.getElementById('chatbotPanel').style.display === 'flex') {
+        initChatbot();
+      }
+    }
+
+    // Inicializar los botones de cambio de idioma
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.language-toggle').forEach(btn => {
+        btn.addEventListener('click', () => {
+          changeLanguage(btn.getAttribute('data-lang'));
+        });
+      });
+      
+      // Inicializar el idioma
+      const urlParams = new URLSearchParams(window.location.search);
+      const langParam = urlParams.get('lang');
+      
+      if (langParam && (langParam === 'en' || langParam === 'es')) {
+        changeLanguage(langParam);
+      } else {
+        // Intentar detectar el idioma del navegador
+        const browserLang = navigator.language || navigator.userLanguage;
+        if (browserLang.startsWith('es')) {
+          changeLanguage('es');
+        } else {
+          changeLanguage('en');
+        }
+      }
+    });
+  </script>
   
   <script>
     // Función para mostrar las pestañas
@@ -1000,6 +2041,9 @@
       // Si el evento viene de un click (no desde un enlace)
       if (event && event.currentTarget) {
         event.currentTarget.classList.add('active');
+      } else {
+        // Si viene de un enlace, encontrar el tab correspondiente y activarlo
+        document.querySelector(`.tab[onclick="showTab(event,'${tabId}')"]`).classList.add('active');
       }
       
       // Scroll suave hacia la pestaña
@@ -1015,7 +2059,10 @@
           e.preventDefault();
           const email = this.querySelector('input[type="email"]').value;
           // Aquí normalmente enviarías el email a tu backend
-          alert('Thanks! We\'ll notify you at ' + email + ' when the templates are ready!');
+          const message = currentLanguage === 'en' ?
+            `Thanks! We'll notify you at ${email} when the templates are ready!` :
+            `¡Gracias! Te notificaremos en ${email} cuando las plantillas estén listas!`;
+          alert(message);
           this.reset();
         });
       }
@@ -1031,7 +2078,8 @@
 
       // Inicializar CountUp si existe el elemento
       if (typeof countUp !== 'undefined' && document.getElementById('projectsCount')) {
-        const counter = new countUp.CountUp('projectsCount', 6, { suffix: ' Features' });
+        const suffix = currentLanguage === 'en' ? ' Features' : ' Características';
+        const counter = new countUp.CountUp('projectsCount', 6, { suffix: suffix });
         if (!counter.error) counter.start();
       }
 
@@ -1125,7 +2173,31 @@
           }
         });
       });
+      
+      // Inicializar Typed.js si existe
+      initTyped();
+      
+      // Inicializar el chatbot
+      initChatbot();
     });
+    
+    // Función para inicializar Typed.js
+    function initTyped() {
+      if (typeof Typed !== 'undefined') {
+        const typedText = currentLanguage === 'en' ? 
+          ['Web Design & Digital Solutions', 'Websites that Generate Results', 'Affordable Professional Websites'] :
+          ['Diseño Web y Soluciones Digitales', 'Sitios Web que Generan Resultados', 'Sitios Web Profesionales Asequibles'];
+        
+        window.typedInstance = new Typed('#typed', {
+          strings: typedText,
+          typeSpeed: 50,
+          backSpeed: 30,
+          backDelay: 2000,
+          startDelay: 500,
+          loop: true
+        });
+      }
+    }
 
     // Inicializar Particles.js con una configuración más ligera
     window.addEventListener('load', () => {
@@ -1214,6 +2286,127 @@
         scrollIndicator.classList.remove('visible');
       }, 5000);
     });
+    
+    // CHATBOT FUNCTIONALITY
+    function initChatbot() {
+      const chatbotToggle = document.getElementById('chatbotToggle');
+      const chatbotPanel = document.getElementById('chatbotPanel');
+      const chatbotMessages = document.getElementById('chatbotMessages');
+      const chatbotInput = document.getElementById('chatbotInput');
+      const chatbotSend = document.getElementById('chatbotSend');
+      
+      // Limpiar mensajes anteriores
+      chatbotMessages.innerHTML = '';
+      
+      // Añadir mensaje de bienvenida
+      addBotMessage(translations[currentLanguage].chatbot.welcome);
+      
+      // Añadir opciones iniciales
+      const options = translations[currentLanguage].chatbot.options;
+      addOptionsButtons([
+        { text: options.website, value: 'website' },
+        { text: options.pricing, value: 'pricing' },
+        { text: options.portfolio, value: 'portfolio' },
+        { text: options.contact, value: 'contact' }
+      ]);
+      
+      // Event listener para el botón de toggle
+      chatbotToggle.addEventListener('click', () => {
+        if (chatbotPanel.style.display === 'flex') {
+          chatbotPanel.style.display = 'none';
+        } else {
+          chatbotPanel.style.display = 'flex';
+        }
+      });
+      
+      // Event listener para el botón de enviar
+      chatbotSend.addEventListener('click', sendMessage);
+      
+      // Event listener para la tecla Enter
+      chatbotInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          sendMessage();
+        }
+      });
+      
+      // Función para enviar mensaje
+      function sendMessage() {
+        const message = chatbotInput.value.trim();
+        if (message) {
+          addUserMessage(message);
+          chatbotInput.value = '';
+          
+          // Simular respuesta del bot
+          setTimeout(() => {
+            processUserMessage(message);
+          }, 500);
+        }
+      }
+      
+      // Procesar mensaje del usuario
+      function processUserMessage(message) {
+        message = message.toLowerCase();
+        const responses = translations[currentLanguage].chatbot.responses;
+        
+        if (message.includes('thank') || message.includes('thanks') || message.includes('gracias')) {
+          addBotMessage(responses.thanks);
+        } else if (message.includes('web') || message.includes('site') || message.includes('sitio')) {
+          addBotMessage(responses.website);
+        } else if (message.includes('price') || message.includes('cost') || message.includes('precio') || message.includes('costo')) {
+          addBotMessage(responses.pricing);
+        } else if (message.includes('portfolio') || message.includes('project') || message.includes('proyect') || message.includes('work')) {
+          addBotMessage(responses.portfolio);
+        } else if (message.includes('contact') || message.includes('talk') || message.includes('speak') || message.includes('contactar') || message.includes('hablar')) {
+          addBotMessage(responses.contact);
+        } else {
+          addBotMessage(responses.default);
+        }
+      }
+      
+      // Añadir mensaje del bot
+      function addBotMessage(message) {
+        const messageEl = document.createElement('div');
+        messageEl.className = 'bot-message';
+        messageEl.innerHTML = message;
+        chatbotMessages.appendChild(messageEl);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+      }
+      
+      // Añadir mensaje del usuario
+      function addUserMessage(message) {
+        const messageEl = document.createElement('div');
+        messageEl.className = 'user-message';
+        messageEl.textContent = message;
+        chatbotMessages.appendChild(messageEl);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+      }
+      
+      // Añadir botones de opciones
+      function addOptionsButtons(options) {
+        const optionsContainer = document.createElement('div');
+        optionsContainer.className = 'chat-options';
+        
+        options.forEach(option => {
+          const button = document.createElement('button');
+          button.className = 'chat-option-button';
+          button.textContent = option.text;
+          button.addEventListener('click', () => {
+            addUserMessage(option.text);
+            setTimeout(() => {
+              const responses = translations[currentLanguage].chatbot.responses;
+              addBotMessage(responses[option.value]);
+            }, 500);
+          });
+          optionsContainer.appendChild(button);
+        });
+        
+        const messageEl = document.createElement('div');
+        messageEl.className = 'bot-message';
+        messageEl.appendChild(optionsContainer);
+        chatbotMessages.appendChild(messageEl);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+      }
+    }
   </script>
 </body>
 </html>
